@@ -8,19 +8,19 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #0f1117;
-      --surface:  #1a1d27;
-      --surface2: #22263a;
-      --border:   #2e334d;
-      --accent:   #6c8aff;
-      --text:     #e4e6f0;
-      --muted:    #7a7f9a;
-      --price:    #a8d8a8;
-      --soup-bg:  #1a2e26;
-      --soup-txt: #7dd1b0;
-      --soup-lbl: #3d8f6f;
-      --error:    #ff6b6b;
-      --r:        14px;
+      --bg:      #0f1117;
+      --surface: #1a1d27;
+      --sur2:    #22263a;
+      --border:  #2e334d;
+      --accent:  #6c8aff;
+      --text:    #e4e6f0;
+      --muted:   #7a7f9a;
+      --price:   #a8d8a8;
+      --soup-bg: #1a2e26;
+      --soup:    #7dd1b0;
+      --slbl:    #3d8f6f;
+      --err:     #ff6b6b;
+      --r:       14px;
     }
 
     body {
@@ -31,137 +31,105 @@
       padding-bottom: 60px;
     }
 
-    /* ── Header ───────────────────────────────── */
     header {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(15,17,23,.92);
+      background: rgba(15,17,23,.9);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
-      padding: 18px 24px;
+      padding: 16px 24px;
       display: flex; align-items: center; justify-content: space-between;
-      gap: 12px; flex-wrap: wrap;
+      flex-wrap: wrap; gap: 10px;
     }
 
-    .logo { font-size: 1.25rem; font-weight: 700; color: #fff; }
+    .logo { font-size: 1.2rem; font-weight: 700; color: #fff; }
     .logo span { color: var(--accent); }
 
-    .header-right { display: flex; align-items: center; gap: 10px; }
+    .hright { display: flex; align-items: center; gap: 10px; }
 
     #date-chip {
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 4px 14px;
-      font-size: 0.8rem;
-      color: var(--muted);
+      background: var(--sur2); border: 1px solid var(--border);
+      border-radius: 20px; padding: 4px 14px;
+      font-size: .78rem; color: var(--muted);
     }
 
-    /* ── Status ───────────────────────────────── */
+    #refresh {
+      background: var(--sur2); border: 1px solid var(--border);
+      color: var(--muted); border-radius: 20px; padding: 4px 14px;
+      font-size: .78rem; cursor: pointer; transition: color .15s, border-color .15s;
+    }
+    #refresh:hover:not(:disabled) { color: var(--text); border-color: var(--accent); }
+    #refresh:disabled { opacity: .4; cursor: default; }
+
     #status {
-      text-align: center;
-      padding: 8px 20px;
-      font-size: 0.78rem;
-      color: var(--muted);
-      min-height: 30px;
+      text-align: center; padding: 8px 20px;
+      font-size: .75rem; color: var(--muted); min-height: 28px;
     }
 
-    /* ── Grid ─────────────────────────────────── */
     main {
-      max-width: 1440px;
-      margin: 0 auto;
-      padding: 20px 20px 0;
+      max-width: 1440px; margin: 0 auto;
+      padding: 16px 20px 0;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+      gap: 16px;
     }
 
-    /* ── Card ─────────────────────────────────── */
     .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--r);
-      display: flex; flex-direction: column;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r); display: flex; flex-direction: column;
       transition: border-color .18s, box-shadow .18s;
     }
-    .card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 4px 28px rgba(108,138,255,.1);
-    }
+    .card:hover { border-color: var(--accent); box-shadow: 0 4px 28px rgba(108,138,255,.1); }
 
     .card-head {
-      padding: 14px 16px 12px;
-      border-bottom: 1px solid var(--border);
+      padding: 14px 16px 12px; border-bottom: 1px solid var(--border);
       display: flex; justify-content: space-between; align-items: flex-start;
     }
-
-    .card-name { font-weight: 700; font-size: .95rem; color: #fff; }
+    .card-name { font-weight: 700; font-size: .92rem; color: #fff; }
     .card-link {
-      font-size: .7rem; color: var(--muted); text-decoration: none;
+      font-size: .68rem; color: var(--muted); text-decoration: none;
       display: block; margin-top: 2px;
     }
     .card-link:hover { color: var(--accent); }
-    .card-icon { font-size: 1.4rem; opacity: .35; }
+    .card-icon { font-size: 1.35rem; opacity: .3; }
 
-    .card-body { padding: 12px 16px; flex: 1; }
+    .card-body { padding: 10px 16px 14px; flex: 1; }
 
-    /* ── Items ────────────────────────────────── */
+    /* loading state */
+    .card-body.loading { opacity: .6; pointer-events: none; }
+
     .item {
       display: flex; gap: 8px; align-items: baseline;
-      padding: 6px 0;
-      border-bottom: 1px solid rgba(255,255,255,.04);
+      padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.04);
     }
     .item:last-child { border-bottom: none; }
 
     .soup-block {
-      background: var(--soup-bg);
-      border-radius: 8px;
-      padding: 7px 10px;
-      margin: 2px -10px 6px;
+      background: var(--soup-bg); border-radius: 8px;
+      padding: 7px 10px; margin: 2px -10px 6px;
     }
-    .soup-lbl {
-      font-size: .65rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: .5px;
-      color: var(--soup-lbl); margin-bottom: 3px;
-    }
-    .soup-block .item-name { color: var(--soup-txt); }
+    .slbl { font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--slbl); margin-bottom: 3px; }
     .soup-row { display: flex; gap: 8px; align-items: baseline; }
+    .soup-block .iname { color: var(--soup); }
 
-    .item-num { color: var(--muted); font-size: .72rem; min-width: 18px; text-align: right; flex-shrink: 0; }
-    .item-name { flex: 1; font-size: .86rem; line-height: 1.4; }
-    .item-price { color: var(--price); font-size: .8rem; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+    .inum  { color: var(--muted); font-size: .7rem; min-width: 18px; text-align: right; flex-shrink: 0; }
+    .iname { flex: 1; font-size: .84rem; line-height: 1.4; }
+    .iprice { color: var(--price); font-size: .78rem; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
 
-    /* ── Empty / Error ────────────────────────── */
-    .card-empty { color: var(--muted); font-size: .84rem; font-style: italic; }
-    .card-err   { color: var(--error); font-size: .82rem; }
+    .card-empty { color: var(--muted); font-size: .82rem; font-style: italic; }
+    .card-err   { color: var(--err);   font-size: .8rem; }
 
-    /* ── Skeleton ─────────────────────────────── */
     .sk {
-      background: linear-gradient(90deg, var(--surface2) 25%, var(--border) 50%, var(--surface2) 75%);
-      background-size: 200% 100%;
-      animation: sh 1.4s infinite;
-      border-radius: 5px; height: 13px; margin-bottom: 9px;
+      background: linear-gradient(90deg, var(--sur2) 25%, var(--border) 50%, var(--sur2) 75%);
+      background-size: 200% 100%; animation: sh 1.4s infinite;
+      border-radius: 5px; height: 12px; margin-bottom: 8px;
     }
     @keyframes sh { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
 
-    /* ── Weekend notice ───────────────────────── */
-    #weekend {
-      display: none;
-      max-width: 420px; margin: 80px auto; text-align: center;
-    }
-    #weekend.show { display: block; }
-    #weekend .wi  { font-size: 3rem; margin-bottom: 14px; }
-    #weekend h2   { color: var(--muted); font-size: 1.2rem; font-weight: 500; }
-
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      color: var(--muted);
-      font-size: .75rem;
-    }
+    footer { margin-top: 36px; text-align: center; color: var(--muted); font-size: .72rem; }
 
     @media (max-width: 480px) {
-      main { padding: 12px; gap: 12px; }
-      header { padding: 14px 16px; }
+      main { padding: 10px 12px 0; gap: 12px; }
+      header { padding: 12px 16px; }
     }
   </style>
 </head>
@@ -169,124 +137,280 @@
 
 <header>
   <div class="logo">Polední menu <span>Brno</span></div>
-  <div class="header-right">
+  <div class="hright">
     <div id="date-chip">…</div>
+    <button id="refresh" onclick="init(true)">↺ Obnovit</button>
   </div>
 </header>
 
-<div id="status">Načítám…</div>
-
-<div id="weekend">
-  <div class="wi">🌴</div>
-  <h2>Víkend — žádné polední menu</h2>
-</div>
-
+<div id="status"></div>
 <main id="grid"></main>
-
 <footer id="foot"></footer>
 
 <script>
+// ─── Config ────────────────────────────────────────────────────────────────
+
+const RESTAURANTS = [
+  { id: 'suzies',   name: "Suzie's Steak Pub",   url: 'https://www.menicka.cz/3830-suzies-steak-pub.html',    type: 'menicka' },
+  { id: 'seminar',  name: 'Hostinec U Semináru',  url: 'https://www.menicka.cz/3197-hostinec-u-seminaru.html', type: 'menicka' },
+  { id: 'kormidlo', name: 'U Kormidla',            url: 'https://www.menicka.cz/6690-u-kormidla.html',          type: 'menicka' },
+  { id: 'laguna',   name: 'Restaurace Laguna',     url: 'https://www.menicka.cz/2701-restaurace-laguna.html',   type: 'menicka' },
+  { id: 'garden',   name: 'Garden Food Concept',   url: 'https://www.menicka.cz/6361-garden-food-concept.html', type: 'menicka' },
+  { id: 'namaskar', name: 'Namaskar',               url: 'https://www.namaskar.cz/poledni-menu/',                type: 'namaskar' },
+];
+
 const ICONS = { suzies:'🥩', seminar:'🍺', kormidlo:'⚓', laguna:'🐟', garden:'🌿', namaskar:'🍛' };
+
+// CORS proxy — proxies the request and returns JSON { contents: "<html>..." }
+const PROXY = url => `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+
+// ─── Date helpers ──────────────────────────────────────────────────────────
+
+function todayStr() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+
 const CS_DAYS   = ['Neděle','Pondělí','Úterý','Středa','Čtvrtek','Pátek','Sobota'];
 const CS_MONTHS = ['ledna','února','března','dubna','května','června','července','srpna','září','října','listopadu','prosince'];
-
-function esc(s) {
-  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
 
 function fmtDate(iso) {
   const d = new Date(iso + 'T00:00:00');
   return `${CS_DAYS[d.getDay()]} ${d.getDate()}. ${CS_MONTHS[d.getMonth()]}`;
 }
 
-function skeletonCard(name) {
+// ─── localStorage cache ────────────────────────────────────────────────────
+
+function readCache() {
+  try {
+    const raw = localStorage.getItem('menu-' + todayStr());
+    return raw ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
+
+function writeCache(data) {
+  try { localStorage.setItem('menu-' + todayStr(), JSON.stringify(data)); } catch {}
+}
+
+// ─── Fetching ──────────────────────────────────────────────────────────────
+
+async function fetchHtml(url) {
+  const res = await fetch(PROXY(url), { signal: AbortSignal.timeout(20000) });
+  if (!res.ok) throw new Error(`proxy HTTP ${res.status}`);
+  const json = await res.json();
+  if (!json.contents) throw new Error('proxy vrátil prázdnou odpověď');
+  return json.contents;
+}
+
+// ─── Parsers ───────────────────────────────────────────────────────────────
+
+function parseMenicka(html) {
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const now  = new Date();
+  const day  = now.getDate();
+  const mon  = now.getMonth() + 1;
+  const items = [];
+
+  // Each day has a .menicka section with h2.nadpis containing the date
+  doc.querySelectorAll('.menicka').forEach(section => {
+    const heading = section.querySelector('h2.nadpis, h2');
+    if (!heading) return;
+    const m = heading.textContent.match(/(\d{1,2})\.\s*(\d{1,2})/);
+    if (!m || +m[1] !== day || +m[2] !== mon) return;
+
+    section.querySelectorAll('li.polevka, li.jidlo').forEach(li => {
+      const name  = li.querySelector('.nazev')?.textContent.trim();
+      const price = li.querySelector('.cena')?.textContent.trim().replace(/\s+/g,' ');
+      const num   = li.querySelector('.cislo')?.textContent.trim() ?? '';
+      if (name) items.push({ number: num, name, price: price ?? '', isSoup: li.classList.contains('polevka') });
+    });
+  });
+
+  // Fallback: grab everything in .jidla lists (page may already show just today)
+  if (!items.length) {
+    doc.querySelectorAll('ul.jidla li').forEach(li => {
+      const name  = li.querySelector('.nazev')?.textContent.trim();
+      const price = li.querySelector('.cena')?.textContent.trim().replace(/\s+/g,' ');
+      const num   = li.querySelector('.cislo')?.textContent.trim() ?? '';
+      if (name) items.push({ number: num, name, price: price ?? '', isSoup: li.classList.contains('polevka') });
+    });
+  }
+
+  return items;
+}
+
+function parseNameaskar(html) {
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const items = [];
+
+  // Strategy 1: table rows with at least 2 cells
+  doc.querySelectorAll('table tr').forEach((tr, i) => {
+    const cells = [...tr.querySelectorAll('td')];
+    if (cells.length < 2) return;
+    const last  = cells[cells.length - 1].textContent.trim();
+    const price = /^\d+/.test(last) ? last : '';
+    const name  = (cells.length >= 3 ? cells[1] : cells[0]).textContent.trim();
+    const num   = cells[0].textContent.trim();
+    if (name && name.length > 3) items.push({ number: num, name, price, isSoup: false });
+  });
+  if (items.length) return items;
+
+  // Strategy 2: common CMS content containers, line by line
+  const containers = [
+    '.entry-content','.post-content','.page-content',
+    'article','.elementor-widget-text-editor','.wp-block-group',
+    '.poledni-menu','.lunch-menu','.menu-content',
+  ];
+  for (const sel of containers) {
+    const el = doc.querySelector(sel);
+    if (!el) continue;
+    const lines = el.textContent.split('\n')
+      .map(l => l.trim()).filter(l => l.length > 4 && l.length < 180);
+    if (lines.length > 2) {
+      lines.forEach((l, i) => items.push({ number: `${i+1}.`, name: l, price: '', isSoup: false }));
+      return items;
+    }
+  }
+
+  return items;
+}
+
+// ─── Scraping ──────────────────────────────────────────────────────────────
+
+async function scrapeOne(r) {
+  try {
+    const html  = await fetchHtml(r.url);
+    const items = r.type === 'namaskar' ? parseNameaskar(html) : parseMenicka(html);
+    return { ...r, items, error: null };
+  } catch (e) {
+    return { ...r, items: [], error: e.message };
+  }
+}
+
+// ─── Rendering ─────────────────────────────────────────────────────────────
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function skeletonCard(r) {
   return `<div class="card">
-    <div class="card-head"><div><div class="card-name">${esc(name)}</div></div></div>
-    <div class="card-body">
+    <div class="card-head">
+      <div><div class="card-name">${esc(r.name)}</div></div>
+      <div class="card-icon">${ICONS[r.id]??'🍽'}</div>
+    </div>
+    <div class="card-body loading">
       <div class="sk" style="width:80%"></div>
-      <div class="sk" style="width:55%"></div>
-      <div class="sk" style="width:70%"></div>
-      <div class="sk" style="width:45%"></div>
+      <div class="sk" style="width:60%"></div>
+      <div class="sk" style="width:72%"></div>
+      <div class="sk" style="width:48%"></div>
     </div>
   </div>`;
 }
 
-function renderCard(r) {
-  const icon = ICONS[r.id] ?? '🍽';
+function renderItems(items) {
+  return items.map(item => {
+    if (item.isSoup) return `
+      <div class="soup-block">
+        <div class="slbl">Polévka</div>
+        <div class="soup-row">
+          <div class="iname">${esc(item.name)}</div>
+          ${item.price ? `<div class="iprice">${esc(item.price)}</div>` : ''}
+        </div>
+      </div>`;
+    return `<div class="item">
+      <div class="inum">${esc(item.number)}</div>
+      <div class="iname">${esc(item.name)}</div>
+      ${item.price ? `<div class="iprice">${esc(item.price)}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+function fillCard(r) {
+  // find the card by id and update its body
+  const card = document.querySelector(`[data-id="${r.id}"]`);
+  if (!card) return;
   let domain;
   try { domain = new URL(r.url).hostname.replace('www.',''); } catch { domain = r.url; }
 
   let body;
-  if (r.error) {
-    body = `<div class="card-err">⚠ ${esc(r.error)}</div>`;
-  } else if (!r.items?.length) {
-    body = `<div class="card-empty">Dnes bez menu.</div>`;
-  } else {
-    body = r.items.map(item => {
-      if (item.isSoup) {
-        return `<div class="soup-block">
-          <div class="soup-lbl">Polévka</div>
-          <div class="soup-row">
-            <div class="item-name">${esc(item.name)}</div>
-            ${item.price ? `<div class="item-price">${esc(item.price)}</div>` : ''}
-          </div>
-        </div>`;
-      }
-      return `<div class="item">
-        <div class="item-num">${esc(item.number)}</div>
-        <div class="item-name">${esc(item.name)}</div>
-        ${item.price ? `<div class="item-price">${esc(item.price)}</div>` : ''}
-      </div>`;
-    }).join('');
-  }
+  if (r.error)          body = `<div class="card-err">⚠ ${esc(r.error)}</div>`;
+  else if (!r.items?.length) body = `<div class="card-empty">Dnes bez menu.</div>`;
+  else                  body = renderItems(r.items);
 
-  return `<div class="card">
-    <div class="card-head">
-      <div>
-        <div class="card-name">${esc(r.name)}</div>
-        <a class="card-link" href="${esc(r.url)}" target="_blank" rel="noopener">${esc(domain)} ↗</a>
+  card.querySelector('.card-body').className = 'card-body';
+  card.querySelector('.card-body').innerHTML = body;
+  card.querySelector('.card-link') && (card.querySelector('.card-link').href = r.url);
+}
+
+function buildGrid() {
+  document.getElementById('grid').innerHTML = RESTAURANTS.map(r => `
+    <div class="card" data-id="${r.id}">
+      <div class="card-head">
+        <div>
+          <div class="card-name">${esc(r.name)}</div>
+          <a class="card-link" href="${esc(r.url)}" target="_blank" rel="noopener">
+            ${(() => { try { return new URL(r.url).hostname.replace('www.',''); } catch { return r.url; } })()} ↗
+          </a>
+        </div>
+        <div class="card-icon">${ICONS[r.id]??'🍽'}</div>
       </div>
-      <div class="card-icon">${icon}</div>
-    </div>
-    <div class="card-body">${body}</div>
-  </div>`;
+      <div class="card-body loading">
+        <div class="sk" style="width:80%"></div>
+        <div class="sk" style="width:58%"></div>
+        <div class="sk" style="width:72%"></div>
+        <div class="sk" style="width:44%"></div>
+      </div>
+    </div>`).join('');
 }
 
-const PLACEHOLDERS = ["Suzie's Steak Pub","Hostinec U Semináru","U Kormidla","Restaurace Laguna","Garden Food Concept","Namaskar"];
+// ─── Main ──────────────────────────────────────────────────────────────────
 
-async function load() {
-  document.getElementById('grid').innerHTML = PLACEHOLDERS.map(skeletonCard).join('');
+async function init(force = false) {
+  const btn = document.getElementById('refresh');
+  btn.disabled = true;
 
-  try {
-    // cache-bust so browser doesn't serve a stale file
-    const res = await fetch(`menu.json?v=${Date.now()}`);
-    if (!res.ok) throw new Error(`HTTP ${res.status} — menu.json not found`);
-    const data = await res.json();
+  const today = todayStr();
+  document.getElementById('date-chip').textContent = fmtDate(today);
+  document.getElementById('status').textContent = '';
 
-    const d = new Date(data.date + 'T00:00:00');
-    const dow = d.getDay();
+  buildGrid();
 
-    document.getElementById('date-chip').textContent = fmtDate(data.date);
-    document.getElementById('weekend').classList.toggle('show', dow === 0 || dow === 6);
-    document.getElementById('grid').innerHTML = data.restaurants.map(renderCard).join('');
-
-    const gen = new Date(data.generatedAt);
-    document.getElementById('status').textContent =
-      `Aktualizováno: ${gen.toLocaleString('cs-CZ')}`;
-    document.getElementById('foot').textContent =
-      `menu-scraper · data z menicka.cz a namaskar.cz`;
-
-  } catch (err) {
-    document.getElementById('grid').innerHTML =
-      `<div style="color:var(--error);padding:20px;grid-column:1/-1">
-        <strong>Chyba:</strong> ${esc(err.message)}<br><br>
-        <small>Spusťte <code>node scraper.js</code> — soubor menu.json musí existovat.</small>
-      </div>`;
-    document.getElementById('status').textContent = '';
+  // Check cache
+  if (!force) {
+    const cached = readCache();
+    if (cached) {
+      cached.restaurants.forEach(fillCard);
+      const gen = new Date(cached.generatedAt);
+      document.getElementById('status').textContent =
+        `Z cache · ${gen.toLocaleTimeString('cs-CZ')}`;
+      btn.disabled = false;
+      return;
+    }
   }
+
+  document.getElementById('status').textContent = 'Načítám menu…';
+
+  // Scrape all in parallel, fill cards as each resolves
+  const promises = RESTAURANTS.map(r =>
+    scrapeOne(r).then(result => { fillCard(result); return result; })
+  );
+
+  const results = await Promise.all(promises);
+  const data = { date: today, generatedAt: new Date().toISOString(), restaurants: results };
+  writeCache(data);
+
+  const errors = results.filter(r => r.error).length;
+  document.getElementById('status').textContent = errors
+    ? `Hotovo · ${errors} restaurace se nepodařilo načíst`
+    : `Hotovo · ${new Date().toLocaleTimeString('cs-CZ')}`;
+
+  document.getElementById('foot').textContent =
+    `Data z menicka.cz a namaskar.cz · uloženo v localStorage do půlnoci`;
+  btn.disabled = false;
 }
 
-load();
+init();
 </script>
 </body>
 </html>
