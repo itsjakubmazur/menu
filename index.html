@@ -62,39 +62,17 @@
 
     .header-right { display: flex; align-items: center; gap: 8px; }
 
-    #settings-btn {
+    #refresh-btn {
       background: none; border: 1px solid var(--border);
       color: var(--muted); border-radius: 8px;
-      width: 32px; height: 32px; cursor: pointer; font-size: .95rem;
+      width: 32px; height: 32px; cursor: pointer; font-size: 1rem;
       display: flex; align-items: center; justify-content: center;
-      transition: color .15s, border-color .15s;
+      transition: color .15s, border-color .15s, transform .15s;
     }
-    #settings-btn:hover { color: var(--text); border-color: var(--accent); }
-    #settings-btn.active { color: var(--accent); border-color: var(--accent); }
+    #refresh-btn:hover { color: var(--text); border-color: var(--accent); }
+    #refresh-btn:active { transform: rotate(180deg); }
+    #refresh-btn:disabled { opacity: .4; cursor: default; }
 
-    /* ── Settings panel ──────────────────────────── */
-    #settings-panel {
-      background: var(--surface); border-bottom: 1px solid var(--border);
-      padding: 14px 20px; display: none;
-    }
-    #settings-panel.open { display: block; }
-
-    .settings-inner { max-width: 560px; display: flex; flex-direction: column; gap: 10px; }
-    .settings-inner label { font-size: .8rem; color: var(--muted); }
-    .settings-row { display: flex; gap: 8px; }
-    .settings-row input {
-      flex: 1; background: var(--sur2); border: 1px solid var(--border);
-      border-radius: 8px; padding: 7px 12px; color: var(--text); font-size: .83rem; outline: none;
-    }
-    .settings-row input:focus { border-color: var(--accent); }
-    .settings-row input::placeholder { color: var(--muted); }
-    .btn-save {
-      background: var(--accent); color: #fff; border: none;
-      border-radius: 8px; padding: 7px 16px; font-size: .82rem; font-weight: 600; cursor: pointer;
-    }
-    .btn-save:hover { opacity: .85; }
-    .settings-hint { font-size: .72rem; color: var(--muted); }
-    .settings-hint a { color: var(--accent); }
 
     /* ── Calendar ────────────────────────────────── */
     #calendar-wrap {
@@ -263,25 +241,10 @@
       <button class="tab active" onclick="switchTab('mine')">Moje hospody</button>
       <button class="tab"        onclick="switchTab('nearby')">📍 V okolí</button>
     </div>
-    <button id="settings-btn" onclick="toggleSettings()" title="Nastavení">⚙</button>
+    <button id="refresh-btn" onclick="refreshToday()" title="Obnovit dnešní menu">↺</button>
   </div>
 </header>
 
-<!-- Settings -->
-<div id="settings-panel">
-  <div class="settings-inner">
-    <label>Foursquare API klíč (pro záložku V okolí — zdarma, žádná karta)</label>
-    <div class="settings-row">
-      <input type="password" id="api-key-input" placeholder="fsq3…" autocomplete="off" />
-      <button class="btn-save" onclick="saveApiKey()">Uložit</button>
-    </div>
-    <div class="settings-hint">
-      Zdarma na <a href="https://foursquare.com/developers/app" target="_blank" rel="noopener">foursquare.com/developers</a>
-      → Create App → zkopíruj API Key (začíná <code>fsq3</code>). 1000 volání/den, není potřeba karta.
-      Klíč zůstane jen v tvém prohlížeči.
-    </div>
-  </div>
-</div>
 
 <!-- Panel: Moje hospody -->
 <div id="panel-mine">
@@ -319,7 +282,12 @@ const FIXED = [
 ];
 const ICONS = { suzies:'🥩', seminar:'🍺', kormidlo:'⚓', laguna:'🐟', garden:'🌿', namaskar:'🍛' };
 
-const PROXY  = u => `https://api.allorigins.win/get?url=${encodeURIComponent(u)}`;
+// Multiple CORS proxies tried in order — first success wins
+const PROXIES = [
+  u => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
+  u => `https://corsproxy.io/?${encodeURIComponent(u)}`,
+  u => `https://api.allorigins.win/get?url=${encodeURIComponent(u)}`,
+];
 const REPO   = 'itsjakubmazur/menu';
 const BRANCH = 'main';
 // For GitHub Pages: read data from raw content. For localhost: relative path.
@@ -348,8 +316,6 @@ function todayStr() {
 }
 
 const store = {
-  apiKey() { return localStorage.getItem('fsq-key') ?? ''; },
-  setApiKey(k) { localStorage.setItem('fsq-key', k); },
   dayCache(date) {
     try { const r = localStorage.getItem(`menu-${date}`); return r ? JSON.parse(r) : null; } catch { return null; }
   },
@@ -373,6 +339,14 @@ function fmtDate(iso) {
 
 function fmtDist(m) { return m < 1000 ? `${Math.round(m)} m` : `${(m/1000).toFixed(1)} km`; }
 
+function haversine(lat1, lon1, lat2, lon2) {
+  const R = 6371000;
+  const φ1 = lat1 * Math.PI / 180, φ2 = lat2 * Math.PI / 180;
+  const Δφ = (lat2 - lat1) * Math.PI / 180, Δλ = (lon2 - lon1) * Math.PI / 180;
+  const a = Math.sin(Δφ/2)**2 + Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
 function renderStars(r) {
   const n = Math.round(r * 2) / 2;
   let s = '';
@@ -384,12 +358,30 @@ function setStatus(msg) { document.getElementById('status').textContent = msg; }
 
 // ─── Network ──────────────────────────────────────────────────────────────
 
-async function fetchHtml(url, timeout = 18000) {
-  const res = await fetch(PROXY(url), { signal: AbortSignal.timeout(timeout) });
-  if (!res.ok) throw new Error(`proxy ${res.status}`);
-  const j = await res.json();
-  if (!j.contents) throw new Error('empty response');
-  return j.contents;
+async function fetchHtml(url, timeout = 12000) {
+  let lastErr;
+  for (const makeProxy of PROXIES) {
+    const ctrl = new AbortController();
+    const tid = setTimeout(() => ctrl.abort(), timeout);
+    try {
+      const res = await fetch(makeProxy(url), { signal: ctrl.signal });
+      clearTimeout(tid);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const ct = res.headers.get('content-type') ?? '';
+      if (ct.includes('json')) {
+        const j = await res.json();
+        const c = j.contents ?? j.body ?? '';
+        if (!c) throw new Error('empty json');
+        return c;
+      }
+      return await res.text();
+    } catch (e) {
+      clearTimeout(tid);
+      lastErr = e;
+      // AbortError or HTTP error → try next proxy
+    }
+  }
+  throw new Error(lastErr?.message ?? 'all proxies failed');
 }
 
 async function fetchJson(url, timeout = 8000) {
@@ -561,40 +553,41 @@ function showSkeletons(grid) {
 // ─── Parsers ──────────────────────────────────────────────────────────────
 
 // menicka.cz iframe API: https://menicka.cz/api/iframe/?id=XXXX
-// Returns a simple widget with the current week. Same CSS classes as full page
-// but much less noise. We find today's section by date, then grab all items.
+// The page returns the full week — one .menicka div per day.
+// Structure per day:
+//   <div class="menicka">
+//     <div class="nadpis">Středa 28. 5. 2025</div>  (or <h2 class="nadpis">)
+//     <ul class="jidla">
+//       <li class="polevka"><span class="cislo"></span><span class="nazev">…</span><span class="cena">…</span></li>
+//       <li class="jidlo"><span class="cislo">1.</span><span class="nazev">…</span><span class="cena">…</span></li>
+//     </ul>
+//   </div>
 function parseMenickaIframe(html) {
   const doc = new DOMParser().parseFromString(html, 'text/html');
   const now = new Date(), day = now.getDate(), mon = now.getMonth() + 1;
   const items = [];
 
-  // Find the heading that contains today's date, e.g. "Úterý 27. 5."
-  let todayEl = null;
-  for (const el of doc.querySelectorAll('h2, h3, .nadpis, .den-nadpis, [class*="den"]')) {
-    const m = el.textContent.match(/(\d{1,2})\.\s*(\d{1,2})/);
-    if (m && +m[1] === day && +m[2] === mon) { todayEl = el; break; }
-  }
+  // Walk every .menicka section and find the one whose heading matches today
+  for (const section of doc.querySelectorAll('.menicka')) {
+    // The date heading may be .nadpis, h2, h3 — try all
+    let headText = '';
+    for (const sel of ['.nadpis', 'h2', 'h3', 'h4', 'p']) {
+      const el = section.querySelector(sel);
+      if (el) { headText = el.textContent; break; }
+    }
+    if (!headText) headText = section.textContent.slice(0, 40);
 
-  // Collect li items from that day's container, or the whole page if single-day
-  const scope = todayEl
-    ? (todayEl.closest('.menicka-den, .den, section, div') ?? todayEl.parentElement)
-    : doc.body;
+    // Match day and month, tolerating spaces: "28. 5." or "28.5." or "28.5.2025"
+    const m = headText.match(/(\d{1,2})\s*\.\s*(\d{1,2})/);
+    if (!m || +m[1] !== day || +m[2] !== mon) continue;
 
-  scope.querySelectorAll('li.polevka, li.jidlo').forEach(li => {
-    const name  = li.querySelector('.nazev')?.textContent.trim();
-    const price = li.querySelector('.cena')?.textContent.trim().replace(/\s+/g, ' ') ?? '';
-    const num   = li.querySelector('.cislo')?.textContent.trim() ?? '';
-    if (name) items.push({ number: num, name, price, isSoup: li.classList.contains('polevka') });
-  });
-
-  // Last-resort: the iframe might not wrap days in a container we can scope to
-  if (!items.length) {
-    doc.querySelectorAll('li.polevka, li.jidlo').forEach(li => {
+    section.querySelectorAll('li').forEach(li => {
       const name  = li.querySelector('.nazev')?.textContent.trim();
       const price = li.querySelector('.cena')?.textContent.trim().replace(/\s+/g, ' ') ?? '';
       const num   = li.querySelector('.cislo')?.textContent.trim() ?? '';
       if (name) items.push({ number: num, name, price, isSoup: li.classList.contains('polevka') });
     });
+    break; // found today — stop
   }
 
   return items;
@@ -695,49 +688,36 @@ function renderFixedCard(r) {
   </div>`;
 }
 
-// ─── Nearby tab — Foursquare Places API (free, no credit card) ────────────
+// ─── Nearby tab — OpenStreetMap Overpass API (free, no key) ───────────────
 
-// Foursquare v3: https://developer.foursquare.com/reference/places-nearby
-// Rating is on 0–10 scale; distance is already in metres in the response.
-// Category 13065 = Restaurant
-
-async function fsqNearby(lat, lng, apiKey) {
-  const params = new URLSearchParams({
-    ll: `${lat},${lng}`,
-    radius: 1500,
-    categories: '13065',
-    sort: 'RATING',
-    limit: 15,
-    fields: 'fsq_id,name,rating,distance,location,website',
+async function findNearbyOSM(lat, lng, radiusM = 1500, limit = 5) {
+  const query = `[out:json][timeout:20];(node["amenity"="restaurant"](around:${radiusM},${lat},${lng});way["amenity"="restaurant"](around:${radiusM},${lat},${lng}););out center ${limit * 4};`;
+  const res = await fetch('https://overpass-api.de/api/interpreter', {
+    method: 'POST',
+    body: 'data=' + encodeURIComponent(query),
+    signal: AbortSignal.timeout(25000),
   });
-  const res = await fetch(`https://api.foursquare.com/v3/places/search?${params}`, {
-    headers: { Authorization: apiKey, Accept: 'application/json' },
-    signal: AbortSignal.timeout(12000),
-  });
-  if (!res.ok) {
-    const text = await res.text().catch(() => '');
-    throw new Error(`Foursquare ${res.status}${text ? ': ' + text.slice(0,120) : ''}`);
-  }
-  const data = await res.json();
-  // Keep places with rating ≥ 8 (≈ 4★ on a 5-star scale); fall back to all if too few
-  const rated = (data.results ?? []).filter(p => (p.rating ?? 0) >= 8);
-  return (rated.length >= 3 ? rated : data.results ?? []).slice(0, 5);
+  if (!res.ok) throw new Error(`Overpass ${res.status}`);
+  const json = await res.json();
+  return (json.elements ?? [])
+    .map(el => {
+      const tags = el.tags ?? {};
+      const elLat = el.lat ?? el.center?.lat;
+      const elLon = el.lon ?? el.center?.lon;
+      const dist = (elLat != null && elLon != null) ? Math.round(haversine(lat, lng, elLat, elLon)) : Infinity;
+      const website = tags.website ?? tags['contact:website'] ?? tags['contact:url'] ?? null;
+      const addr = [tags['addr:street'], tags['addr:housenumber']].filter(Boolean).join(' ');
+      return { id: String(el.id), name: tags.name, dist, addr, website };
+    })
+    .filter(p => p.name && p.dist < Infinity)
+    .sort((a, b) => a.dist - b.dist)
+    .slice(0, limit);
 }
 
 async function loadNearby() {
   if (nearbyLoaded) return;
   nearbyLoaded = true;
   const el = document.getElementById('nearby-content');
-  const apiKey = store.apiKey();
-  if (!apiKey) {
-    el.innerHTML = `<div class="panel-msg">
-      <div class="pm-icon">🗝</div>
-      <h2>Potřebuješ Foursquare API klíč</h2>
-      <p>Zdarma na <strong>foursquare.com/developers</strong> → Create App. Žádná karta, 1000 volání/den.</p>
-      <button class="btn-primary" onclick="toggleSettings()">⚙ Nastavení</button>
-    </div>`;
-    return;
-  }
 
   const cached = store.nearbyCache();
   if (cached?.places?.length) {
@@ -751,7 +731,7 @@ async function loadNearby() {
   el.innerHTML = `<div class="panel-msg">
     <div class="pm-icon">📍</div>
     <h2>Zjistit polohu</h2>
-    <p>Potřebujeme tvou polohu pro hledání nejbližších restaurací.</p>
+    <p>Potřebujeme tvou polohu pro hledání nejbližších restaurací (OpenStreetMap, bez API klíče).</p>
     <button class="btn-primary" onclick="startNearbySearch()">Povolit polohu</button>
   </div>`;
 }
@@ -805,19 +785,11 @@ function renderFallbackLinks(name, websiteUrl, mapsSearchUrl) {
 }
 
 function renderNearbyCard(place, menuResult) {
-  // Foursquare place object: { fsq_id, name, rating, distance, location, website }
-  const name    = place.name;
-  const rating  = place.rating;   // 0–10 scale
-  const dist    = place.distance; // metres, already computed by Foursquare
-  const addr    = place.location?.formatted_address ?? place.location?.address ?? '';
-  const website = place.website ?? (menuResult?.url && menuResult.source !== 'links' ? menuResult.url : null);
+  // OSM place object: { id, name, dist, addr, website }
+  const { name, dist, addr, website } = place;
   const mapsSearch = `https://www.google.com/search?q=${encodeURIComponent(name + ' polední menu Brno')}`;
-
   let domain; try { domain = website ? new URL(website).hostname.replace('www.', '') : null; } catch {}
-
-  // Convert Foursquare 0–10 to 5-star display
-  const starsHtml = rating != null ? renderStars(rating / 2) : '';
-  const distHtml  = dist != null ? `<span class="dist-badge">${fmtDist(dist)}</span>` : '';
+  const distHtml = dist != null ? `<span class="dist-badge">${fmtDist(dist)}</span>` : '';
 
   let body;
   if (menuResult?.items?.length) {
@@ -832,7 +804,7 @@ function renderNearbyCard(place, menuResult) {
       <div>
         <div class="card-name">${esc(name)}</div>
         <div class="card-sub">
-          ${starsHtml} ${distHtml}
+          ${distHtml}
           ${domain ? `<a class="card-link" href="${esc(website)}" target="_blank" rel="noopener">${esc(domain)} ↗</a>` : ''}
           ${addr ? `<span class="card-addr">${esc(addr)}</span>` : ''}
         </div>
@@ -860,9 +832,9 @@ async function startNearbySearch() {
 
   let places;
   try {
-    places = await fsqNearby(lat, lng, store.apiKey());
+    places = await findNearbyOSM(lat, lng);
   } catch (e) {
-    el.innerHTML = `<div class="panel-msg"><div class="pm-icon">⚠</div><h2>Chyba Foursquare API</h2><p>${esc(e.message)}</p><button class="btn-primary" onclick="toggleSettings()">⚙ Zkontrolovat klíč</button></div>`;
+    el.innerHTML = `<div class="panel-msg"><div class="pm-icon">⚠</div><h2>Chyba při hledání</h2><p>${esc(e.message)}</p><button class="btn-primary" onclick="startNearbySearch()">Zkusit znovu</button></div>`;
     return;
   }
 
@@ -873,11 +845,11 @@ async function startNearbySearch() {
 
   const grid = document.createElement('div'); grid.className = 'grid';
   grid.innerHTML = places.map(p => `
-    <div class="card" id="nc-${CSS.escape(p.fsq_id)}">
+    <div class="card" id="nc-${CSS.escape(p.id)}">
       <div class="card-head">
         <div>
           <div class="card-name">${esc(p.name)}</div>
-          <div class="card-sub">${p.rating != null ? renderStars(p.rating/2) : ''} ${p.distance != null ? `<span class="dist-badge">${fmtDist(p.distance)}</span>` : ''}</div>
+          <div class="card-sub"><span class="dist-badge">${fmtDist(p.dist)}</span></div>
         </div>
         <div class="card-icon">🍽</div>
       </div>
@@ -893,7 +865,7 @@ async function startNearbySearch() {
   const resolved = await Promise.all(places.map(async p => {
     const menu = await resolveNearbyMenu(p.name, p.website ?? null);
     const card = renderNearbyCard(p, menu);
-    const old  = grid.querySelector(`#nc-${CSS.escape(p.fsq_id)}`);
+    const old  = grid.querySelector(`#nc-${CSS.escape(p.id)}`);
     if (old) old.outerHTML = card;
     return { place: p, menu };
   }));
@@ -902,21 +874,18 @@ async function startNearbySearch() {
   setStatus(`Hotovo · ${new Date().toLocaleTimeString('cs-CZ')}`);
 }
 
-// ─── Settings ─────────────────────────────────────────────────────────────
+// ─── Refresh ──────────────────────────────────────────────────────────────
 
-function toggleSettings() {
-  const p = document.getElementById('settings-panel');
-  const b = document.getElementById('settings-btn');
-  const open = !p.classList.contains('open');
-  p.classList.toggle('open', open);
-  b.classList.toggle('active', open);
-  if (open) document.getElementById('api-key-input').value = store.apiKey();
-}
-
-function saveApiKey() {
-  store.setApiKey(document.getElementById('api-key-input').value.trim());
-  toggleSettings();
-  if (activeTab === 'nearby') { nearbyLoaded = false; loadNearby(); }
+function refreshToday() {
+  const btn = document.getElementById('refresh-btn');
+  btn.disabled = true;
+  const today = todayStr();
+  localStorage.removeItem(`menu-${today}`);
+  selectedDate = today;
+  calYear = null; calMonth = null;
+  renderCalendar();
+  scrapeLiveToday(document.getElementById('grid-mine'))
+    .finally(() => { btn.disabled = false; });
 }
 
 // ─── Tabs ─────────────────────────────────────────────────────────────────
