@@ -1,28 +1,23 @@
 'use strict';
 
-const express = require('express');
+// Local dev server — serves index.html + menu.json statically.
+// Run: node scraper.js && node server.js
+
+const http = require('http');
+const fs   = require('fs');
 const path = require('path');
-const { getMenu } = require('./scraper');
 
-const app = express();
 const PORT = process.env.PORT || 3000;
+const MIME = { '.html':'text/html', '.json':'application/json', '.js':'text/javascript', '.css':'text/css' };
 
-app.use(express.static(path.join(__dirname)));
+http.createServer((req, res) => {
+  const file = req.url === '/' ? 'index.html' : req.url.split('?')[0].replace(/^\//, '');
+  const filePath = path.join(__dirname, file);
 
-// Kick off scraping at startup (non-blocking)
-let menuPromise = getMenu();
-
-app.get('/api/menu', async (req, res) => {
-  try {
-    const force = req.query.force === '1';
-    if (force) menuPromise = getMenu({ forceRefresh: true });
-    const data = await menuPromise;
-    res.json(data);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
-app.listen(PORT, () => {
-  console.log(`\nMenu server running → http://localhost:${PORT}\n`);
-});
+  fs.readFile(filePath, (err, data) => {
+    if (err) { res.writeHead(404); return res.end('Not found'); }
+    const ext = path.extname(filePath);
+    res.writeHead(200, { 'Content-Type': MIME[ext] ?? 'text/plain' });
+    res.end(data);
+  });
+}).listen(PORT, () => console.log(`http://localhost:${PORT}`));

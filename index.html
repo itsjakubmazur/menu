@@ -8,437 +8,285 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:        #0f1117;
-      --surface:   #1a1d27;
-      --surface2:  #22263a;
-      --border:    #2e334d;
-      --accent:    #6c8aff;
-      --accent2:   #ff9f6c;
-      --soup:      #3d8f6f;
-      --soup-bg:   #1a2e26;
-      --text:      #e4e6f0;
-      --muted:     #7a7f9a;
-      --price:     #a8d8a8;
-      --error:     #ff6b6b;
-      --success:   #6bcb77;
-      --radius:    14px;
+      --bg:       #0f1117;
+      --surface:  #1a1d27;
+      --surface2: #22263a;
+      --border:   #2e334d;
+      --accent:   #6c8aff;
+      --text:     #e4e6f0;
+      --muted:    #7a7f9a;
+      --price:    #a8d8a8;
+      --soup-bg:  #1a2e26;
+      --soup-txt: #7dd1b0;
+      --soup-lbl: #3d8f6f;
+      --error:    #ff6b6b;
+      --r:        14px;
     }
-
-    html { font-size: 15px; }
 
     body {
       background: var(--bg);
       color: var(--text);
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       min-height: 100vh;
-      padding: 0 0 60px;
+      padding-bottom: 60px;
     }
 
-    /* ── Header ── */
+    /* ── Header ───────────────────────────────── */
     header {
-      background: linear-gradient(135deg, #1a1d27 0%, #0f1117 100%);
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,.92);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
-      padding: 24px 24px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(8px);
+      padding: 18px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; flex-wrap: wrap;
     }
 
-    header h1 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: -0.3px;
-      color: #fff;
-    }
+    .logo { font-size: 1.25rem; font-weight: 700; color: #fff; }
+    .logo span { color: var(--accent); }
 
-    header h1 span {
-      color: var(--accent);
-    }
+    .header-right { display: flex; align-items: center; gap: 10px; }
 
-    .header-meta {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    #date-badge {
+    #date-chip {
       background: var(--surface2);
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 4px 14px;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--muted);
     }
 
-    #refresh-btn {
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      border-radius: 20px;
-      padding: 6px 16px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: opacity .15s, transform .15s;
-    }
-
-    #refresh-btn:hover  { opacity: .85; }
-    #refresh-btn:active { transform: scale(.96); }
-    #refresh-btn:disabled { opacity: .45; cursor: default; }
-
-    /* ── Status bar ── */
-    #status-bar {
+    /* ── Status ───────────────────────────────── */
+    #status {
       text-align: center;
-      padding: 10px;
-      font-size: 0.82rem;
+      padding: 8px 20px;
+      font-size: 0.78rem;
       color: var(--muted);
-      display: none;
+      min-height: 30px;
     }
 
-    #status-bar.visible { display: block; }
-
-    /* ── Main grid ── */
+    /* ── Grid ─────────────────────────────────── */
     main {
-      max-width: 1400px;
+      max-width: 1440px;
       margin: 0 auto;
-      padding: 28px 20px 0;
+      padding: 20px 20px 0;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 18px;
     }
 
-    /* ── Restaurant card ── */
+    /* ── Card ─────────────────────────────────── */
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: border-color .2s, box-shadow .2s;
+      border-radius: var(--r);
+      display: flex; flex-direction: column;
+      transition: border-color .18s, box-shadow .18s;
     }
-
     .card:hover {
       border-color: var(--accent);
-      box-shadow: 0 4px 24px rgba(108, 138, 255, .12);
+      box-shadow: 0 4px 28px rgba(108,138,255,.1);
     }
 
-    .card-header {
-      padding: 16px 18px 14px;
+    .card-head {
+      padding: 14px 16px 12px;
       border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 10px;
+      display: flex; justify-content: space-between; align-items: flex-start;
     }
 
-    .card-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.3;
-    }
-
+    .card-name { font-weight: 700; font-size: .95rem; color: #fff; }
     .card-link {
-      color: var(--muted);
-      font-size: 0.72rem;
-      text-decoration: none;
-      white-space: nowrap;
-      margin-top: 2px;
-      display: block;
+      font-size: .7rem; color: var(--muted); text-decoration: none;
+      display: block; margin-top: 2px;
     }
-
     .card-link:hover { color: var(--accent); }
+    .card-icon { font-size: 1.4rem; opacity: .35; }
 
-    .card-body {
-      padding: 14px 18px;
-      flex: 1;
-    }
+    .card-body { padding: 12px 16px; flex: 1; }
 
-    /* ── Error state ── */
-    .card-error {
-      color: var(--error);
-      font-size: 0.82rem;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* ── Empty state ── */
-    .card-empty {
-      color: var(--muted);
-      font-size: 0.85rem;
-      font-style: italic;
-    }
-
-    /* ── Menu item ── */
+    /* ── Items ────────────────────────────────── */
     .item {
-      display: flex;
-      gap: 10px;
-      align-items: baseline;
-      padding: 7px 0;
+      display: flex; gap: 8px; align-items: baseline;
+      padding: 6px 0;
       border-bottom: 1px solid rgba(255,255,255,.04);
     }
-
     .item:last-child { border-bottom: none; }
 
-    .item-soup {
+    .soup-block {
       background: var(--soup-bg);
       border-radius: 8px;
       padding: 7px 10px;
-      margin: 4px -10px 6px;
+      margin: 2px -10px 6px;
     }
-
-    .item-soup .item-name { color: #7dd1b0; }
-
-    .item-num {
-      color: var(--muted);
-      font-size: 0.75rem;
-      min-width: 20px;
-      text-align: right;
-      flex-shrink: 0;
+    .soup-lbl {
+      font-size: .65rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .5px;
+      color: var(--soup-lbl); margin-bottom: 3px;
     }
+    .soup-block .item-name { color: var(--soup-txt); }
+    .soup-row { display: flex; gap: 8px; align-items: baseline; }
 
-    .item-name {
-      flex: 1;
-      font-size: 0.88rem;
-      line-height: 1.4;
-      color: var(--text);
-    }
+    .item-num { color: var(--muted); font-size: .72rem; min-width: 18px; text-align: right; flex-shrink: 0; }
+    .item-name { flex: 1; font-size: .86rem; line-height: 1.4; }
+    .item-price { color: var(--price); font-size: .8rem; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
 
-    .item-price {
-      color: var(--price);
-      font-size: 0.82rem;
-      font-weight: 600;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
+    /* ── Empty / Error ────────────────────────── */
+    .card-empty { color: var(--muted); font-size: .84rem; font-style: italic; }
+    .card-err   { color: var(--error); font-size: .82rem; }
 
-    /* ── Soup label ── */
-    .soup-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .5px;
-      color: var(--soup);
-      margin-bottom: 4px;
-    }
-
-    /* ── Loading skeleton ── */
-    .skeleton {
+    /* ── Skeleton ─────────────────────────────── */
+    .sk {
       background: linear-gradient(90deg, var(--surface2) 25%, var(--border) 50%, var(--surface2) 75%);
       background-size: 200% 100%;
-      animation: shimmer 1.4s infinite;
-      border-radius: 6px;
-      height: 14px;
-      margin-bottom: 10px;
+      animation: sh 1.4s infinite;
+      border-radius: 5px; height: 13px; margin-bottom: 9px;
     }
+    @keyframes sh { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
 
-    @keyframes shimmer {
-      0%   { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
-    }
-
-    /* ── Footer ── */
-    footer {
-      text-align: center;
-      padding: 40px 20px 0;
-      color: var(--muted);
-      font-size: 0.78rem;
-    }
-
-    /* ── Weekend notice ── */
-    #weekend-notice {
-      max-width: 500px;
-      margin: 60px auto;
-      text-align: center;
+    /* ── Weekend notice ───────────────────────── */
+    #weekend {
       display: none;
+      max-width: 420px; margin: 80px auto; text-align: center;
+    }
+    #weekend.show { display: block; }
+    #weekend .wi  { font-size: 3rem; margin-bottom: 14px; }
+    #weekend h2   { color: var(--muted); font-size: 1.2rem; font-weight: 500; }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .75rem;
     }
 
-    #weekend-notice.visible { display: block; }
-
-    #weekend-notice .icon { font-size: 3rem; margin-bottom: 16px; }
-    #weekend-notice h2 { font-size: 1.3rem; color: var(--muted); }
-
-    @media (max-width: 500px) {
-      main { padding: 16px 12px 0; gap: 14px; }
-      header { padding: 16px; }
+    @media (max-width: 480px) {
+      main { padding: 12px; gap: 12px; }
+      header { padding: 14px 16px; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div>
-    <h1>Polední menu <span>Brno</span></h1>
-  </div>
-  <div class="header-meta">
-    <div id="date-badge">načítám…</div>
-    <button id="refresh-btn" onclick="loadMenu(true)">↺ Aktualizovat</button>
+  <div class="logo">Polední menu <span>Brno</span></div>
+  <div class="header-right">
+    <div id="date-chip">…</div>
   </div>
 </header>
 
-<div id="status-bar"></div>
+<div id="status">Načítám…</div>
 
-<div id="weekend-notice">
-  <div class="icon">🌴</div>
+<div id="weekend">
+  <div class="wi">🌴</div>
   <h2>Víkend — žádné polední menu</h2>
 </div>
 
 <main id="grid"></main>
 
-<footer id="footer"></footer>
+<footer id="foot"></footer>
 
 <script>
-  const CZECH_DAYS   = ['Neděle','Pondělí','Úterý','Středa','Čtvrtek','Pátek','Sobota'];
-  const CZECH_MONTHS = ['ledna','února','března','dubna','května','června','července','srpna','září','října','listopadu','prosince'];
+const ICONS = { suzies:'🥩', seminar:'🍺', kormidlo:'⚓', laguna:'🐟', garden:'🌿', namaskar:'🍛' };
+const CS_DAYS   = ['Neděle','Pondělí','Úterý','Středa','Čtvrtek','Pátek','Sobota'];
+const CS_MONTHS = ['ledna','února','března','dubna','května','června','července','srpna','září','října','listopadu','prosince'];
 
-  function formatDate(dateStr) {
-    const d = new Date(dateStr + 'T00:00:00');
-    return `${CZECH_DAYS[d.getDay()]} ${d.getDate()}. ${CZECH_MONTHS[d.getMonth()]} ${d.getFullYear()}`;
-  }
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
 
-  function setStatus(msg, visible = true) {
-    const el = document.getElementById('status-bar');
-    el.textContent = msg;
-    el.classList.toggle('visible', visible);
-  }
+function fmtDate(iso) {
+  const d = new Date(iso + 'T00:00:00');
+  return `${CS_DAYS[d.getDay()]} ${d.getDate()}. ${CS_MONTHS[d.getMonth()]}`;
+}
 
-  function skeletonCard(name) {
-    return `
-      <div class="card">
-        <div class="card-header">
-          <div><div class="card-title">${name}</div></div>
-        </div>
-        <div class="card-body">
-          <div class="skeleton" style="width:80%"></div>
-          <div class="skeleton" style="width:60%"></div>
-          <div class="skeleton" style="width:75%"></div>
-          <div class="skeleton" style="width:50%"></div>
-        </div>
-      </div>`;
-  }
+function skeletonCard(name) {
+  return `<div class="card">
+    <div class="card-head"><div><div class="card-name">${esc(name)}</div></div></div>
+    <div class="card-body">
+      <div class="sk" style="width:80%"></div>
+      <div class="sk" style="width:55%"></div>
+      <div class="sk" style="width:70%"></div>
+      <div class="sk" style="width:45%"></div>
+    </div>
+  </div>`;
+}
 
-  function renderCard(restaurant) {
-    const { name, url, items, error } = restaurant;
+function renderCard(r) {
+  const icon = ICONS[r.id] ?? '🍽';
+  let domain;
+  try { domain = new URL(r.url).hostname.replace('www.',''); } catch { domain = r.url; }
 
-    let body;
-    if (error) {
-      body = `<div class="card-error">⚠ ${escHtml(error)}</div>`;
-    } else if (!items || items.length === 0) {
-      body = `<div class="card-empty">Menu dnes není k dispozici.</div>`;
-    } else {
-      body = items.map(item => {
-        if (item.isSoup) {
-          return `
-            <div class="item item-soup">
-              <div class="soup-label">Polévka</div>
-              <div style="display:flex;gap:10px;align-items:baseline">
-                <div class="item-name">${escHtml(item.name)}</div>
-                ${item.price ? `<div class="item-price">${escHtml(item.price)}</div>` : ''}
-              </div>
-            </div>`;
-        }
-        return `
-          <div class="item">
-            <div class="item-num">${item.number ? escHtml(item.number) : ''}</div>
-            <div class="item-name">${escHtml(item.name)}</div>
-            ${item.price ? `<div class="item-price">${escHtml(item.price)}</div>` : ''}
-          </div>`;
-      }).join('');
-    }
-
-    const linkDomain = (() => {
-      try { return new URL(url).hostname.replace('www.', ''); } catch { return url; }
-    })();
-
-    return `
-      <div class="card">
-        <div class="card-header">
-          <div>
-            <div class="card-title">${escHtml(name)}</div>
-            <a class="card-link" href="${escHtml(url)}" target="_blank" rel="noopener">${escHtml(linkDomain)} ↗</a>
+  let body;
+  if (r.error) {
+    body = `<div class="card-err">⚠ ${esc(r.error)}</div>`;
+  } else if (!r.items?.length) {
+    body = `<div class="card-empty">Dnes bez menu.</div>`;
+  } else {
+    body = r.items.map(item => {
+      if (item.isSoup) {
+        return `<div class="soup-block">
+          <div class="soup-lbl">Polévka</div>
+          <div class="soup-row">
+            <div class="item-name">${esc(item.name)}</div>
+            ${item.price ? `<div class="item-price">${esc(item.price)}</div>` : ''}
           </div>
-          <div style="font-size:1.4rem;opacity:.35">${restaurantIcon(restaurant.id)}</div>
-        </div>
-        <div class="card-body">${body}</div>
+        </div>`;
+      }
+      return `<div class="item">
+        <div class="item-num">${esc(item.number)}</div>
+        <div class="item-name">${esc(item.name)}</div>
+        ${item.price ? `<div class="item-price">${esc(item.price)}</div>` : ''}
       </div>`;
+    }).join('');
   }
 
-  function restaurantIcon(id) {
-    const icons = {
-      suzies: '🥩', seminar: '🍺', kormidlo: '⚓',
-      laguna: '🐟', garden: '🌿', namaskar: '🍛',
-    };
-    return icons[id] || '🍽';
-  }
+  return `<div class="card">
+    <div class="card-head">
+      <div>
+        <div class="card-name">${esc(r.name)}</div>
+        <a class="card-link" href="${esc(r.url)}" target="_blank" rel="noopener">${esc(domain)} ↗</a>
+      </div>
+      <div class="card-icon">${icon}</div>
+    </div>
+    <div class="card-body">${body}</div>
+  </div>`;
+}
 
-  function escHtml(str) {
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
-  }
+const PLACEHOLDERS = ["Suzie's Steak Pub","Hostinec U Semináru","U Kormidla","Restaurace Laguna","Garden Food Concept","Namaskar"];
 
-  const ALL_NAMES = [
-    "Suzie's Steak Pub", 'Hostinec U Semináru', 'U Kormidla',
-    'Restaurace Laguna', 'Garden Food Concept', 'Namaskar',
-  ];
+async function load() {
+  document.getElementById('grid').innerHTML = PLACEHOLDERS.map(skeletonCard).join('');
 
-  async function loadMenu(force = false) {
-    const btn = document.getElementById('refresh-btn');
-    btn.disabled = true;
+  try {
+    // cache-bust so browser doesn't serve a stale file
+    const res = await fetch(`menu.json?v=${Date.now()}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status} — menu.json not found`);
+    const data = await res.json();
 
-    // Show skeletons
-    const grid = document.getElementById('grid');
-    grid.innerHTML = ALL_NAMES.map(skeletonCard).join('');
-    setStatus('Načítám menu…');
+    const d = new Date(data.date + 'T00:00:00');
+    const dow = d.getDay();
 
-    try {
-      const url = force ? '/api/menu?force=1' : '/api/menu';
-      const res = await fetch(url);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
+    document.getElementById('date-chip').textContent = fmtDate(data.date);
+    document.getElementById('weekend').classList.toggle('show', dow === 0 || dow === 6);
+    document.getElementById('grid').innerHTML = data.restaurants.map(renderCard).join('');
 
-      // Weekend check
-      const d = new Date(data.date + 'T00:00:00');
-      const dow = d.getDay();
-      document.getElementById('weekend-notice').classList.toggle('visible', dow === 0 || dow === 6);
+    const gen = new Date(data.generatedAt);
+    document.getElementById('status').textContent =
+      `Aktualizováno: ${gen.toLocaleString('cs-CZ')}`;
+    document.getElementById('foot').textContent =
+      `menu-scraper · data z menicka.cz a namaskar.cz`;
 
-      // Date badge
-      document.getElementById('date-badge').textContent = formatDate(data.date);
-
-      // Render cards
-      grid.innerHTML = data.restaurants.map(renderCard).join('');
-
-      const generated = new Date(data.generatedAt);
-      const fromCache = (Date.now() - generated.getTime()) > 60_000;
-      setStatus(fromCache
-        ? `Data z cache · ${generated.toLocaleTimeString('cs-CZ')} · ${data.date}`
-        : `Čerstvě staženo · ${generated.toLocaleTimeString('cs-CZ')}`, true);
-
-      document.getElementById('footer').innerHTML =
-        `Generováno: ${generated.toLocaleString('cs-CZ')} &nbsp;·&nbsp; menu-scraper`;
-
-    } catch (err) {
-      grid.innerHTML = `<div style="color:var(--error);padding:20px;grid-column:1/-1">
-        Chyba při načítání: ${escHtml(err.message)}<br>
-        <small>Spusťte <code>node server.js</code> a obnovte stránku.</small>
+  } catch (err) {
+    document.getElementById('grid').innerHTML =
+      `<div style="color:var(--error);padding:20px;grid-column:1/-1">
+        <strong>Chyba:</strong> ${esc(err.message)}<br><br>
+        <small>Spusťte <code>node scraper.js</code> — soubor menu.json musí existovat.</small>
       </div>`;
-      setStatus('Chyba při načítání', true);
-    }
-
-    btn.disabled = false;
+    document.getElementById('status').textContent = '';
   }
+}
 
-  loadMenu();
+load();
 </script>
 </body>
 </html>

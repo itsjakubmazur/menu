@@ -4,8 +4,9 @@
   "description": "Polední menu scraper - Brno restaurace",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "scrape": "node scraper.js"
+    "scrape": "node scraper.js",
+    "scrape:force": "node scraper.js --force",
+    "dev": "node scraper.js && node server.js"
   },
   "dependencies": {
     "axios": "^1.6.7",

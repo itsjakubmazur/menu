@@ -1,0 +1,35 @@
+name: Scrape menus
+
+on:
+  schedule:
+    # Weekdays at 08:30 UTC = 10:30 CEST / 09:30 CET
+    - cron: '30 8 * * 1-5'
+  workflow_dispatch:   # manual trigger from GitHub UI
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Scrape menus
+        run: node scraper.js --force
+
+      - name: Commit menu.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add menu.json
+          git diff --staged --quiet || git commit -m "chore: menu $(date +%Y-%m-%d)"
+          git push
