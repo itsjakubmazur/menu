@@ -46,35 +46,24 @@ function parseMenickaIframe(html) {
   const now = new Date(), day = now.getDate(), mon = now.getMonth() + 1;
   const items = [];
 
-  // Find today's section by date heading
+  // Structure: div.content per day, h2 with date, table.menu with tr.soup/tr.main
   let todaySection = null;
-  $('.menicka').each((_, section) => {
-    const headText = $(section).find('.nadpis, h2, h3, h4').first().text();
-    const m = headText.match(/(\d{1,2})\s*\.\s*(\d{1,2})/);
+  $('div.content').each((_, section) => {
+    const $s = $(section);
+    if ($s.find('h2 .dnes').length) { todaySection = section; return false; }
+    const m = $s.find('h2').first().text().match(/(\d{1,2})\.(\d{1,2})/);
     if (m && +m[1] === day && +m[2] === mon) { todaySection = section; return false; }
   });
 
-  const $scope = todaySection ? $(todaySection) : $('body');
+  if (!todaySection) return items;
 
-  $scope.find('li').each((_, li) => {
-    const $li = $(li);
-
-    // Style A: span.nazev / span.cislo
-    const nazev = $li.find('.nazev').text().trim();
-    if (nazev) {
-      const price = $li.find('.cena').text().trim().replace(/\s+/g, ' ');
-      const num   = $li.find('.cislo').text().trim();
-      items.push({ number: num, name: nazev, price, isSoup: $li.hasClass('polevka') });
-      return;
-    }
-
-    // Style B: div.polozka / span.poradi / div.cena
-    const $polozka = $li.find('.polozka');
-    if ($polozka.length) {
-      const num  = $polozka.find('.poradi').text().trim();
-      const name = $polozka.clone().find('.poradi').remove().end().text().trim();
-      const price = $li.find('.cena').text().trim().replace(/\s+/g, ' ');
-      if (name) items.push({ number: num, name, price, isSoup: false });
+  $(todaySection).find('tr.soup, tr.main').each((_, tr) => {
+    const $tr   = $(tr);
+    const name  = $tr.find('td.food').text().trim();
+    const price = $tr.find('td.prize').text().trim();
+    const num   = $tr.find('td.no').text().trim();
+    if (name && !name.startsWith('Pro tento den')) {
+      items.push({ number: num, name, price, isSoup: $tr.hasClass('soup') });
     }
   });
 
