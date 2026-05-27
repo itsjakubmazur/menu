@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Polední menu — Brno</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -27,7 +30,7 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
       min-height: 100vh;
       padding-bottom: 60px;
     }
@@ -72,6 +75,16 @@
     #refresh-btn:hover { color: var(--text); border-color: var(--accent); }
     #refresh-btn:active { transform: rotate(180deg); }
     #refresh-btn:disabled { opacity: .4; cursor: default; }
+
+    #cal-btn {
+      background: none; border: 1px solid var(--border);
+      color: var(--muted); border-radius: 8px;
+      width: 32px; height: 32px; cursor: pointer; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: color .15s, border-color .15s;
+    }
+    #cal-btn:hover { color: var(--text); border-color: var(--accent); }
+    #cal-btn.active { color: var(--accent); border-color: var(--accent); }
 
 
     /* ── Calendar ────────────────────────────────── */
@@ -241,6 +254,7 @@
       <button class="tab active" onclick="switchTab('mine')">Moje hospody</button>
       <button class="tab"        onclick="switchTab('nearby')">📍 V okolí</button>
     </div>
+    <button id="cal-btn" onclick="toggleCalendar()" title="Kalendář">📅</button>
     <button id="refresh-btn" onclick="refreshToday()" title="Obnovit dnešní menu">↺</button>
   </div>
 </header>
@@ -249,7 +263,7 @@
 <!-- Panel: Moje hospody -->
 <div id="panel-mine">
   <!-- Calendar -->
-  <div id="calendar-wrap">
+  <div id="calendar-wrap" hidden>
     <div class="cal-header">
       <button class="cal-nav" id="cal-prev" onclick="calNav(-1)">‹</button>
       <div class="cal-month" id="cal-month-label"></div>
@@ -278,9 +292,8 @@ const FIXED = [
   { id:'kormidlo', name:'U Kormidla',           menickaId:6690, url:'https://www.menicka.cz/6690-u-kormidla.html',          type:'menicka' },
   { id:'laguna',   name:'Restaurace Laguna',    menickaId:2701, url:'https://www.menicka.cz/2701-restaurace-laguna.html',   type:'menicka' },
   { id:'garden',   name:'Garden Food Concept',  menickaId:6361, url:'https://www.menicka.cz/6361-garden-food-concept.html', type:'menicka' },
-  { id:'namaskar', name:'Namaskar',              menickaId:null, url:'https://www.namaskar.cz/poledni-menu/',                type:'generic' },
 ];
-const ICONS = { suzies:'🥩', seminar:'🍺', kormidlo:'⚓', laguna:'🐟', garden:'🌿', namaskar:'🍛' };
+const ICONS = { suzies:'🥩', seminar:'🍺', kormidlo:'⚓', laguna:'🐟', garden:'🌿' };
 
 // Multiple CORS proxies tried in order — first success wins
 const PROXIES = [
@@ -374,7 +387,14 @@ async function fetchHtml(url, timeout = 12000) {
         if (!c) throw new Error('empty json');
         return c;
       }
-      return await res.text();
+      // Decode with correct charset — menicka.cz uses windows-1250, not UTF-8
+      const buf = await res.arrayBuffer();
+      const prefix = new TextDecoder('latin1').decode(buf.slice(0, 2048));
+      const metaCharset = prefix.match(/charset=["']?([\w-]+)/i)?.[1];
+      if (metaCharset && !/utf-?8/i.test(metaCharset)) {
+        try { return new TextDecoder(metaCharset).decode(buf); } catch {}
+      }
+      return new TextDecoder('utf-8').decode(buf);
     } catch (e) {
       clearTimeout(tid);
       lastErr = e;
@@ -476,7 +496,9 @@ function calNav(dir) {
 
 async function selectDate(date) {
   selectedDate = date;
-  renderCalendar(); // update selected highlight
+  document.getElementById('calendar-wrap').hidden = true;
+  document.getElementById('cal-btn').classList.remove('active');
+  renderCalendar();
   await loadDayData(date);
 }
 
@@ -552,27 +574,11 @@ function showSkeletons(grid) {
 
 // ─── Parsers ──────────────────────────────────────────────────────────────
 
-// menicka.cz iframe API: https://menicka.cz/api/iframe/?id=XXXX
-// Structure: div.content per day, h2 heading (today has span.dnes inside),
-// table.menu with tr.soup / tr.main rows, td.no / td.food / td.prize cells.
-function parseMenickaIframe(html) {
-  const doc = new DOMParser().parseFromString(html, 'text/html');
-  const now = new Date(), day = now.getDate(), mon = now.getMonth() + 1;
+// menicka.cz iframe: div.content per day, h2 (today has span.dnes),
+// table.menu with tr.soup/tr.main, td.no/td.food/td.prize.
+function parseSectionItems(section) {
   const items = [];
-
-  let todaySection = null;
-  for (const section of doc.querySelectorAll('div.content')) {
-    // Primary: today is flagged with span.dnes inside the h2
-    if (section.querySelector('h2 .dnes')) { todaySection = section; break; }
-    // Fallback: match date "27.5" numerically
-    const h2 = section.querySelector('h2');
-    const m  = h2?.textContent.match(/(\d{1,2})\.(\d{1,2})/);
-    if (m && +m[1] === day && +m[2] === mon) { todaySection = section; break; }
-  }
-
-  if (!todaySection) return items;
-
-  for (const tr of todaySection.querySelectorAll('tr.soup, tr.main')) {
+  for (const tr of section.querySelectorAll('tr.soup, tr.main')) {
     const name  = tr.querySelector('td.food')?.textContent.trim() ?? '';
     const price = tr.querySelector('td.prize')?.textContent.trim() ?? '';
     const num   = tr.querySelector('td.no')?.textContent.trim() ?? '';
@@ -580,8 +586,31 @@ function parseMenickaIframe(html) {
       items.push({ number: num, name, price, isSoup: tr.classList.contains('soup') });
     }
   }
-
   return items;
+}
+
+function parseMenickaIframe(html) {
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const now = new Date(), day = now.getDate(), mon = now.getMonth() + 1;
+  for (const section of doc.querySelectorAll('div.content')) {
+    if (section.querySelector('h2 .dnes')) return parseSectionItems(section);
+    const m = section.querySelector('h2')?.textContent.match(/(\d{1,2})\.(\d{1,2})/);
+    if (m && +m[1] === day && +m[2] === mon) return parseSectionItems(section);
+  }
+  return [];
+}
+
+// Returns { 'YYYY-MM-DD': items[] } for every day in the iframe response
+function parseAllDaysFromIframe(html) {
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const result = {};
+  for (const section of doc.querySelectorAll('div.content')) {
+    const m = section.querySelector('h2')?.textContent.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/);
+    if (!m) continue;
+    const dateStr = `${m[3]}-${String(+m[2]).padStart(2,'0')}-${String(+m[1]).padStart(2,'0')}`;
+    result[dateStr] = parseSectionItems(section);
+  }
+  return result;
 }
 
 function parseGeneric(html) {
@@ -616,26 +645,42 @@ async function scrapeLiveToday(grid) {
   showSkeletons(grid);
   setStatus('Scrapy z webu… (GitHub Actions ještě neproběhl)');
 
+  const today = todayStr();
+  const allDaysByRestaurant = {};
+
   const results = await Promise.all(FIXED.map(async r => {
     try {
-      const fetchUrl = (r.type === 'menicka' && r.menickaId)
-        ? `https://menicka.cz/api/iframe/?id=${r.menickaId}`
-        : r.url;
-      const html  = await fetchHtml(fetchUrl);
-      const items = r.type === 'menicka' ? parseMenickaIframe(html) : parseGeneric(html);
-      return { ...r, items, error: null };
+      const fetchUrl = `https://menicka.cz/api/iframe/?id=${r.menickaId}`;
+      const html = await fetchHtml(fetchUrl);
+      const allDays = parseAllDaysFromIframe(html);
+      allDaysByRestaurant[r.id] = allDays;
+      return { ...r, items: allDays[today] ?? [], error: null };
     } catch (e) {
       return { ...r, items: [], error: e.message };
     }
   }));
 
+  // Cache future days that have at least one restaurant's menu
+  const futureDates = new Set(
+    Object.values(allDaysByRestaurant).flatMap(m => Object.keys(m)).filter(d => d > today)
+  );
+  for (const date of futureDates) {
+    const dayRestaurants = FIXED.map(r => ({
+      ...r, items: allDaysByRestaurant[r.id]?.[date] ?? [], error: null,
+    }));
+    if (dayRestaurants.some(r => r.items.length > 0)) {
+      store.setDayCache(date, { date, generatedAt: new Date().toISOString(), restaurants: dayRestaurants });
+      availableDates.add(date);
+    }
+  }
+  if (futureDates.size > 0) renderCalendar();
+
   grid.innerHTML = results.map(renderFixedCard).join('');
-  const data = { date: todayStr(), generatedAt: new Date().toISOString(), restaurants: results };
-  store.setDayCache(todayStr(), data);
+  store.setDayCache(today, { date: today, generatedAt: new Date().toISOString(), restaurants: results });
 
   const errs = results.filter(r=>r.error).length;
   setStatus(errs ? `Hotovo · ${errs} chyb` : `Hotovo · ${new Date().toLocaleTimeString('cs-CZ')}`);
-  document.getElementById('foot').textContent = 'data z menicka.cz, namaskar.cz · live';
+  document.getElementById('foot').textContent = 'data z menicka.cz · live';
 }
 
 // ─── Rendering ────────────────────────────────────────────────────────────
@@ -879,6 +924,15 @@ function refreshToday() {
     .finally(() => { btn.disabled = false; });
 }
 
+// ─── Calendar toggle ──────────────────────────────────────────────────────
+
+function toggleCalendar() {
+  const wrap = document.getElementById('calendar-wrap');
+  const btn  = document.getElementById('cal-btn');
+  wrap.hidden = !wrap.hidden;
+  btn.classList.toggle('active', !wrap.hidden);
+}
+
 // ─── Tabs ─────────────────────────────────────────────────────────────────
 
 function switchTab(tab) {
@@ -887,6 +941,9 @@ function switchTab(tab) {
     t.classList.toggle('active', t.textContent.includes(tab==='mine'?'hospody':'okolí')));
   document.getElementById('panel-mine').hidden   = tab !== 'mine';
   document.getElementById('panel-nearby').hidden = tab !== 'nearby';
+  const calBtn = document.getElementById('cal-btn');
+  calBtn.hidden = tab !== 'mine';
+  if (tab !== 'mine') document.getElementById('calendar-wrap').hidden = true;
   if (tab === 'nearby') loadNearby();
 }
 
