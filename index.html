@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polední menu — Brno</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0f1117;
+      --surface:  #1a1d27;
+      --surface2: #22263a;
+      --border:   #2e334d;
+      --accent:   #6c8aff;
+      --text:     #e4e6f0;
+      --muted:    #7a7f9a;
+      --price:    #a8d8a8;
+      --soup-bg:  #1a2e26;
+      --soup-txt: #7dd1b0;
+      --soup-lbl: #3d8f6f;
+      --error:    #ff6b6b;
+      --r:        14px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
+
+    /* ── Header ───────────────────────────────── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; flex-wrap: wrap;
+    }
+
+    .logo { font-size: 1.25rem; font-weight: 700; color: #fff; }
+    .logo span { color: var(--accent); }
+
+    .header-right { display: flex; align-items: center; gap: 10px; }
+
+    #date-chip {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ── Status ───────────────────────────────── */
+    #status {
+      text-align: center;
+      padding: 8px 20px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      min-height: 30px;
+    }
+
+    /* ── Grid ─────────────────────────────────── */
+    main {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 20px 20px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 18px;
+    }
+
+    /* ── Card ─────────────────────────────────── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      display: flex; flex-direction: column;
+      transition: border-color .18s, box-shadow .18s;
+    }
+    .card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 28px rgba(108,138,255,.1);
+    }
+
+    .card-head {
+      padding: 14px 16px 12px;
+      border-bottom: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: flex-start;
+    }
+
+    .card-name { font-weight: 700; font-size: .95rem; color: #fff; }
+    .card-link {
+      font-size: .7rem; color: var(--muted); text-decoration: none;
+      display: block; margin-top: 2px;
+    }
+    .card-link:hover { color: var(--accent); }
+    .card-icon { font-size: 1.4rem; opacity: .35; }
+
+    .card-body { padding: 12px 16px; flex: 1; }
+
+    /* ── Items ────────────────────────────────── */
+    .item {
+      display: flex; gap: 8px; align-items: baseline;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,.04);
+    }
+    .item:last-child { border-bottom: none; }
+
+    .soup-block {
+      background: var(--soup-bg);
+      border-radius: 8px;
+      padding: 7px 10px;
+      margin: 2px -10px 6px;
+    }
+    .soup-lbl {
+      font-size: .65rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .5px;
+      color: var(--soup-lbl); margin-bottom: 3px;
+    }
+    .soup-block .item-name { color: var(--soup-txt); }
+    .soup-row { display: flex; gap: 8px; align-items: baseline; }
+
+    .item-num { color: var(--muted); font-size: .72rem; min-width: 18px; text-align: right; flex-shrink: 0; }
+    .item-name { flex: 1; font-size: .86rem; line-height: 1.4; }
+    .item-price { color: var(--price); font-size: .8rem; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+
+    /* ── Empty / Error ────────────────────────── */
+    .card-empty { color: var(--muted); font-size: .84rem; font-style: italic; }
+    .card-err   { color: var(--error); font-size: .82rem; }
+
+    /* ── Skeleton ─────────────────────────────── */
+    .sk {
+      background: linear-gradient(90deg, var(--surface2) 25%, var(--border) 50%, var(--surface2) 75%);
+      background-size: 200% 100%;
+      animation: sh 1.4s infinite;
+      border-radius: 5px; height: 13px; margin-bottom: 9px;
+    }
+    @keyframes sh { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+    /* ── Weekend notice ───────────────────────── */
+    #weekend {
+      display: none;
+      max-width: 420px; margin: 80px auto; text-align: center;
+    }
+    #weekend.show { display: block; }
+    #weekend .wi  { font-size: 3rem; margin-bottom: 14px; }
+    #weekend h2   { color: var(--muted); font-size: 1.2rem; font-weight: 500; }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .75rem;
+    }
+
+    @media (max-width: 480px) {
+      main { padding: 12px; gap: 12px; }
+      header { padding: 14px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Polední menu <span>Brno</span></div>
+  <div class="header-right">
+    <div id="date-chip">…</div>
+  </div>
+</header>
+
+<div id="status">Načítám…</div>
+
+<div id="weekend">
+  <div class="wi">🌴</div>
+  <h2>Víkend — žádné polední menu</h2>
+</div>
+
+<main id="grid"></main>
+
+<footer id="foot"></footer>
+
+<script>
+const ICONS = { suzies:'🥩', seminar:'🍺', kormidlo:'⚓', laguna:'🐟', garden:'🌿', namaskar:'🍛' };
+const CS_DAYS   = ['Neděle','Pondělí','Úterý','Středa','Čtvrtek','Pátek','Sobota'];
+const CS_MONTHS = ['ledna','února','března','dubna','května','června','července','srpna','září','října','listopadu','prosince'];
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function fmtDate(iso) {
+  const d = new Date(iso + 'T00:00:00');
+  return `${CS_DAYS[d.getDay()]} ${d.getDate()}. ${CS_MONTHS[d.getMonth()]}`;
+}
+
+function skeletonCard(name) {
+  return `<div class="card">
+    <div class="card-head"><div><div class="card-name">${esc(name)}</div></div></div>
+    <div class="card-body">
+      <div class="sk" style="width:80%"></div>
+      <div class="sk" style="width:55%"></div>
+      <div class="sk" style="width:70%"></div>
+      <div class="sk" style="width:45%"></div>
+    </div>
+  </div>`;
+}
+
+function renderCard(r) {
+  const icon = ICONS[r.id] ?? '🍽';
+  let domain;
+  try { domain = new URL(r.url).hostname.replace('www.',''); } catch { domain = r.url; }
+
+  let body;
+  if (r.error) {
+    body = `<div class="card-err">⚠ ${esc(r.error)}</div>`;
+  } else if (!r.items?.length) {
+    body = `<div class="card-empty">Dnes bez menu.</div>`;
+  } else {
+    body = r.items.map(item => {
+      if (item.isSoup) {
+        return `<div class="soup-block">
+          <div class="soup-lbl">Polévka</div>
+          <div class="soup-row">
+            <div class="item-name">${esc(item.name)}</div>
+            ${item.price ? `<div class="item-price">${esc(item.price)}</div>` : ''}
+          </div>
+        </div>`;
+      }
+      return `<div class="item">
+        <div class="item-num">${esc(item.number)}</div>
+        <div class="item-name">${esc(item.name)}</div>
+        ${item.price ? `<div class="item-price">${esc(item.price)}</div>` : ''}
+      </div>`;
+    }).join('');
+  }
+
+  return `<div class="card">
+    <div class="card-head">
+      <div>
+        <div class="card-name">${esc(r.name)}</div>
+        <a class="card-link" href="${esc(r.url)}" target="_blank" rel="noopener">${esc(domain)} ↗</a>
+      </div>
+      <div class="card-icon">${icon}</div>
+    </div>
+    <div class="card-body">${body}</div>
+  </div>`;
+}
+
+const PLACEHOLDERS = ["Suzie's Steak Pub","Hostinec U Semináru","U Kormidla","Restaurace Laguna","Garden Food Concept","Namaskar"];
+
+async function load() {
+  document.getElementById('grid').innerHTML = PLACEHOLDERS.map(skeletonCard).join('');
+
+  try {
+    // cache-bust so browser doesn't serve a stale file
+    const res = await fetch(`menu.json?v=${Date.now()}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status} — menu.json not found`);
+    const data = await res.json();
+
+    const d = new Date(data.date + 'T00:00:00');
+    const dow = d.getDay();
+
+    document.getElementById('date-chip').textContent = fmtDate(data.date);
+    document.getElementById('weekend').classList.toggle('show', dow === 0 || dow === 6);
+    document.getElementById('grid').innerHTML = data.restaurants.map(renderCard).join('');
+
+    const gen = new Date(data.generatedAt);
+    document.getElementById('status').textContent =
+      `Aktualizováno: ${gen.toLocaleString('cs-CZ')}`;
+    document.getElementById('foot').textContent =
+      `menu-scraper · data z menicka.cz a namaskar.cz`;
+
+  } catch (err) {
+    document.getElementById('grid').innerHTML =
+      `<div style="color:var(--error);padding:20px;grid-column:1/-1">
+        <strong>Chyba:</strong> ${esc(err.message)}<br><br>
+        <small>Spusťte <code>node scraper.js</code> — soubor menu.json musí existovat.</small>
+      </div>`;
+    document.getElementById('status').textContent = '';
+  }
+}
+
+load();
+</script>
+</body>
+</html>
