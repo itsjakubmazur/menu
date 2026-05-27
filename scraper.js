@@ -20,7 +20,6 @@ const RESTAURANTS = [
   { id: 'kormidlo', name: 'U Kormidla',            menickaId: 6690, url: 'https://www.menicka.cz/6690-u-kormidla.html',          type: 'menicka' },
   { id: 'laguna',   name: 'Restaurace Laguna',     menickaId: 2701, url: 'https://www.menicka.cz/2701-restaurace-laguna.html',   type: 'menicka' },
   { id: 'garden',   name: 'Garden Food Concept',   menickaId: 6361, url: 'https://www.menicka.cz/6361-garden-food-concept.html', type: 'menicka' },
-  { id: 'namaskar', name: 'Namaskar',               menickaId: null, url: 'https://www.namaskar.cz/poledni-menu/',                type: 'generic' },
 ];
 
 // ── Utils ────────────────────────────────────────────────────────────────────
