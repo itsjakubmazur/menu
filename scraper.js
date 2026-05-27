@@ -15,12 +15,12 @@ const HEADERS = {
 };
 
 const RESTAURANTS = [
-  { id: 'suzies',   name: "Suzie's Steak Pub",   url: 'https://www.menicka.cz/3830-suzies-steak-pub.html',    type: 'menicka' },
-  { id: 'seminar',  name: 'Hostinec U Semináru',  url: 'https://www.menicka.cz/3197-hostinec-u-seminaru.html', type: 'menicka' },
-  { id: 'kormidlo', name: 'U Kormidla',            url: 'https://www.menicka.cz/6690-u-kormidla.html',          type: 'menicka' },
-  { id: 'laguna',   name: 'Restaurace Laguna',     url: 'https://www.menicka.cz/2701-restaurace-laguna.html',   type: 'menicka' },
-  { id: 'garden',   name: 'Garden Food Concept',   url: 'https://www.menicka.cz/6361-garden-food-concept.html', type: 'menicka' },
-  { id: 'namaskar', name: 'Namaskar',               url: 'https://www.namaskar.cz/poledni-menu/',                type: 'generic' },
+  { id: 'suzies',   name: "Suzie's Steak Pub",   menickaId: 3830, url: 'https://www.menicka.cz/3830-suzies-steak-pub.html',    type: 'menicka' },
+  { id: 'seminar',  name: 'Hostinec U Semináru',  menickaId: 3197, url: 'https://www.menicka.cz/3197-hostinec-u-seminaru.html', type: 'menicka' },
+  { id: 'kormidlo', name: 'U Kormidla',            menickaId: 6690, url: 'https://www.menicka.cz/6690-u-kormidla.html',          type: 'menicka' },
+  { id: 'laguna',   name: 'Restaurace Laguna',     menickaId: 2701, url: 'https://www.menicka.cz/2701-restaurace-laguna.html',   type: 'menicka' },
+  { id: 'garden',   name: 'Garden Food Concept',   menickaId: 6361, url: 'https://www.menicka.cz/6361-garden-food-concept.html', type: 'menicka' },
+  { id: 'namaskar', name: 'Namaskar',               menickaId: null, url: 'https://www.namaskar.cz/poledni-menu/',                type: 'generic' },
 ];
 
 // ── Utils ────────────────────────────────────────────────────────────────────
@@ -37,34 +37,49 @@ async function fetchHtml(url) {
 
 // ── Parsers ──────────────────────────────────────────────────────────────────
 
-function parseMenicka(html) {
+// menicka.cz iframe API returns a simple widget for the current week.
+// Structure: each day in a .den / h2 section, items in li.jidlo / li.polevka
+// with .nazev, .cena, .cislo spans — same classes as the full page,
+// but no noise around them so we just need to find today's section.
+function parseMenickaIframe(html) {
   const $ = cheerio.load(html);
   const now = new Date(), day = now.getDate(), mon = now.getMonth() + 1;
   const items = [];
 
-  $('.menicka').each((_, sec) => {
-    const heading = $(sec).find('h2.nadpis, h2').first().text();
-    const m = heading.match(/(\d{1,2})\.\s*(\d{1,2})/);
-    if (!m || +m[1] !== day || +m[2] !== mon) return;
-
-    $(sec).find('li.polevka, li.jidlo').each((_, li) => {
-      const $li  = $(li);
-      const name  = $li.find('.nazev').text().trim();
-      const price = $li.find('.cena').text().trim().replace(/\s+/g, ' ');
-      const num   = $li.find('.cislo').text().trim();
-      if (name) items.push({ number: num, name, price, isSoup: $li.hasClass('polevka') });
-    });
+  // Strategy 1: find the section whose heading contains today's date
+  let todaySection = null;
+  $('h2, h3, .nadpis, .den-nadpis').each((_, el) => {
+    const txt = $(el).text();
+    const m = txt.match(/(\d{1,2})\.\s*(\d{1,2})/);
+    if (m && +m[1] === day && +m[2] === mon) {
+      todaySection = el;
+      return false; // break
+    }
   });
 
+  const $scope = todaySection
+    ? $(todaySection).closest('div, section, .den, .menicka-den').add($(todaySection).parent())
+    : $('body');    // fallback: whole page (iframe shows only current day sometimes)
+
+  $scope.find('li.polevka, li.jidlo').each((_, li) => {
+    const $li   = $(li);
+    const name  = $li.find('.nazev').text().trim();
+    const price = $li.find('.cena').text().trim().replace(/\s+/g, ' ');
+    const num   = $li.find('.cislo').text().trim();
+    if (name) items.push({ number: num, name, price, isSoup: $li.hasClass('polevka') });
+  });
+
+  // If nothing found via scope, take everything (single-day iframe)
   if (!items.length) {
-    $('ul.jidla li').each((_, li) => {
-      const $li  = $(li);
+    $('li.polevka, li.jidlo').each((_, li) => {
+      const $li   = $(li);
       const name  = $li.find('.nazev').text().trim();
       const price = $li.find('.cena').text().trim().replace(/\s+/g, ' ');
       const num   = $li.find('.cislo').text().trim();
       if (name) items.push({ number: num, name, price, isSoup: $li.hasClass('polevka') });
     });
   }
+
   return items;
 }
 
@@ -100,8 +115,17 @@ function parseGeneric(html) {
 async function scrapeOne(r) {
   try {
     console.log(`  ${r.name}…`);
-    const html  = await fetchHtml(r.url);
-    const items = r.type === 'menicka' ? parseMenicka(html) : parseGeneric(html);
+    let html, fetchUrl;
+
+    if (r.type === 'menicka' && r.menickaId) {
+      fetchUrl = `https://menicka.cz/api/iframe/?id=${r.menickaId}`;
+      html = await fetchHtml(fetchUrl);
+    } else {
+      fetchUrl = r.url;
+      html = await fetchHtml(fetchUrl);
+    }
+
+    const items = r.type === 'menicka' ? parseMenickaIframe(html) : parseGeneric(html);
     console.log(`    ✓ ${items.length} položek`);
     return { ...r, items, error: null };
   } catch (e) {
