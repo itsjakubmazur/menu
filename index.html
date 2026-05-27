@@ -20,6 +20,7 @@
       --soup:    #7dd1b0;
       --slbl:    #3d8f6f;
       --err:     #ff6b6b;
+      --gold:    #f5c842;
       --r:       14px;
     }
 
@@ -31,48 +32,101 @@
       padding-bottom: 60px;
     }
 
+    /* ── Header ── */
     header {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(15,17,23,.9);
+      background: rgba(15,17,23,.92);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
-      padding: 16px 24px;
+      padding: 12px 20px;
       display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 10px;
+      gap: 12px; flex-wrap: wrap;
     }
 
-    .logo { font-size: 1.2rem; font-weight: 700; color: #fff; }
+    .logo { font-size: 1.1rem; font-weight: 700; color: #fff; white-space: nowrap; }
     .logo span { color: var(--accent); }
 
-    .hright { display: flex; align-items: center; gap: 10px; }
+    /* ── Tabs ── */
+    .tabs {
+      display: flex; gap: 4px;
+      background: var(--sur2); border: 1px solid var(--border);
+      border-radius: 24px; padding: 3px;
+    }
+
+    .tab {
+      background: none; border: none; cursor: pointer;
+      padding: 6px 18px; border-radius: 20px;
+      font-size: .82rem; font-weight: 600; color: var(--muted);
+      transition: background .15s, color .15s;
+      white-space: nowrap;
+    }
+    .tab.active { background: var(--accent); color: #fff; }
+    .tab:not(.active):hover { color: var(--text); }
+
+    .header-right { display: flex; align-items: center; gap: 10px; }
 
     #date-chip {
       background: var(--sur2); border: 1px solid var(--border);
-      border-radius: 20px; padding: 4px 14px;
-      font-size: .78rem; color: var(--muted);
+      border-radius: 20px; padding: 4px 12px;
+      font-size: .75rem; color: var(--muted);
     }
 
-    #refresh {
-      background: var(--sur2); border: 1px solid var(--border);
-      color: var(--muted); border-radius: 20px; padding: 4px 14px;
-      font-size: .78rem; cursor: pointer; transition: color .15s, border-color .15s;
+    #settings-btn {
+      background: none; border: 1px solid var(--border);
+      color: var(--muted); border-radius: 8px;
+      width: 32px; height: 32px; cursor: pointer; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: color .15s, border-color .15s;
     }
-    #refresh:hover:not(:disabled) { color: var(--text); border-color: var(--accent); }
-    #refresh:disabled { opacity: .4; cursor: default; }
+    #settings-btn:hover { color: var(--text); border-color: var(--accent); }
+    #settings-btn.active { color: var(--accent); border-color: var(--accent); }
 
+    /* ── Settings panel ── */
+    #settings-panel {
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      padding: 16px 20px; display: none;
+      animation: slideDown .18s ease;
+    }
+    #settings-panel.open { display: block; }
+    @keyframes slideDown { from { opacity:0; transform:translateY(-8px); } to { opacity:1; transform:none; } }
+
+    .settings-inner {
+      max-width: 600px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .settings-inner label { font-size: .82rem; color: var(--muted); }
+    .settings-row { display: flex; gap: 8px; }
+    .settings-row input {
+      flex: 1; background: var(--sur2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 8px 12px; color: var(--text);
+      font-size: .84rem; outline: none;
+    }
+    .settings-row input:focus { border-color: var(--accent); }
+    .settings-row input::placeholder { color: var(--muted); }
+    .btn-save {
+      background: var(--accent); color: #fff; border: none;
+      border-radius: 8px; padding: 8px 16px; font-size: .82rem;
+      font-weight: 600; cursor: pointer; white-space: nowrap;
+    }
+    .btn-save:hover { opacity: .85; }
+    .settings-hint { font-size: .74rem; color: var(--muted); }
+    .settings-hint a { color: var(--accent); }
+
+    /* ── Status bar ── */
     #status {
-      text-align: center; padding: 8px 20px;
-      font-size: .75rem; color: var(--muted); min-height: 28px;
+      text-align: center; padding: 7px 20px;
+      font-size: .74rem; color: var(--muted); min-height: 28px;
     }
 
-    main {
+    /* ── Grid ── */
+    .grid {
       max-width: 1440px; margin: 0 auto;
-      padding: 16px 20px 0;
+      padding: 14px 20px 0;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
       gap: 16px;
     }
 
+    /* ── Cards ── */
     .card {
       background: var(--surface); border: 1px solid var(--border);
       border-radius: var(--r); display: flex; flex-direction: column;
@@ -81,22 +135,30 @@
     .card:hover { border-color: var(--accent); box-shadow: 0 4px 28px rgba(108,138,255,.1); }
 
     .card-head {
-      padding: 14px 16px 12px; border-bottom: 1px solid var(--border);
-      display: flex; justify-content: space-between; align-items: flex-start;
+      padding: 13px 15px 11px; border-bottom: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;
     }
     .card-name { font-weight: 700; font-size: .92rem; color: #fff; }
+    .card-sub { display: flex; align-items: center; gap: 8px; margin-top: 3px; flex-wrap: wrap; }
     .card-link {
-      font-size: .68rem; color: var(--muted); text-decoration: none;
-      display: block; margin-top: 2px;
+      font-size: .67rem; color: var(--muted); text-decoration: none;
     }
     .card-link:hover { color: var(--accent); }
-    .card-icon { font-size: 1.35rem; opacity: .3; }
+    .card-addr { font-size: .67rem; color: var(--muted); }
+    .card-icon { font-size: 1.3rem; opacity: .3; flex-shrink: 0; }
 
-    .card-body { padding: 10px 16px 14px; flex: 1; }
+    /* stars */
+    .stars { color: var(--gold); font-size: .72rem; letter-spacing: 1px; }
+    .rating-num { color: var(--muted); font-size: .7rem; margin-left: 3px; }
+    .dist-badge {
+      background: var(--sur2); border-radius: 10px;
+      padding: 1px 7px; font-size: .66rem; color: var(--muted);
+    }
 
-    /* loading state */
-    .card-body.loading { opacity: .6; pointer-events: none; }
+    /* card body */
+    .card-body { padding: 10px 15px 13px; flex: 1; }
 
+    /* menu items */
     .item {
       display: flex; gap: 8px; align-items: baseline;
       padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.04);
@@ -107,17 +169,32 @@
       background: var(--soup-bg); border-radius: 8px;
       padding: 7px 10px; margin: 2px -10px 6px;
     }
-    .slbl { font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--slbl); margin-bottom: 3px; }
+    .slbl { font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--slbl); margin-bottom: 3px; }
     .soup-row { display: flex; gap: 8px; align-items: baseline; }
     .soup-block .iname { color: var(--soup); }
 
-    .inum  { color: var(--muted); font-size: .7rem; min-width: 18px; text-align: right; flex-shrink: 0; }
-    .iname { flex: 1; font-size: .84rem; line-height: 1.4; }
-    .iprice { color: var(--price); font-size: .78rem; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+    .inum  { color: var(--muted); font-size: .68rem; min-width: 18px; text-align: right; flex-shrink: 0; }
+    .iname { flex: 1; font-size: .83rem; line-height: 1.4; }
+    .iprice { color: var(--price); font-size: .76rem; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
 
+    /* fallback links */
+    .link-row { display: flex; flex-direction: column; gap: 8px; }
+    .ext-link {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--sur2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 8px 12px; text-decoration: none;
+      color: var(--text); font-size: .8rem; transition: border-color .15s;
+    }
+    .ext-link:hover { border-color: var(--accent); color: var(--accent); }
+    .ext-link .el-icon { font-size: 1rem; }
+    .ext-link .el-text { flex: 1; }
+    .ext-link .el-arrow { color: var(--muted); font-size: .75rem; }
+
+    /* states */
     .card-empty { color: var(--muted); font-size: .82rem; font-style: italic; }
-    .card-err   { color: var(--err);   font-size: .8rem; }
+    .card-err   { color: var(--err); font-size: .78rem; }
 
+    /* skeleton */
     .sk {
       background: linear-gradient(90deg, var(--sur2) 25%, var(--border) 50%, var(--sur2) 75%);
       background-size: 200% 100%; animation: sh 1.4s infinite;
@@ -125,11 +202,28 @@
     }
     @keyframes sh { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
 
+    /* empty/prompt panels */
+    .panel-msg {
+      max-width: 420px; margin: 64px auto; text-align: center;
+      display: flex; flex-direction: column; align-items: center; gap: 14px;
+    }
+    .panel-msg .pm-icon { font-size: 2.8rem; }
+    .panel-msg h2 { color: var(--text); font-size: 1.1rem; font-weight: 600; }
+    .panel-msg p { color: var(--muted); font-size: .84rem; line-height: 1.5; }
+    .btn-primary {
+      background: var(--accent); color: #fff; border: none;
+      border-radius: 24px; padding: 10px 24px; font-size: .88rem;
+      font-weight: 600; cursor: pointer; transition: opacity .15s;
+    }
+    .btn-primary:hover { opacity: .85; }
+    .btn-primary:disabled { opacity: .45; cursor: default; }
+
     footer { margin-top: 36px; text-align: center; color: var(--muted); font-size: .72rem; }
 
-    @media (max-width: 480px) {
-      main { padding: 10px 12px 0; gap: 12px; }
-      header { padding: 12px 16px; }
+    @media (max-width: 520px) {
+      header { padding: 10px 12px; }
+      .grid { padding: 10px 12px 0; gap: 12px; }
+      .tab { padding: 6px 12px; }
     }
   </style>
 </head>
@@ -137,178 +231,295 @@
 
 <header>
   <div class="logo">Polední menu <span>Brno</span></div>
-  <div class="hright">
+  <div class="header-right">
     <div id="date-chip">…</div>
-    <button id="refresh" onclick="init(true)">↺ Obnovit</button>
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('mine')">Moje hospody</button>
+      <button class="tab" onclick="switchTab('nearby')">📍 V okolí</button>
+    </div>
+    <button id="settings-btn" onclick="toggleSettings()" title="Nastavení">⚙</button>
   </div>
 </header>
 
+<!-- Settings -->
+<div id="settings-panel">
+  <div class="settings-inner">
+    <label>Google Maps API klíč (potřebný pro záložku „V okolí")</label>
+    <div class="settings-row">
+      <input type="password" id="api-key-input" placeholder="AIzaSy…" autocomplete="off" />
+      <button class="btn-save" onclick="saveApiKey()">Uložit</button>
+    </div>
+    <div class="settings-hint">
+      Klíč získáš zdarma na
+      <a href="https://console.cloud.google.com/apis/library/places-backend.googleapis.com" target="_blank">Google Cloud Console</a>
+      → aktivuj <strong>Maps JavaScript API</strong> + <strong>Places API</strong>.
+      Klíč je uložen pouze v tvém prohlížeči.
+    </div>
+  </div>
+</div>
+
 <div id="status"></div>
-<main id="grid"></main>
+
+<!-- Panel: Moje hospody -->
+<div id="panel-mine">
+  <div class="grid" id="grid-mine"></div>
+</div>
+
+<!-- Panel: V okolí -->
+<div id="panel-nearby" hidden>
+  <div id="nearby-content"></div>
+</div>
+
 <footer id="foot"></footer>
 
 <script>
-// ─── Config ────────────────────────────────────────────────────────────────
+// ─── Constants ────────────────────────────────────────────────────────────
 
-const RESTAURANTS = [
-  { id: 'suzies',   name: "Suzie's Steak Pub",   url: 'https://www.menicka.cz/3830-suzies-steak-pub.html',    type: 'menicka' },
-  { id: 'seminar',  name: 'Hostinec U Semináru',  url: 'https://www.menicka.cz/3197-hostinec-u-seminaru.html', type: 'menicka' },
-  { id: 'kormidlo', name: 'U Kormidla',            url: 'https://www.menicka.cz/6690-u-kormidla.html',          type: 'menicka' },
-  { id: 'laguna',   name: 'Restaurace Laguna',     url: 'https://www.menicka.cz/2701-restaurace-laguna.html',   type: 'menicka' },
-  { id: 'garden',   name: 'Garden Food Concept',   url: 'https://www.menicka.cz/6361-garden-food-concept.html', type: 'menicka' },
-  { id: 'namaskar', name: 'Namaskar',               url: 'https://www.namaskar.cz/poledni-menu/',                type: 'namaskar' },
+const FIXED = [
+  { id:'suzies',   name:"Suzie's Steak Pub",  url:'https://www.menicka.cz/3830-suzies-steak-pub.html',    type:'menicka' },
+  { id:'seminar',  name:'Hostinec U Semináru', url:'https://www.menicka.cz/3197-hostinec-u-seminaru.html', type:'menicka' },
+  { id:'kormidlo', name:'U Kormidla',           url:'https://www.menicka.cz/6690-u-kormidla.html',          type:'menicka' },
+  { id:'laguna',   name:'Restaurace Laguna',    url:'https://www.menicka.cz/2701-restaurace-laguna.html',   type:'menicka' },
+  { id:'garden',   name:'Garden Food Concept',  url:'https://www.menicka.cz/6361-garden-food-concept.html', type:'menicka' },
+  { id:'namaskar', name:'Namaskar',              url:'https://www.namaskar.cz/poledni-menu/',                type:'namaskar'},
 ];
-
 const ICONS = { suzies:'🥩', seminar:'🍺', kormidlo:'⚓', laguna:'🐟', garden:'🌿', namaskar:'🍛' };
 
-// CORS proxy — proxies the request and returns JSON { contents: "<html>..." }
-const PROXY = url => `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+const PROXY = u => `https://api.allorigins.win/get?url=${encodeURIComponent(u)}`;
 
-// ─── Date helpers ──────────────────────────────────────────────────────────
+const CS_DAYS   = ['Neděle','Pondělí','Úterý','Středa','Čtvrtek','Pátek','Sobota'];
+const CS_MONTHS = ['ledna','února','března','dubna','května','června','července','srpna','září','října','listopadu','prosince'];
+
+// ─── State ────────────────────────────────────────────────────────────────
+
+let activeTab = 'mine';
+let gmapsReady = false;
+let nearbyLoaded = false;
+
+// ─── Storage ──────────────────────────────────────────────────────────────
 
 function todayStr() {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 }
 
-const CS_DAYS   = ['Neděle','Pondělí','Úterý','Středa','Čtvrtek','Pátek','Sobota'];
-const CS_MONTHS = ['ledna','února','března','dubna','května','června','července','srpna','září','října','listopadu','prosince'];
+const store = {
+  apiKey() { return localStorage.getItem('gmaps-key') ?? ''; },
+  setApiKey(k) { localStorage.setItem('gmaps-key', k); },
+  fixedCache() {
+    try { const r = localStorage.getItem('menu-fixed-'+todayStr()); return r ? JSON.parse(r) : null; } catch { return null; }
+  },
+  setFixedCache(d) { try { localStorage.setItem('menu-fixed-'+todayStr(), JSON.stringify(d)); } catch {} },
+  nearbyCache() {
+    try { const r = localStorage.getItem('menu-nearby-'+todayStr()); return r ? JSON.parse(r) : null; } catch { return null; }
+  },
+  setNearbyCache(d) { try { localStorage.setItem('menu-nearby-'+todayStr(), JSON.stringify(d)); } catch {} },
+};
+
+// ─── Utils ────────────────────────────────────────────────────────────────
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
 
 function fmtDate(iso) {
   const d = new Date(iso + 'T00:00:00');
   return `${CS_DAYS[d.getDay()]} ${d.getDate()}. ${CS_MONTHS[d.getMonth()]}`;
 }
 
-// ─── localStorage cache ────────────────────────────────────────────────────
-
-function readCache() {
-  try {
-    const raw = localStorage.getItem('menu-' + todayStr());
-    return raw ? JSON.parse(raw) : null;
-  } catch { return null; }
+function fmtDist(m) {
+  return m < 1000 ? `${Math.round(m)} m` : `${(m/1000).toFixed(1)} km`;
 }
 
-function writeCache(data) {
-  try { localStorage.setItem('menu-' + todayStr(), JSON.stringify(data)); } catch {}
+function renderStars(rating) {
+  const r = Math.round(rating * 2) / 2;
+  let s = '';
+  for (let i = 1; i <= 5; i++) {
+    if (i <= r) s += '★';
+    else if (i - 0.5 === r) s += '½';
+    else s += '☆';
+  }
+  return `<span class="stars">${s}</span><span class="rating-num">${rating.toFixed(1)}</span>`;
 }
 
-// ─── Fetching ──────────────────────────────────────────────────────────────
+// ─── Network ──────────────────────────────────────────────────────────────
 
-async function fetchHtml(url) {
-  const res = await fetch(PROXY(url), { signal: AbortSignal.timeout(20000) });
-  if (!res.ok) throw new Error(`proxy HTTP ${res.status}`);
-  const json = await res.json();
-  if (!json.contents) throw new Error('proxy vrátil prázdnou odpověď');
-  return json.contents;
+async function fetchHtml(url, timeout = 18000) {
+  const res = await fetch(PROXY(url), { signal: AbortSignal.timeout(timeout) });
+  if (!res.ok) throw new Error(`proxy ${res.status}`);
+  const j = await res.json();
+  if (!j.contents) throw new Error('empty proxy response');
+  return j.contents;
 }
 
-// ─── Parsers ───────────────────────────────────────────────────────────────
+// ─── Parsers ──────────────────────────────────────────────────────────────
 
 function parseMenicka(html) {
   const doc = new DOMParser().parseFromString(html, 'text/html');
-  const now  = new Date();
-  const day  = now.getDate();
-  const mon  = now.getMonth() + 1;
+  const now = new Date(), day = now.getDate(), mon = now.getMonth()+1;
   const items = [];
 
-  // Each day has a .menicka section with h2.nadpis containing the date
-  doc.querySelectorAll('.menicka').forEach(section => {
-    const heading = section.querySelector('h2.nadpis, h2');
-    if (!heading) return;
-    const m = heading.textContent.match(/(\d{1,2})\.\s*(\d{1,2})/);
+  doc.querySelectorAll('.menicka').forEach(sec => {
+    const h = sec.querySelector('h2.nadpis, h2');
+    if (!h) return;
+    const m = h.textContent.match(/(\d{1,2})\.\s*(\d{1,2})/);
     if (!m || +m[1] !== day || +m[2] !== mon) return;
 
-    section.querySelectorAll('li.polevka, li.jidlo').forEach(li => {
+    sec.querySelectorAll('li.polevka, li.jidlo').forEach(li => {
       const name  = li.querySelector('.nazev')?.textContent.trim();
       const price = li.querySelector('.cena')?.textContent.trim().replace(/\s+/g,' ');
       const num   = li.querySelector('.cislo')?.textContent.trim() ?? '';
-      if (name) items.push({ number: num, name, price: price ?? '', isSoup: li.classList.contains('polevka') });
+      if (name) items.push({ number:num, name, price:price??'', isSoup:li.classList.contains('polevka') });
     });
   });
 
-  // Fallback: grab everything in .jidla lists (page may already show just today)
   if (!items.length) {
     doc.querySelectorAll('ul.jidla li').forEach(li => {
       const name  = li.querySelector('.nazev')?.textContent.trim();
       const price = li.querySelector('.cena')?.textContent.trim().replace(/\s+/g,' ');
       const num   = li.querySelector('.cislo')?.textContent.trim() ?? '';
-      if (name) items.push({ number: num, name, price: price ?? '', isSoup: li.classList.contains('polevka') });
+      if (name) items.push({ number:num, name, price:price??'', isSoup:li.classList.contains('polevka') });
     });
   }
-
   return items;
 }
 
-function parseNameaskar(html) {
+function parseGeneric(html) {
   const doc = new DOMParser().parseFromString(html, 'text/html');
   const items = [];
 
-  // Strategy 1: table rows with at least 2 cells
-  doc.querySelectorAll('table tr').forEach((tr, i) => {
+  // Table rows (name + price pattern)
+  doc.querySelectorAll('table tr').forEach(tr => {
     const cells = [...tr.querySelectorAll('td')];
     if (cells.length < 2) return;
-    const last  = cells[cells.length - 1].textContent.trim();
+    const last  = cells.at(-1).textContent.trim();
     const price = /^\d+/.test(last) ? last : '';
     const name  = (cells.length >= 3 ? cells[1] : cells[0]).textContent.trim();
-    const num   = cells[0].textContent.trim();
-    if (name && name.length > 3) items.push({ number: num, name, price, isSoup: false });
+    if (name && name.length > 3 && name.length < 180) items.push({ number:'', name, price, isSoup:false });
   });
-  if (items.length) return items;
+  if (items.length > 2) return items;
 
-  // Strategy 2: common CMS content containers, line by line
-  const containers = [
-    '.entry-content','.post-content','.page-content',
-    'article','.elementor-widget-text-editor','.wp-block-group',
-    '.poledni-menu','.lunch-menu','.menu-content',
-  ];
-  for (const sel of containers) {
+  // Content containers
+  for (const sel of ['.entry-content','.post-content','.page-content','article .content',
+      '.elementor-widget-text-editor','.wp-block-group','.poledni-menu','.lunch-menu']) {
     const el = doc.querySelector(sel);
     if (!el) continue;
-    const lines = el.textContent.split('\n')
-      .map(l => l.trim()).filter(l => l.length > 4 && l.length < 180);
+    const lines = el.textContent.split('\n').map(l=>l.trim()).filter(l=>l.length>4 && l.length<180);
     if (lines.length > 2) {
-      lines.forEach((l, i) => items.push({ number: `${i+1}.`, name: l, price: '', isSoup: false }));
+      lines.forEach((l,i) => items.push({ number:`${i+1}.`, name:l, price:'', isSoup:false }));
       return items;
     }
   }
 
-  return items;
+  // Fallback: paragraphs
+  doc.querySelectorAll('p').forEach(p => {
+    const t = p.textContent.trim();
+    if (t.length > 5 && t.length < 180) items.push({ number:'', name:t, price:'', isSoup:false });
+  });
+  return items.slice(0, 20);
 }
 
-// ─── Scraping ──────────────────────────────────────────────────────────────
+// ─── Menu resolution chain ────────────────────────────────────────────────
+// For nearby restaurants: try menicka.cz search → own website → links only
 
-async function scrapeOne(r) {
+async function searchMenicka(name) {
+  // Search menicka.cz for the restaurant
   try {
-    const html  = await fetchHtml(r.url);
-    const items = r.type === 'namaskar' ? parseNameaskar(html) : parseMenicka(html);
-    return { ...r, items, error: null };
-  } catch (e) {
-    return { ...r, items: [], error: e.message };
+    const html = await fetchHtml(`https://www.menicka.cz/vyhledavani/?q=${encodeURIComponent(name)}`);
+    const doc  = new DOMParser().parseFromString(html, 'text/html');
+    // Find first result link matching /NNNN-slug.html pattern
+    for (const a of doc.querySelectorAll('a[href]')) {
+      const href = a.getAttribute('href') || '';
+      if (/\/\d+-[\w-]+\.html/.test(href)) {
+        const fullUrl = href.startsWith('http') ? href : 'https://www.menicka.cz' + href;
+        const menuHtml = await fetchHtml(fullUrl);
+        const items = parseMenicka(menuHtml);
+        if (items.length) return { source: 'menicka', url: fullUrl, items };
+      }
+    }
+  } catch {}
+  return null;
+}
+
+async function tryWebsiteUrls(baseUrl) {
+  if (!baseUrl) return null;
+  const base = baseUrl.replace(/\/$/, '');
+  const paths = ['/poledni-menu', '/poledni-menu/', '/tydenni-menu', '/lunch',
+                 '/denni-menu', '/menu', '/jidelni-listek', ''];
+  for (const path of paths) {
+    try {
+      const html  = await fetchHtml(base + path, 10000);
+      const items = parseGeneric(html);
+      if (items.length > 2) return { source: 'web', url: base + path || baseUrl, items };
+    } catch {}
   }
+  return null;
 }
 
-// ─── Rendering ─────────────────────────────────────────────────────────────
-
-function esc(s) {
-  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+async function resolveNearbyMenu(name, websiteUrl) {
+  // 1. menicka.cz
+  const mc = await searchMenicka(name);
+  if (mc) return mc;
+  // 2. own website
+  if (websiteUrl) {
+    const web = await tryWebsiteUrls(websiteUrl);
+    if (web) return web;
+  }
+  // 3. links only
+  return { source: 'links', url: websiteUrl, items: [] };
 }
 
-function skeletonCard(r) {
-  return `<div class="card">
-    <div class="card-head">
-      <div><div class="card-name">${esc(r.name)}</div></div>
-      <div class="card-icon">${ICONS[r.id]??'🍽'}</div>
-    </div>
-    <div class="card-body loading">
-      <div class="sk" style="width:80%"></div>
-      <div class="sk" style="width:60%"></div>
-      <div class="sk" style="width:72%"></div>
-      <div class="sk" style="width:48%"></div>
-    </div>
-  </div>`;
+// ─── Google Maps ──────────────────────────────────────────────────────────
+
+function loadGmaps(apiKey) {
+  if (gmapsReady) return Promise.resolve();
+  return new Promise((res, rej) => {
+    const cb = '__gmcb' + Date.now();
+    window[cb] = () => { gmapsReady = true; delete window[cb]; res(); };
+    const s = document.createElement('script');
+    s.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&libraries=places&callback=${cb}`;
+    s.onerror = () => rej(new Error('Nepodařilo se načíst Google Maps — zkontroluj API klíč.'));
+    document.head.appendChild(s);
+  });
 }
 
-function renderItems(items) {
+function placesNearby(lat, lng) {
+  return new Promise((res, rej) => {
+    const svc = new google.maps.places.PlacesService(document.createElement('div'));
+    svc.nearbySearch({
+      location: new google.maps.LatLng(lat, lng),
+      radius: 1500,
+      type: 'restaurant',
+      rankBy: google.maps.places.RankBy.PROMINENCE,
+    }, (results, status) => {
+      if (status === 'OK' || status === 'ZERO_RESULTS') {
+        res((results || []).filter(r => (r.rating ?? 0) >= 4));
+      } else {
+        rej(new Error('Places API: ' + status));
+      }
+    });
+  });
+}
+
+function getPlaceDetails(placeId) {
+  return new Promise(res => {
+    const svc = new google.maps.places.PlacesService(document.createElement('div'));
+    svc.getDetails({ placeId, fields: ['website','url','formatted_phone_number'] }, (place, status) => {
+      res(status === 'OK' ? place : null);
+    });
+  });
+}
+
+function haversine(lat1, lon1, lat2, lon2) {
+  const R = 6371e3, φ1 = lat1*Math.PI/180, φ2 = lat2*Math.PI/180;
+  const dφ = (lat2-lat1)*Math.PI/180, dλ = (lon2-lon1)*Math.PI/180;
+  const a = Math.sin(dφ/2)**2 + Math.cos(φ1)*Math.cos(φ2)*Math.sin(dλ/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
+// ─── Rendering ────────────────────────────────────────────────────────────
+
+function renderMenuItems(items) {
   return items.map(item => {
     if (item.isSoup) return `
       <div class="soup-block">
@@ -326,91 +537,318 @@ function renderItems(items) {
   }).join('');
 }
 
-function fillCard(r) {
-  // find the card by id and update its body
-  const card = document.querySelector(`[data-id="${r.id}"]`);
-  if (!card) return;
-  let domain;
-  try { domain = new URL(r.url).hostname.replace('www.',''); } catch { domain = r.url; }
+function renderFallbackLinks(name, websiteUrl, mapsUrl) {
+  const links = [];
+  if (websiteUrl) links.push(`
+    <a class="ext-link" href="${esc(websiteUrl)}" target="_blank" rel="noopener">
+      <span class="el-icon">🌐</span>
+      <span class="el-text">Web restaurace</span>
+      <span class="el-arrow">↗</span>
+    </a>`);
+  links.push(`
+    <a class="ext-link" href="https://www.google.com/search?q=${encodeURIComponent(name+' polední menu')}" target="_blank" rel="noopener">
+      <span class="el-icon">🔍</span>
+      <span class="el-text">Hledat polední menu</span>
+      <span class="el-arrow">↗</span>
+    </a>`);
+  if (mapsUrl) links.push(`
+    <a class="ext-link" href="${esc(mapsUrl)}" target="_blank" rel="noopener">
+      <span class="el-icon">📍</span>
+      <span class="el-text">Zobrazit na Google Maps</span>
+      <span class="el-arrow">↗</span>
+    </a>`);
+  return `<div class="link-row">${links.join('')}</div>`;
+}
+
+function renderFixedCard(r) {
+  let domain; try { domain = new URL(r.url).hostname.replace('www.',''); } catch { domain = r.url; }
+  let body;
+  if (r.error)           body = `<div class="card-err">⚠ ${esc(r.error)}</div>`;
+  else if (!r.items?.length) body = `<div class="card-empty">Dnes bez menu.</div>`;
+  else                   body = renderMenuItems(r.items);
+
+  return `<div class="card">
+    <div class="card-head">
+      <div>
+        <div class="card-name">${esc(r.name)}</div>
+        <div class="card-sub">
+          <a class="card-link" href="${esc(r.url)}" target="_blank" rel="noopener">${esc(domain)} ↗</a>
+        </div>
+      </div>
+      <div class="card-icon">${ICONS[r.id]??'🍽'}</div>
+    </div>
+    <div class="card-body">${body}</div>
+  </div>`;
+}
+
+function skeletonNearbyCard(name) {
+  return `<div class="card" id="nc-${CSS.escape(name.replace(/\s+/g,'-'))}">
+    <div class="card-head">
+      <div>
+        <div class="card-name">${esc(name)}</div>
+        <div class="card-sub"><div class="sk" style="width:120px;height:11px;margin:0"></div></div>
+      </div>
+      <div class="card-icon">🍽</div>
+    </div>
+    <div class="card-body">
+      <div class="sk" style="width:80%"></div>
+      <div class="sk" style="width:58%"></div>
+      <div class="sk" style="width:70%"></div>
+    </div>
+  </div>`;
+}
+
+function renderNearbyCard(place, dist, menuResult) {
+  const { name, rating, vicinity, place_id } = place;
+  const mapsUrl = `https://www.google.com/maps/place/?q=place_id:${place_id}`;
+  const website = menuResult?.url && menuResult.source !== 'links' ? menuResult.url : null;
+  let domain; try { domain = website ? new URL(website).hostname.replace('www.','') : null; } catch {}
+
+  const starsHtml = rating ? renderStars(rating) : '';
+  const distHtml  = dist != null ? `<span class="dist-badge">${fmtDist(dist)}</span>` : '';
 
   let body;
-  if (r.error)          body = `<div class="card-err">⚠ ${esc(r.error)}</div>`;
-  else if (!r.items?.length) body = `<div class="card-empty">Dnes bez menu.</div>`;
-  else                  body = renderItems(r.items);
+  if (menuResult?.items?.length) {
+    body = renderMenuItems(menuResult.items);
+    const src = menuResult.source === 'menicka' ? '📋 menicka.cz' : '🌐 web restaurace';
+    body += `<div style="margin-top:8px;font-size:.68rem;color:var(--muted)">zdroj: ${src}</div>`;
+  } else {
+    body = renderFallbackLinks(name, menuResult?.url ?? null, mapsUrl);
+  }
 
-  card.querySelector('.card-body').className = 'card-body';
-  card.querySelector('.card-body').innerHTML = body;
-  card.querySelector('.card-link') && (card.querySelector('.card-link').href = r.url);
-}
-
-function buildGrid() {
-  document.getElementById('grid').innerHTML = RESTAURANTS.map(r => `
-    <div class="card" data-id="${r.id}">
-      <div class="card-head">
-        <div>
-          <div class="card-name">${esc(r.name)}</div>
-          <a class="card-link" href="${esc(r.url)}" target="_blank" rel="noopener">
-            ${(() => { try { return new URL(r.url).hostname.replace('www.',''); } catch { return r.url; } })()} ↗
-          </a>
+  return `<div class="card">
+    <div class="card-head">
+      <div>
+        <div class="card-name">${esc(name)}</div>
+        <div class="card-sub">
+          ${starsHtml} ${distHtml}
+          ${domain ? `<a class="card-link" href="${esc(menuResult.url)}" target="_blank" rel="noopener">${esc(domain)} ↗</a>` : ''}
+          ${vicinity ? `<span class="card-addr">${esc(vicinity)}</span>` : ''}
         </div>
-        <div class="card-icon">${ICONS[r.id]??'🍽'}</div>
       </div>
-      <div class="card-body loading">
-        <div class="sk" style="width:80%"></div>
-        <div class="sk" style="width:58%"></div>
-        <div class="sk" style="width:72%"></div>
-        <div class="sk" style="width:44%"></div>
-      </div>
-    </div>`).join('');
+      <div class="card-icon">🍽</div>
+    </div>
+    <div class="card-body">${body}</div>
+  </div>`;
 }
 
-// ─── Main ──────────────────────────────────────────────────────────────────
+// ─── Tab: Moje hospody ────────────────────────────────────────────────────
 
-async function init(force = false) {
-  const btn = document.getElementById('refresh');
-  btn.disabled = true;
+async function loadFixed(force = false) {
+  const grid = document.getElementById('grid-mine');
 
-  const today = todayStr();
-  document.getElementById('date-chip').textContent = fmtDate(today);
-  document.getElementById('status').textContent = '';
-
-  buildGrid();
-
-  // Check cache
   if (!force) {
-    const cached = readCache();
+    const cached = store.fixedCache();
     if (cached) {
-      cached.restaurants.forEach(fillCard);
-      const gen = new Date(cached.generatedAt);
-      document.getElementById('status').textContent =
-        `Z cache · ${gen.toLocaleTimeString('cs-CZ')}`;
-      btn.disabled = false;
+      grid.innerHTML = cached.restaurants.map(renderFixedCard).join('');
+      setStatus(`Z cache · ${new Date(cached.generatedAt).toLocaleTimeString('cs-CZ')}`);
       return;
     }
   }
 
-  document.getElementById('status').textContent = 'Načítám menu…';
+  // Show skeletons
+  grid.innerHTML = FIXED.map(r => `
+    <div class="card">
+      <div class="card-head">
+        <div><div class="card-name">${esc(r.name)}</div></div>
+        <div class="card-icon">${ICONS[r.id]??'🍽'}</div>
+      </div>
+      <div class="card-body">
+        <div class="sk" style="width:82%"></div>
+        <div class="sk" style="width:60%"></div>
+        <div class="sk" style="width:74%"></div>
+        <div class="sk" style="width:48%"></div>
+      </div>
+    </div>`).join('');
 
-  // Scrape all in parallel, fill cards as each resolves
-  const promises = RESTAURANTS.map(r =>
-    scrapeOne(r).then(result => { fillCard(result); return result; })
-  );
+  setStatus('Načítám menu…');
 
-  const results = await Promise.all(promises);
-  const data = { date: today, generatedAt: new Date().toISOString(), restaurants: results };
-  writeCache(data);
+  const results = await Promise.all(FIXED.map(async r => {
+    try {
+      const html  = await fetchHtml(r.url);
+      const items = r.type === 'namaskar' ? parseGeneric(html) : parseMenicka(html);
+      return { ...r, items, error: null };
+    } catch (e) {
+      return { ...r, items: [], error: e.message };
+    }
+  }));
 
-  const errors = results.filter(r => r.error).length;
-  document.getElementById('status').textContent = errors
-    ? `Hotovo · ${errors} restaurace se nepodařilo načíst`
-    : `Hotovo · ${new Date().toLocaleTimeString('cs-CZ')}`;
+  grid.innerHTML = results.map(renderFixedCard).join('');
+  const data = { generatedAt: new Date().toISOString(), restaurants: results };
+  store.setFixedCache(data);
 
-  document.getElementById('foot').textContent =
-    `Data z menicka.cz a namaskar.cz · uloženo v localStorage do půlnoci`;
-  btn.disabled = false;
+  const errs = results.filter(r => r.error).length;
+  setStatus(errs ? `Hotovo · ${errs} se nepodařilo načíst` : `Hotovo · ${new Date().toLocaleTimeString('cs-CZ')}`);
 }
 
-init();
+// ─── Tab: V okolí ─────────────────────────────────────────────────────────
+
+async function loadNearby() {
+  if (nearbyLoaded) return;
+  nearbyLoaded = true;
+
+  const el = document.getElementById('nearby-content');
+  const apiKey = store.apiKey();
+
+  if (!apiKey) {
+    el.innerHTML = `<div class="panel-msg">
+      <div class="pm-icon">🗝</div>
+      <h2>Potřebuješ Google Maps API klíč</h2>
+      <p>Klikni na ⚙ vpravo nahoře, vlož svůj API klíč a ulož.</p>
+      <button class="btn-primary" onclick="toggleSettings()">⚙ Nastavení</button>
+    </div>`;
+    return;
+  }
+
+  // Check day cache
+  const cached = store.nearbyCache();
+  if (cached?.places?.length) {
+    const grid = document.createElement('div');
+    grid.className = 'grid';
+    grid.innerHTML = cached.places.map(p => renderNearbyCard(p.place, p.dist, p.menu)).join('');
+    el.innerHTML = '';
+    el.appendChild(grid);
+    setStatus(`Z cache · ${new Date(cached.generatedAt).toLocaleTimeString('cs-CZ')}`);
+    return;
+  }
+
+  el.innerHTML = `<div class="panel-msg">
+    <div class="pm-icon">📍</div>
+    <h2>Zjistit polohu</h2>
+    <p>Potřebujeme tvou polohu, abychom našli nejbližší restaurace.</p>
+    <button class="btn-primary" id="loc-btn" onclick="startNearbySearch()">Povolit polohu</button>
+  </div>`;
+}
+
+async function startNearbySearch() {
+  const el = document.getElementById('nearby-content');
+  el.innerHTML = `<div class="panel-msg"><div class="pm-icon" style="animation:spin 1s linear infinite">⟳</div><h2>Zjišťuji polohu…</h2></div>`;
+
+  let pos;
+  try {
+    pos = await new Promise((res, rej) =>
+      navigator.geolocation.getCurrentPosition(res, rej, { timeout: 10000 }));
+  } catch (e) {
+    el.innerHTML = `<div class="panel-msg">
+      <div class="pm-icon">⚠</div>
+      <h2>Poloha není dostupná</h2>
+      <p>${esc(e.message)}</p>
+      <button class="btn-primary" onclick="startNearbySearch()">Zkusit znovu</button>
+    </div>`;
+    return;
+  }
+
+  const { latitude: lat, longitude: lng } = pos.coords;
+  el.innerHTML = `<div class="panel-msg"><div class="pm-icon" style="animation:spin 1s linear infinite">⟳</div><h2>Načítám Google Maps…</h2></div>`;
+
+  try {
+    await loadGmaps(store.apiKey());
+  } catch (e) {
+    el.innerHTML = `<div class="panel-msg">
+      <div class="pm-icon">⚠</div>
+      <h2>Chyba Google Maps</h2>
+      <p>${esc(e.message)}</p>
+      <button class="btn-primary" onclick="toggleSettings()">⚙ Opravit klíč</button>
+    </div>`;
+    return;
+  }
+
+  setStatus('Hledám restaurace v okolí…');
+  el.innerHTML = `<div class="panel-msg"><div class="pm-icon" style="animation:spin 1s linear infinite">⟳</div><h2>Hledám restaurace v okolí…</h2></div>`;
+
+  let places;
+  try {
+    places = await placesNearby(lat, lng);
+  } catch (e) {
+    el.innerHTML = `<div class="panel-msg"><div class="pm-icon">⚠</div><h2>${esc(e.message)}</h2></div>`;
+    return;
+  }
+
+  if (!places.length) {
+    el.innerHTML = `<div class="panel-msg"><div class="pm-icon">🤷</div><h2>Žádné restaurace s hodnocením 4+ nenalezeny v okruhu 1.5 km</h2></div>`;
+    return;
+  }
+
+  // Sort by distance, take top 5
+  const ranked = places
+    .map(p => ({ p, dist: haversine(lat, lng, p.geometry.location.lat(), p.geometry.location.lng()) }))
+    .sort((a, b) => a.dist - b.dist)
+    .slice(0, 5);
+
+  // Build grid with skeletons
+  const grid = document.createElement('div');
+  grid.className = 'grid';
+  grid.innerHTML = ranked.map(({ p }) => skeletonNearbyCard(p.name)).join('');
+  el.innerHTML = '';
+  el.appendChild(grid);
+  setStatus(`Nalezeno ${ranked.length} restaurací — hledám menu…`);
+
+  // Resolve each restaurant: details + menu — fill card as each completes
+  const resolved = await Promise.all(ranked.map(async ({ p, dist }) => {
+    const details = await getPlaceDetails(p.place_id);
+    const website = details?.website ?? null;
+    const menu    = await resolveNearbyMenu(p.name, website);
+    const card    = renderNearbyCard(p, dist, menu);
+    // Replace skeleton
+    const id = CSS.escape(p.name.replace(/\s+/g,'-'));
+    const old = grid.querySelector(`#nc-${id}`);
+    if (old) old.outerHTML = card;
+    return { place: p, dist, menu };
+  }));
+
+  store.setNearbyCache({ generatedAt: new Date().toISOString(), places: resolved });
+  setStatus(`Hotovo · ${new Date().toLocaleTimeString('cs-CZ')}`);
+}
+
+// ─── Settings ─────────────────────────────────────────────────────────────
+
+function toggleSettings() {
+  const panel = document.getElementById('settings-panel');
+  const btn   = document.getElementById('settings-btn');
+  const open  = !panel.classList.contains('open');
+  panel.classList.toggle('open', open);
+  btn.classList.toggle('active', open);
+  if (open) {
+    document.getElementById('api-key-input').value = store.apiKey();
+  }
+}
+
+function saveApiKey() {
+  const k = document.getElementById('api-key-input').value.trim();
+  store.setApiKey(k);
+  toggleSettings();
+  if (activeTab === 'nearby') {
+    nearbyLoaded = false;
+    gmapsReady = false;
+    loadNearby();
+  }
+}
+
+// ─── Tabs ─────────────────────────────────────────────────────────────────
+
+function switchTab(tab) {
+  activeTab = tab;
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.textContent.includes(tab === 'mine' ? 'hospody' : 'okolí')));
+  document.getElementById('panel-mine').hidden   = tab !== 'mine';
+  document.getElementById('panel-nearby').hidden = tab !== 'nearby';
+  if (tab === 'nearby') loadNearby();
+}
+
+function setStatus(msg) {
+  document.getElementById('status').textContent = msg;
+}
+
+// ─── Boot ─────────────────────────────────────────────────────────────────
+
+document.getElementById('date-chip').textContent = fmtDate(todayStr());
+document.getElementById('foot').textContent = 'data z menicka.cz, namaskar.cz a Google Places API';
+
+// spinning animation for loading icons
+const style = document.createElement('style');
+style.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
+document.head.appendChild(style);
+
+loadFixed();
 </script>
 </body>
 </html>
