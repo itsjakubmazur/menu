@@ -553,43 +553,54 @@ function showSkeletons(grid) {
 // ─── Parsers ──────────────────────────────────────────────────────────────
 
 // menicka.cz iframe API: https://menicka.cz/api/iframe/?id=XXXX
-// The page returns the full week — one .menicka div per day.
-// Structure per day:
-//   <div class="menicka">
-//     <div class="nadpis">Středa 28. 5. 2025</div>  (or <h2 class="nadpis">)
-//     <ul class="jidla">
-//       <li class="polevka"><span class="cislo"></span><span class="nazev">…</span><span class="cena">…</span></li>
-//       <li class="jidlo"><span class="cislo">1.</span><span class="nazev">…</span><span class="cena">…</span></li>
-//     </ul>
-//   </div>
+// Returns the current week — one div.menicka per day.
+// Known structures (site has changed over time, try both):
+//   A) div.menicka > div.nadpis + ul > li.polevka/li.jidlo > span.nazev + span.cena + span.cislo
+//   B) div.menicka > div.nadpis + ul > li > div.polozka (contains span.poradi) + div.cena
 function parseMenickaIframe(html) {
   const doc = new DOMParser().parseFromString(html, 'text/html');
   const now = new Date(), day = now.getDate(), mon = now.getMonth() + 1;
   const items = [];
 
-  // Walk every .menicka section and find the one whose heading matches today
+  // Find the section whose heading matches today
+  let todaySection = null;
   for (const section of doc.querySelectorAll('.menicka')) {
-    // The date heading may be .nadpis, h2, h3 — try all
     let headText = '';
-    for (const sel of ['.nadpis', 'h2', 'h3', 'h4', 'p']) {
+    for (const sel of ['.nadpis', 'h2', 'h3', 'h4']) {
       const el = section.querySelector(sel);
       if (el) { headText = el.textContent; break; }
     }
-    if (!headText) headText = section.textContent.slice(0, 40);
-
-    // Match day and month, tolerating spaces: "28. 5." or "28.5." or "28.5.2025"
     const m = headText.match(/(\d{1,2})\s*\.\s*(\d{1,2})/);
-    if (!m || +m[1] !== day || +m[2] !== mon) continue;
+    if (m && +m[1] === day && +m[2] === mon) { todaySection = section; break; }
+  }
 
-    section.querySelectorAll('li').forEach(li => {
-      const name  = li.querySelector('.nazev')?.textContent.trim();
+  const scope = todaySection ?? doc.body; // fallback: iframe may show only current day
+
+  for (const li of scope.querySelectorAll('li')) {
+    // Style A: span.nazev / span.cislo / span.cena (or .cena directly)
+    const nazev = li.querySelector('.nazev');
+    if (nazev) {
+      const name  = nazev.textContent.trim();
       const price = li.querySelector('.cena')?.textContent.trim().replace(/\s+/g, ' ') ?? '';
       const num   = li.querySelector('.cislo')?.textContent.trim() ?? '';
       if (name) items.push({ number: num, name, price, isSoup: li.classList.contains('polevka') });
-    });
-    break; // found today — stop
+      continue;
+    }
+
+    // Style B: div.polozka (name) + div.cena, number in span.poradi inside polozka
+    const polozka = li.querySelector('.polozka');
+    if (polozka) {
+      const poradi = polozka.querySelector('.poradi');
+      const num    = poradi?.textContent.trim() ?? '';
+      if (poradi) poradi.remove(); // remove number element before reading name
+      const name  = polozka.textContent.trim();
+      const price = li.querySelector('.cena')?.textContent.trim().replace(/\s+/g, ' ') ?? '';
+      if (name) items.push({ number: num, name, price, isSoup: false });
+    }
   }
 
+  console.log(`[menu] parseMenickaIframe day=${day} mon=${mon} section=${!!todaySection} items=${items.length}`);
+  if (!items.length) console.log('[menu] HTML snippet:', html.slice(0, 600));
   return items;
 }
 

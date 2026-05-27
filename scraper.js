@@ -46,39 +46,37 @@ function parseMenickaIframe(html) {
   const now = new Date(), day = now.getDate(), mon = now.getMonth() + 1;
   const items = [];
 
-  // Strategy 1: find the section whose heading contains today's date
+  // Find today's section by date heading
   let todaySection = null;
-  $('h2, h3, .nadpis, .den-nadpis').each((_, el) => {
-    const txt = $(el).text();
-    const m = txt.match(/(\d{1,2})\.\s*(\d{1,2})/);
-    if (m && +m[1] === day && +m[2] === mon) {
-      todaySection = el;
-      return false; // break
-    }
+  $('.menicka').each((_, section) => {
+    const headText = $(section).find('.nadpis, h2, h3, h4').first().text();
+    const m = headText.match(/(\d{1,2})\s*\.\s*(\d{1,2})/);
+    if (m && +m[1] === day && +m[2] === mon) { todaySection = section; return false; }
   });
 
-  const $scope = todaySection
-    ? $(todaySection).closest('div, section, .den, .menicka-den').add($(todaySection).parent())
-    : $('body');    // fallback: whole page (iframe shows only current day sometimes)
+  const $scope = todaySection ? $(todaySection) : $('body');
 
-  $scope.find('li.polevka, li.jidlo').each((_, li) => {
-    const $li   = $(li);
-    const name  = $li.find('.nazev').text().trim();
-    const price = $li.find('.cena').text().trim().replace(/\s+/g, ' ');
-    const num   = $li.find('.cislo').text().trim();
-    if (name) items.push({ number: num, name, price, isSoup: $li.hasClass('polevka') });
-  });
+  $scope.find('li').each((_, li) => {
+    const $li = $(li);
 
-  // If nothing found via scope, take everything (single-day iframe)
-  if (!items.length) {
-    $('li.polevka, li.jidlo').each((_, li) => {
-      const $li   = $(li);
-      const name  = $li.find('.nazev').text().trim();
+    // Style A: span.nazev / span.cislo
+    const nazev = $li.find('.nazev').text().trim();
+    if (nazev) {
       const price = $li.find('.cena').text().trim().replace(/\s+/g, ' ');
       const num   = $li.find('.cislo').text().trim();
-      if (name) items.push({ number: num, name, price, isSoup: $li.hasClass('polevka') });
-    });
-  }
+      items.push({ number: num, name: nazev, price, isSoup: $li.hasClass('polevka') });
+      return;
+    }
+
+    // Style B: div.polozka / span.poradi / div.cena
+    const $polozka = $li.find('.polozka');
+    if ($polozka.length) {
+      const num  = $polozka.find('.poradi').text().trim();
+      const name = $polozka.clone().find('.poradi').remove().end().text().trim();
+      const price = $li.find('.cena').text().trim().replace(/\s+/g, ' ');
+      if (name) items.push({ number: num, name, price, isSoup: false });
+    }
+  });
 
   return items;
 }
