@@ -553,54 +553,34 @@ function showSkeletons(grid) {
 // ─── Parsers ──────────────────────────────────────────────────────────────
 
 // menicka.cz iframe API: https://menicka.cz/api/iframe/?id=XXXX
-// Returns the current week — one div.menicka per day.
-// Known structures (site has changed over time, try both):
-//   A) div.menicka > div.nadpis + ul > li.polevka/li.jidlo > span.nazev + span.cena + span.cislo
-//   B) div.menicka > div.nadpis + ul > li > div.polozka (contains span.poradi) + div.cena
+// Structure: div.content per day, h2 heading (today has span.dnes inside),
+// table.menu with tr.soup / tr.main rows, td.no / td.food / td.prize cells.
 function parseMenickaIframe(html) {
   const doc = new DOMParser().parseFromString(html, 'text/html');
   const now = new Date(), day = now.getDate(), mon = now.getMonth() + 1;
   const items = [];
 
-  // Find the section whose heading matches today
   let todaySection = null;
-  for (const section of doc.querySelectorAll('.menicka')) {
-    let headText = '';
-    for (const sel of ['.nadpis', 'h2', 'h3', 'h4']) {
-      const el = section.querySelector(sel);
-      if (el) { headText = el.textContent; break; }
-    }
-    const m = headText.match(/(\d{1,2})\s*\.\s*(\d{1,2})/);
+  for (const section of doc.querySelectorAll('div.content')) {
+    // Primary: today is flagged with span.dnes inside the h2
+    if (section.querySelector('h2 .dnes')) { todaySection = section; break; }
+    // Fallback: match date "27.5" numerically
+    const h2 = section.querySelector('h2');
+    const m  = h2?.textContent.match(/(\d{1,2})\.(\d{1,2})/);
     if (m && +m[1] === day && +m[2] === mon) { todaySection = section; break; }
   }
 
-  const scope = todaySection ?? doc.body; // fallback: iframe may show only current day
+  if (!todaySection) return items;
 
-  for (const li of scope.querySelectorAll('li')) {
-    // Style A: span.nazev / span.cislo / span.cena (or .cena directly)
-    const nazev = li.querySelector('.nazev');
-    if (nazev) {
-      const name  = nazev.textContent.trim();
-      const price = li.querySelector('.cena')?.textContent.trim().replace(/\s+/g, ' ') ?? '';
-      const num   = li.querySelector('.cislo')?.textContent.trim() ?? '';
-      if (name) items.push({ number: num, name, price, isSoup: li.classList.contains('polevka') });
-      continue;
-    }
-
-    // Style B: div.polozka (name) + div.cena, number in span.poradi inside polozka
-    const polozka = li.querySelector('.polozka');
-    if (polozka) {
-      const poradi = polozka.querySelector('.poradi');
-      const num    = poradi?.textContent.trim() ?? '';
-      if (poradi) poradi.remove(); // remove number element before reading name
-      const name  = polozka.textContent.trim();
-      const price = li.querySelector('.cena')?.textContent.trim().replace(/\s+/g, ' ') ?? '';
-      if (name) items.push({ number: num, name, price, isSoup: false });
+  for (const tr of todaySection.querySelectorAll('tr.soup, tr.main')) {
+    const name  = tr.querySelector('td.food')?.textContent.trim() ?? '';
+    const price = tr.querySelector('td.prize')?.textContent.trim() ?? '';
+    const num   = tr.querySelector('td.no')?.textContent.trim() ?? '';
+    if (name && !name.startsWith('Pro tento den')) {
+      items.push({ number: num, name, price, isSoup: tr.classList.contains('soup') });
     }
   }
 
-  console.log(`[menu] parseMenickaIframe day=${day} mon=${mon} section=${!!todaySection} items=${items.length}`);
-  if (!items.length) console.log('[menu] HTML snippet:', html.slice(0, 600));
   return items;
 }
 
