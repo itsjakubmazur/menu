@@ -1,0 +1,230 @@
+{
+  "date": "2026-06-23",
+  "generatedAt": "2026-06-23T11:40:53.056Z",
+  "restaurants": [
+    {
+      "id": "suzies",
+      "name": "Suzie's Steak Pub",
+      "menickaId": 3830,
+      "url": "https://www.menicka.cz/3830-suzies-steak-pub.html",
+      "type": "menicka",
+      "items": [
+        {
+          "number": "",
+          "name": "Fazolov� pol�vka s major�nkou",
+          "price": "",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "Sal�t: 200g Sma�en�  kr�t� stripsy pod�van� na listov�m sal�tu s farm��sk�m dresinkem, va�en�m vejcem, parmez�nem a �erstv�m pe�ivem",
+          "price": "179 K�",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "Hotovka 1: 200g  Sma�en� kv�t�kov� hlavi�ky pod�van� s va�en�mi bramborami a tatarskou om��kou",
+          "price": "",
+          "isSoup": false
+        },
+        {
+          "number": "3.",
+          "name": "Hotovka 2: 200g Masov� mlet� koule pln�n� bylinkami pod�van� v tradi�n� rajsk�  om��ce, va�en� kol�nka",
+          "price": "169 K�",
+          "isSoup": false
+        },
+        {
+          "number": "4.",
+          "name": "Minutka: 200g Fil�rovan� panensk� sv��kov� pod�van� s restovan�mi fazolov�mi lusky s Chorizem,  americk�mi bramborami a pep�ovou om��kou",
+          "price": "185 K�",
+          "isSoup": false
+        },
+        {
+          "number": "5.",
+          "name": "Tip dne: 150g Pomalu ta�en�  vep�ov� l��ka na ko�enov� zelenin� a �erven�m v�n�, m�slov� bramborov� ka�e, perle�ov� cibulky",
+          "price": "195 K�",
+          "isSoup": false
+        },
+        {
+          "number": "6.",
+          "name": "0, 3l  �epovan� R�dler 20 / 0, 5l �tatl 12`",
+          "price": "45 K�",
+          "isSoup": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "seminar",
+      "name": "Hostinec U Semináru",
+      "menickaId": 3197,
+      "url": "https://www.menicka.cz/3197-hostinec-u-seminaru.html",
+      "type": "menicka",
+      "items": [
+        {
+          "number": "",
+          "name": "0,25 l Hrstkov� pol�vka  s ko�enovou zeleninou",
+          "price": "",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "200 g Vykost�n� vep�ov�  koleno pe�en� na rozmar�nu a plze�sk�m pivu, ran� hl�vkov� zel�, houskov� knedl�k",
+          "price": "179 K�",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "150 g Filovan� ku�ec� prso s italsk�mi gnocchi a pikantn� om��kou Arrabiata se s�rem Gran Biraghi a bazalkov�m pestem",
+          "price": "189 K�",
+          "isSoup": false
+        },
+        {
+          "number": "3.",
+          "name": "200 g Konfitovan� hov�z� krk s om��kou z lesn�ch hub a du�enou r��� Basmati,  okurkov� sal�t",
+          "price": "269 K�",
+          "isSoup": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "kormidlo",
+      "name": "U Kormidla",
+      "menickaId": 6690,
+      "url": "https://www.menicka.cz/6690-u-kormidla.html",
+      "type": "menicka",
+      "items": [
+        {
+          "number": "",
+          "name": "Hov�z� v�var s j�trov�mi  knedl��ky a nudlemi 1a,3",
+          "price": "",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "Sma�en� holandsk� ��zek, va�en�  brambory, tatarka 1a,3,7",
+          "price": "139 K�",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "Ku�ec� prsn� nugety v  holandsk� om��ce, krokety 1a,7",
+          "price": "139 K�",
+          "isSoup": false
+        },
+        {
+          "number": "3.",
+          "name": "Vep�ov� j�tra na cibulce, r��e, okurek sterilovan�  1a",
+          "price": "139 K�",
+          "isSoup": false
+        },
+        {
+          "number": "4.",
+          "name": "Hov�z� l��ka na v�n�,  bramborov� pyr� 1a,7,9",
+          "price": "179 K�",
+          "isSoup": false
+        },
+        {
+          "number": "5.",
+          "name": "Zel. sal�t, brambor��ky s ku�ec�m masem  a s�rem, dressing, pe�ivo 1a,3,7",
+          "price": "179 K�",
+          "isSoup": false
+        },
+        {
+          "number": "6.",
+          "name": "Bramborov� gul� s klob�sou, chl�b 1a",
+          "price": "139 K�",
+          "isSoup": false
+        },
+        {
+          "number": "7.",
+          "name": "200g STEAK Z VEP�OV�  PANENKY, PEP�OV� OM��KA, OP. BRAMBOR 1a,7,10",
+          "price": "179 K�",
+          "isSoup": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "laguna",
+      "name": "Restaurace Laguna",
+      "menickaId": 2701,
+      "url": "https://www.menicka.cz/2701-restaurace-laguna.html",
+      "type": "menicka",
+      "items": [
+        {
+          "number": "",
+          "name": "pol�vka:  Frankfurtsk� s p�rkem",
+          "price": "35 K�",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "Jel�tkov� a jitrnicov� prejt  se zel�m a va�en�mi bramborami",
+          "price": "136 K�",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "Ku�ec� sot�  se �ampiony,du�en� r��e",
+          "price": "136 K�",
+          "isSoup": false
+        },
+        {
+          "number": "3.",
+          "name": "Vep�ov� �p�z s paprikou a klob�skou,hranolky",
+          "price": "148 K�",
+          "isSoup": false
+        },
+        {
+          "number": "4.",
+          "name": "�eck�  sal�t s �ern�mi olivami,balk�nsk�m s�rem a rozpe�en�m toastem",
+          "price": "157 K�",
+          "isSoup": false
+        },
+        {
+          "number": "5.",
+          "name": "Ku�ec� Cordon bleu s va�en�mi bramborami a tatarskou om��kou",
+          "price": "172 K�",
+          "isSoup": false
+        },
+        {
+          "number": "6.",
+          "name": "Dezert:  Kokosov� dort ,,Rafaelo\" se �leha�kou",
+          "price": "93 K�",
+          "isSoup": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "garden",
+      "name": "Garden Food Concept",
+      "menickaId": 6361,
+      "url": "https://www.menicka.cz/6361-garden-food-concept.html",
+      "type": "menicka",
+      "items": [
+        {
+          "number": "",
+          "name": "�o�kov� pol�vka s  p�rkem a major�nkou  139",
+          "price": "",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "1. 150g Mo�sk� �tika pe�en� na su�en�ch raj�atech pod�van� na bat�tov�m pyr� s grilovanou zeleninou a bulgurov� sal�t s  olivami, raj�aty, cibulkou a bylinkami  14",
+          "price": "189 K�",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "2. 150g Tortilla pln�n� ku�ec�m gyrosem, sal�tem, raj�aty, s�rem a majon�zou z pe�en�ho  �esneku a petr�elky pod�v�me s pe�en�mi grenailemi a okurkov�mi tzatziki s �esnekem a koprem  137",
+          "price": "189 K�",
+          "isSoup": false
+        }
+      ],
+      "error": null
+    }
+  ]
+}
