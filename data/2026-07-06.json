@@ -1,0 +1,156 @@
+{
+  "date": "2026-07-06",
+  "generatedAt": "2026-07-06T12:25:25.591Z",
+  "restaurants": [
+    {
+      "id": "suzies",
+      "name": "Suzie's Steak Pub",
+      "menickaId": 3830,
+      "url": "https://www.menicka.cz/3830-suzies-steak-pub.html",
+      "type": "menicka",
+      "items": [],
+      "error": null
+    },
+    {
+      "id": "seminar",
+      "name": "Hostinec U Semináru",
+      "menickaId": 3197,
+      "url": "https://www.menicka.cz/3197-hostinec-u-seminaru.html",
+      "type": "menicka",
+      "items": [
+        {
+          "number": "",
+          "name": "0,25 l Tomatov�  pol�vka s t�stovinami",
+          "price": "",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "150 g Marinovan� ku�ec� prso s kus kus sal�tem s grilovanou zeleninou (raj�e, paprika, cuketa,  lilek) a bylinkov�m pestem",
+          "price": "179 K�",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "250 g  Lasagne s bolo�sk�m masov�m rag�, be�amelem, mozzarellou a bazalkou",
+          "price": "195 K�",
+          "isSoup": false
+        },
+        {
+          "number": "3.",
+          "name": "150 g Anglick� roastbeef,  ope�en� brambory, dom�c� remul�da s kapary",
+          "price": "279 K�",
+          "isSoup": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "kormidlo",
+      "name": "U Kormidla",
+      "menickaId": 6690,
+      "url": "https://www.menicka.cz/6690-u-kormidla.html",
+      "type": "menicka",
+      "items": [
+        {
+          "number": "",
+          "name": "Fazola�ka mexick�  1a,9",
+          "price": "",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "Sma�en�  ku�ec� prsa pln�n� nivou a slaninou, va�. nov� brambory s m�slem 1a,3,7",
+          "price": "169 K�",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "200g VEP�OV�  STEAK Z PANENKY, �ESNEKOV� DIP, HRANOLKY 1a,7",
+          "price": "179 K�",
+          "isSoup": false
+        },
+        {
+          "number": "3.",
+          "name": "Ku�ec� nudli�ky v s�rov� om��ce  s cukrov�m hr�kem, jasm�nov� r��e 1a,7",
+          "price": "169 K�",
+          "isSoup": false
+        },
+        {
+          "number": "4.",
+          "name": "Sv��kov� na smetan� s  brusinkami, houskov� knedl�k 1a,3,7,9,10",
+          "price": "189 K�",
+          "isSoup": false
+        },
+        {
+          "number": "5.",
+          "name": "Zeleninov� sal�t, uzen� losos, mozzarella, dressing, bageta  1a,4,7",
+          "price": "189 K�",
+          "isSoup": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "laguna",
+      "name": "Restaurace Laguna",
+      "menickaId": 2701,
+      "url": "https://www.menicka.cz/2701-restaurace-laguna.html",
+      "type": "menicka",
+      "items": [
+        {
+          "number": "",
+          "name": "Pol�vka: Hrachov� s p�rkem",
+          "price": "35 K�",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "1/4 Pe�en�  ku�e s du�enou r���,okurek",
+          "price": "136 K�",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "Vep�ov� steak s  anglickou slaninou a uzen�m s�rem,hranolky",
+          "price": "136 K�",
+          "isSoup": false
+        },
+        {
+          "number": "3.",
+          "name": "Ku�ec� medailonky na restovan�  zelenin� ,hranolky",
+          "price": "148 K�",
+          "isSoup": false
+        },
+        {
+          "number": "4.",
+          "name": "Tagliatelle s ku�ec�m masem a smetanovou om��kou z li�ek",
+          "price": "157 K�",
+          "isSoup": false
+        },
+        {
+          "number": "5.",
+          "name": "Steak z lososa s bylinkovou  om��kou a va�en�mi bramborami",
+          "price": "172 K�",
+          "isSoup": false
+        },
+        {
+          "number": "6.",
+          "name": "Dezert: Kokosov� dort ,,Rafaelo\" se �leha�kou",
+          "price": "93 K�",
+          "isSoup": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "garden",
+      "name": "Garden Food Concept",
+      "menickaId": 6361,
+      "url": "https://www.menicka.cz/6361-garden-food-concept.html",
+      "type": "menicka",
+      "items": [],
+      "error": null
+    }
+  ]
+}
