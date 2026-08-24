@@ -1,0 +1,230 @@
+{
+  "date": "2026-08-24",
+  "generatedAt": "2026-08-24T09:25:20.563Z",
+  "restaurants": [
+    {
+      "id": "suzies",
+      "name": "Suzie's Steak Pub",
+      "menickaId": 3830,
+      "url": "https://www.menicka.cz/3830-suzies-steak-pub.html",
+      "type": "menicka",
+      "items": [
+        {
+          "number": "",
+          "name": "Pórkový krém  s krutonky",
+          "price": "",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "Pasta: 200g Italské houbové  risotto podávané s filírovanou panenskou svíčkovou, sypané parmezánem",
+          "price": "169 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "Hotovka 1:  200g Segedínsky guláš podávaný s houskovými knedlíky",
+          "price": "169 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "3.",
+          "name": "Hotovka 2: 200g Kuřecí Kung Pao s rok zeleninou, praženými arašídy a  dušenou rýže, salátek",
+          "price": "175 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "4.",
+          "name": "Minutka: 200g Kuřecí prsní steak gratinovaný poličanem, žampiony a sýrem, bramborové hranolky a naše tatarská omáčka",
+          "price": "179 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "5.",
+          "name": "Tip dne: 150g Filírované kachní prsíčko z grilu podávané  se švestkovou omáčkou a pečenými brambůrkami s cibulkou a bylinkami",
+          "price": "195 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "6.",
+          "name": "Dezerty: 1 ks Malinový řez s pistáciemi 45  / 1 ks Naše Tiramisu",
+          "price": "85 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "7.",
+          "name": "AKCE!!! 0,  5l Štatl 40 / 0, 3l Čepovaný Rádler",
+          "price": "20 Kč",
+          "isSoup": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "seminar",
+      "name": "Hostinec U Semináru",
+      "menickaId": 3197,
+      "url": "https://www.menicka.cz/3197-hostinec-u-seminaru.html",
+      "type": "menicka",
+      "items": [
+        {
+          "number": "",
+          "name": "0,25 l Cuketová polévka s houskovými krutony",
+          "price": "",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "150 g Kuřecí ragú na bílém víně, fenyklu, tymiánu a iberijském špeku s perlovými cibulkami a restovanými žampiony,  jasmínová rýže",
+          "price": "185 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "150 g Grilovaný telecí karbenátek s restovanou slaninou a pepřovou omáčkou,  pečené rozmarýnové brambory, míchaný zeleninový salát",
+          "price": "195 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "3.",
+          "name": "150 g Anglický  roastbeef, opečené brambory, domácí remuláda s kapary",
+          "price": "285 Kč",
+          "isSoup": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "kormidlo",
+      "name": "U Kormidla",
+      "menickaId": 6690,
+      "url": "https://www.menicka.cz/6690-u-kormidla.html",
+      "type": "menicka",
+      "items": [
+        {
+          "number": "",
+          "name": "Zeleninová s bramborem, řapíkatým  celerem a kedlubnou 1a,9",
+          "price": "",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "Smažená vepřová kotleta pl. žampiony a mozz., vařené  brambory s máslem 1a,3,7",
+          "price": "139 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "Kuřecí prsa na grilu s houbovo nivovou omáčkou, opékaný brambor 1a,7",
+          "price": "139 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "3.",
+          "name": "Vepřové  nudličky na divoko, jasmínová rýže 1a",
+          "price": "139 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "4.",
+          "name": "Špagety aglio olio  e peperoncino (sýr moravia) 1a,3,7",
+          "price": "139 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "5.",
+          "name": "Zeleninový  salát, 100g smažený losos, dressing, pečivo 1a,3,4,7",
+          "price": "179 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "6.",
+          "name": "Fazolový  guláš s klobásou, chléb 1a",
+          "price": "139 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "7.",
+          "name": "200g STEAK Z  VEPŘOVÉ PANENKY S HOŘČIČO MEDOVOU OMÁČKOU, AM. BR. 1a,7",
+          "price": "179 Kč",
+          "isSoup": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "laguna",
+      "name": "Restaurace Laguna",
+      "menickaId": 2701,
+      "url": "https://www.menicka.cz/2701-restaurace-laguna.html",
+      "type": "menicka",
+      "items": [
+        {
+          "number": "",
+          "name": "Polévka:valašská  kyselice",
+          "price": "35 Kč",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "Kuskus se zeleninou a kuřecím  masem",
+          "price": "136 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "Dušená kapusta  s pečeným vepřovým masem a vařenými bramborami",
+          "price": "136 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "3.",
+          "name": "Tagliatelle  s kuřecím masem smetanou a žampiony",
+          "price": "148 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "4.",
+          "name": "Smažené tvarůžky  s vařenými bramborami a tatarskou omáčkou",
+          "price": "157 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "5.",
+          "name": "Hovězí guláš s opečenou klobáskou a  červenou cibulkou,houskové knedlíky",
+          "price": "172 Kč",
+          "isSoup": false
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "garden",
+      "name": "Garden Food Concept",
+      "menickaId": 6361,
+      "url": "https://www.menicka.cz/6361-garden-food-concept.html",
+      "type": "menicka",
+      "items": [
+        {
+          "number": "",
+          "name": "Zeleninová polévka  na rajčatech s čočkou\n\t1\n\t9",
+          "price": "",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "1. 150g Korejská kuřecí pánev (pikantni) ochucená chilli pastou gochujang a rybí omáčkou, čerstvá zelenina (cuketa, ředkev, paprika, čínské zelí, cibule, žampiony) podávaná s dušenou jasminovou  rýží a smaženou cibulkou\n\t4\n\t5\n\t7\n\t11",
+          "price": "189 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "2. 150g Vepřový řízek z kotlety marinovaný v  česneku a pepři podávaný se štouchanými brambory s bylinkami a cibulkou, salat coleslaw a nakládaná okurka\n\t1\n\t3\n\t7",
+          "price": "189 Kč",
+          "isSoup": false
+        }
+      ],
+      "error": null
+    }
+  ]
+}
