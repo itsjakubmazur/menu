@@ -2,8 +2,13 @@ name: Scrape menus
 
 on:
   schedule:
-    # Weekdays at 08:30 UTC = 10:30 CEST / 09:30 CET
-    - cron: '30 8 * * 1-5'
+    # GitHub runs scheduled workflows "at or after" the cron time, and on this
+    # repo they have consistently started 4-7 h late — the 08:30 UTC schedule
+    # was landing between 12:50 and 15:11 UTC, long after lunch. Aim early and
+    # keep a second run as a backup.
+    # 02:00 UTC -> typically lands 06:00-09:00 UTC (08:00-11:00 CEST)
+    - cron: '0 2 * * 1-5'
+    - cron: '0 5 * * 1-5'
   workflow_dispatch:
 
 jobs:

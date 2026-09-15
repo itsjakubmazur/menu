@@ -442,10 +442,13 @@ const FIXED = [
 ];
 const ICONS = { suzies:'🥩', seminar:'🍺', kormidlo:'⚓', laguna:'🐟', garden:'🌿' };
 
-// Multiple CORS proxies tried in order — first success wins
+// Multiple CORS proxies tried in order — first success wins.
+// Keep the hosts distinct: several entries pointing at one service is a single
+// proxy wearing several hats the moment that service is down or rate-limits us.
 const PROXIES = [
   u => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
-  u => `https://corsproxy.io/?${encodeURIComponent(u)}`,
+  u => `https://api.codetabs.com/v1/proxy/?quest=${encodeURIComponent(u)}`,
+  u => `https://corsproxy.io/?url=${encodeURIComponent(u)}`,
   u => `https://api.allorigins.win/get?url=${encodeURIComponent(u)}`,
 ];
 const REPO   = 'itsjakubmazur/menu';
@@ -549,6 +552,24 @@ async function fetchHtml(url, timeout = 12000) {
     }
   }
   throw new Error(lastErr?.message ?? 'all proxies failed');
+}
+
+// Run tasks a few at a time. Firing every restaurant at one proxy host at once
+// gets us rate-limited, and the abort timer runs while a request is still
+// queued behind the browser's per-host connection limit — so it aborts before
+// it was ever sent.
+async function mapLimit(items, limit, fn) {
+  const out = new Array(items.length);
+  let next = 0;
+  await Promise.all(
+    Array.from({ length: Math.min(limit, items.length) }, async () => {
+      while (next < items.length) {
+        const i = next++;
+        out[i] = await fn(items[i]);
+      }
+    })
+  );
+  return out;
 }
 
 async function fetchJson(url, timeout = 8000) {
@@ -658,8 +679,10 @@ async function loadDayData(date) {
   const isToday = date === today;
 
   // 1. Check localStorage cache
+  // A cache entry holding errors is a failed scrape, not data — ignore it, or
+  // every later reload replays the same errors instead of retrying.
   const cached = store.dayCache(date);
-  if (cached) {
+  if (cached && Array.isArray(cached.restaurants) && !cached.restaurants.some(r => r.error)) {
     grid.innerHTML = cached.restaurants.map(renderFixedCard).join('');
     const gen = new Date(cached.generatedAt);
     setStatus(`${fmtDate(date)} · z cache · ${gen.toLocaleTimeString('cs-CZ')}`);
@@ -669,7 +692,10 @@ async function loadDayData(date) {
   }
 
   // 2. Try loading from GitHub data/
-  if (availableDates.has(date) || isPast) {
+  // Today is always worth a try: index.json loads in parallel with this, so
+  // availableDates is still empty here on first paint, and today's entry is
+  // written by the very run we are hoping for.
+  if (availableDates.has(date) || isPast || isToday) {
     try {
       showSkeletons(grid);
       setStatus(`Načítám ${fmtDate(date)}…`);
@@ -796,7 +822,7 @@ async function scrapeLiveToday(grid) {
   const today = todayStr();
   const allDaysByRestaurant = {};
 
-  const results = await Promise.all(FIXED.map(async r => {
+  const results = await mapLimit(FIXED, 2, async r => {
     try {
       const fetchUrl = `https://menicka.cz/api/iframe/?id=${r.menickaId}`;
       const html = await fetchHtml(fetchUrl);
@@ -806,7 +832,7 @@ async function scrapeLiveToday(grid) {
     } catch (e) {
       return { ...r, items: [], error: e.message };
     }
-  }));
+  });
 
   // Cache future days that have at least one restaurant's menu
   const futureDates = new Set(
@@ -824,9 +850,13 @@ async function scrapeLiveToday(grid) {
   if (futureDates.size > 0) renderCalendar();
 
   grid.innerHTML = results.map(renderFixedCard).join('');
-  store.setDayCache(today, { date: today, generatedAt: new Date().toISOString(), restaurants: results });
 
   const errs = results.filter(r=>r.error).length;
+  // Cache only a clean run — a partial one would freeze the failures in
+  // localStorage until midnight.
+  if (!errs) {
+    store.setDayCache(today, { date: today, generatedAt: new Date().toISOString(), restaurants: results });
+  }
   setStatus(errs ? `Hotovo · ${errs} chyb` : `Hotovo · ${new Date().toLocaleTimeString('cs-CZ')}`);
   document.getElementById('foot').textContent = 'data z menicka.cz · live';
 }
@@ -1069,7 +1099,10 @@ function refreshToday() {
   selectedDate = today;
   calYear = null; calMonth = null;
   renderCalendar();
-  scrapeLiveToday(document.getElementById('grid-mine'))
+  // Re-read index.json first: the workflow may have published today's data
+  // since page load, and that beats scraping it out of the site ourselves.
+  loadAvailableDates()
+    .then(() => loadDayData(today))
     .finally(() => { btn.disabled = false; });
 }
 
