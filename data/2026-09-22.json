@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generatedAt": "2026-09-22T07:22:08.086Z",
+  "generatedAt": "2026-09-22T09:31:06.268Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -11,25 +11,25 @@
       "items": [
         {
           "number": "",
-          "name": "Gulášová polévka",
+          "name": "Gulášová  polévka",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "200g Tradiční zapékané šunkofleky s uzeným masem, zeleninou a vaječnou směsí se šlehačkou, zelný  salát Coleslaw",
+          "name": "200g Tradiční zapékané šunkofleky s uzeným  masem, zeleninou a vaječnou směsí se šlehačkou, zelný salát Coleslaw",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "200g Sekaná plněná sýrem a  bylinkami, bramborovo-hráškové pyré a zelná čalamáda",
+          "name": "200g Sekaná plněná sýrem a bylinkami, bramborovo-hráškové pyré  a zelná čalamáda",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "200g Vepřový stroganoff se zeleninou podávaný se smaženými bramboráčky,  baby okurky cornichors",
+          "name": "200g Vepřový stroganoff se zeleninou podávaný se smaženými bramboráčky, baby  okurky cornichors",
           "price": "175 Kč",
           "isSoup": false
         },
@@ -41,7 +41,7 @@
         },
         {
           "number": "5.",
-          "name": "350g Pečené kachní stehno podávané s dušeným sladkokyselým zelím, variací knedlíků, výpekem a smaženou  cibulkou",
+          "name": "350g Pečené kachní stehno podávané s dušeným sladkokyselým zelím, variací knedlíků, výpekem a smaženou cibulkou",
           "price": "199 Kč",
           "isSoup": false
         }
@@ -57,25 +57,25 @@
       "items": [
         {
           "number": "",
-          "name": "0, 25 l  Cibulačka s bílým vínem, slaninou a opečeným chlebem",
+          "name": "0, 25 l Cibulačka s bílým  vínem, slaninou a opečeným chlebem",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "120g Čočka  na kyselo se zauzeným vepřovým karé, sázeným vejcem a kyselým okurkem, valašský chleba",
+          "name": "120g Čočka na kyselo se  zauzeným vepřovým karé, sázeným vejcem a kyselým okurkem, valašský chleba",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g  Kuřecí gyros, bramborové hranolky, tzatziki",
+          "name": "150g Kuřecí  gyros, bramborové hranolky, tzatziki",
           "price": "195 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "150g Dančí guláš s červenou  cibulkou a domácím karlovarským knedlíkem",
+          "name": "150g Dančí guláš s červenou cibulkou a domácím  karlovarským knedlíkem",
           "price": "262 Kč",
           "isSoup": false
         }
@@ -97,43 +97,43 @@
         },
         {
           "number": "1.",
-          "name": "Kuřecí prsa se  salámem v česnekovém těstíčku, bramborové pyré 1a,3,7",
+          "name": "Kuřecí prsa se salámem v česnekovém těstíčku, bramborové pyré  1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Smažený sýr  se šunkou, hranolky, tatarka 1a,3,7",
+          "name": "Smažený sýr se šunkou,  hranolky, tatarka 1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Hovězí pečeně  frankfurtská, rýže 1a",
+          "name": "Hovězí pečeně frankfurtská,  rýže 1a",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Plněný paprikový lusk, rajská omáčka,  houskový knedlík 1a,3,7",
+          "name": "Plněný paprikový  lusk, rajská omáčka, houskový knedlík 1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Zeleninový salát s pečeným tofu sýrem, kuřecí steak, dressing,  pečivo 1a,7",
+          "name": "Zeleninový salát s pečeným tofu sýrem, kuřecí steak, dressing, pečivo  1a,7",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Pečené baby brambory s kuřecím masem, grilovanou zeleninou a houbami v sýrové  omáčce 1a,7 (smíchané)",
+          "name": "Pečené baby brambory s kuřecím masem, grilovanou zeleninou a houbami v sýrové omáčce 1a,7 (smíchané)",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "7.",
-          "name": "200g VEPŘOVÝ STEAK Z KOTLETY, HŘIBOVÁ OMÁČKA,  AM. BRAMBORY, ZEL. 1a,7",
+          "name": "200g VEPŘOVÝ STEAK Z KOTLETY, HŘIBOVÁ OMÁČKA, AM.  BRAMBORY, ZEL. 1a,7",
           "price": "179 Kč",
           "isSoup": false
         }
@@ -155,31 +155,31 @@
         },
         {
           "number": "1.",
-          "name": "Smažená aljašská treska s  bramborovou kaší",
+          "name": "Smažená aljašská treska s bramborovou  kaší",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Kuřecí soté se žampiony,dušená rýže",
+          "name": "Kuřecí soté se  žampiony,dušená rýže",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Tagliatelle  s grilovanými kousky lososa a špenátem,parmezán",
+          "name": "Tagliatelle s grilovanými kousky lososa  a špenátem,parmezán",
           "price": "148 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Smažená krkovice s  česnekem a jarním bramborovým salátem",
+          "name": "Smažená krkovice s česnekem  a jarním bramborovým salátem",
           "price": "157 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Grilovaný steak s bylinkovou  omáčkou a vařenými bramborami",
+          "name": "Grilovaný steak  s bylinkovou omáčkou a vařenými bramborami",
           "price": "172 Kč",
           "isSoup": false
         },
@@ -191,7 +191,7 @@
         },
         {
           "number": "7.",
-          "name": "Mini  zákusek (věneček,špička,větrník,kokoska)",
+          "name": "Mini zákusek  (věneček,špička,větrník,kokoska)",
           "price": "30 Kč",
           "isSoup": false
         }
@@ -207,19 +207,19 @@
       "items": [
         {
           "number": "",
-          "name": "Slepičí  vývar s masem, zeleninou, nudlemi a bylinkami\n\t1\n\t3\n\t7\n\t9",
+          "name": "Slepičí vývar s masem,  zeleninou, nudlemi a bylinkami\n\t1\n\t3\n\t7\n\t9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150g Kuřecí steak marinovaný v jogurtu a koření, podávaný na pastě z pečeného lilku a bulgurovým salátem tabouleh s rajčaty, pestem ze  sušených rajčat, cibulkou a okurkami, petrželové pesto\n\t1\n\t3\n\t7",
+          "name": "150g Kuřecí steak marinovaný v jogurtu a koření, podávaný na  pastě z pečeného lilku a bulgurovým salátem tabouleh s rajčaty, pestem ze sušených rajčat, cibulkou a okurkami, petrželové pesto\n\t1\n\t3\n\t7",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g Dušené hovězí  se smetanovou omáčkou s čerstvým koprem, vejcem a koprovým olejem a houskovým knedlikem\n\t1\n\t3\n\t7\n\t9",
+          "name": "150g Dušené  hovězí se smetanovou omáčkou s čerstvým koprem, vejcem a koprovým olejem a houskovým knedlikem\n\t1\n\t3\n\t7\n\t9",
           "price": "189 Kč",
           "isSoup": false
         }
