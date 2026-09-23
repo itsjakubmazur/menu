@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generatedAt": "2026-09-23T07:24:04.438Z",
+  "generatedAt": "2026-09-23T09:36:07.879Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -11,25 +11,25 @@
       "items": [
         {
           "number": "",
-          "name": "Česneková polévka se šunkou, bramborem  a krutonky",
+          "name": "Česneková polévka se  šunkou, bramborem a krutonky",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "250g Caesar  salát /listy římského salátu s tradičním dresinkem, slaninovými chipsy, kuřecími prsíčky z grilu, parmezánem a čerstvým pečivem",
+          "name": "250g Caesar salát /listy římského salátu s tradičním dresinkem, slaninovými chipsy, kuřecími  prsíčky z grilu, parmezánem a čerstvým pečivem",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "200g Kuřecí nudličky Teriyaki s  česnekem, zázvorem a zeleninou, dušená jasmínová rýže",
+          "name": "200g Kuřecí nudličky  Teriyaki s česnekem, zázvorem a zeleninou, dušená jasmínová rýže",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "200g Smažené sýrové duo (gouda se  šunkou, hermelín s Herkulesem) vařené brambory s máslem a pažitkou, domácí tatarská omáčka",
+          "name": "200g Smažené sýrové duo  (gouda se šunkou, hermelín s Herkulesem) vařené brambory s máslem a pažitkou, domácí tatarská omáčka",
           "price": "179 Kč",
           "isSoup": false
         },
@@ -41,7 +41,7 @@
         },
         {
           "number": "5.",
-          "name": "150g Vepřová líčka po burgundsku, máslová bramborová  kaše, chipsy z kořenové zeleniny",
+          "name": "150g Vepřová líčka po burgundsku, máslová  bramborová kaše, chipsy z kořenové zeleniny",
           "price": "195 Kč",
           "isSoup": false
         }
@@ -57,25 +57,25 @@
       "items": [
         {
           "number": "",
-          "name": "0, 25 l  Květákový krém",
+          "name": "0, 25  l Květákový krém",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150g Štěpánská sekaná pečeně s bramborovo - pastiňákové pyré, maďarský zelný salát  s paprikou a feferony",
+          "name": "150g Štěpánská sekaná pečeně s bramborovo - pastiňákové pyré, maďarský zelný salát s  paprikou a feferony",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "120g Italské gnocchi s kuřecím masem, parmezánem  a smetanovým listovým špenátem",
+          "name": "120g  Italské gnocchi s kuřecím masem, parmezánem a smetanovým listovým špenátem",
           "price": "195 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "150g Dančí guláš s červenou cibulkou a domácím  karlovarským knedlíkem",
+          "name": "150g Dančí guláš s červenou  cibulkou a domácím karlovarským knedlíkem",
           "price": "262 Kč",
           "isSoup": false
         }
@@ -91,49 +91,49 @@
       "items": [
         {
           "number": "",
-          "name": "Hovězí vývar s masem s játrovými  knedlíčky a nudlemi 1a,3,9",
+          "name": "Hovězí  vývar s masem s játrovými knedlíčky a nudlemi 1a,3,9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Smažený  holandský řízek, vařené brambory, tatarka 1a,3,7",
+          "name": "Smažený holandský řízek, vařené brambory, tatarka  1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Kuřecí prsní nugety v  nivové omáčce, krokety 1a,7",
+          "name": "Kuřecí prsní nugety v nivové omáčce, krokety 1a,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Vepřová játra na cibulce, rýže, rajčatový  salát 1a",
+          "name": "Vepřová játra na cibulce, rýže, rajčatový salát 1a",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Vepřové výpečky,  dušená kapusta, vařené brambory",
+          "name": "Vepřové výpečky, dušená kapusta, vařené  brambory",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "BZM /Zeleninový salát COLESLAW, grilovaný hermelín,  bageta, brusinky 1a,3,7",
+          "name": "BZM  /Zeleninový salát COLESLAW, grilovaný hermelín, bageta, brusinky 1a,3,7",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Boloňské  špagety s kuřecím masem, sýr 1a,7",
+          "name": "Boloňské špagety s kuřecím masem, sýr  1a,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "7.",
-          "name": "200g VEPŘOVÝ STEAK Z  KOTLETY, HŘIBOVÁ OMÁČKA, AM. BRAMBORY, ZEL. 1a,7",
+          "name": "200g VEPŘOVÝ STEAK Z KOTLETY, HŘIBOVÁ OMÁČKA,  AM. BRAMBORY, ZEL. 1a,7",
           "price": "179 Kč",
           "isSoup": false
         }
@@ -149,43 +149,43 @@
       "items": [
         {
           "number": "",
-          "name": "Polévka:  mexická",
+          "name": "Polévka: mexická",
           "price": "35 Kč",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Povidlové kynuté  knedlíky s mákem a cukrem",
+          "name": "Povidlové kynuté knedlíky s mákem a cukrem",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Dušená kapusta s pečeným vepřovým masem a vařenými  bramborami",
+          "name": "Dušená kapusta s pečeným vepřovým  masem a vařenými bramborami",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Tagliatelle s grilovanými  kousky lososa a špenátem,parmezán",
+          "name": "Tagliatelle s grilovanými kousky lososa a špenátem,parmezán",
           "price": "148 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Smažená krkovice s česnekem a jarním  bramborovým salátem",
+          "name": "Smažená krkovice s  česnekem a jarním bramborovým salátem",
           "price": "157 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Grilovaný steak s bylinkovou omáčkou a  vařenými bramborami",
+          "name": "Grilovaný steak s bylinkovou omáčkou a vařenými  bramborami",
           "price": "172 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Dezert:  čokoládový dort,,pohádka\"",
+          "name": "Dezert: čokoládový  dort,,pohádka\"",
           "price": "93 Kč",
           "isSoup": false
         },
@@ -207,19 +207,19 @@
       "items": [
         {
           "number": "",
-          "name": "Smetanová kulajda s čerstvým koprem a vejcem \n\t1\n\t7\n\t9",
+          "name": "Smetanová kulajda s  čerstvým koprem a vejcem\n\t1\n\t7\n\t9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150g Vietnamský bourguignon (hovězí přední tažené přes noc v červeném víně, rajčatech,  zelenině, rybí omáčce a citronové trávě) podáváme s dušenou jasmínovou rýží, koriandrem, pažitkou a smaženou cibulkou\n\t1\n\t3\n\t7\n\t9\n\t10",
+          "name": "150g Vietnamský bourguignon (hovězí přední tažené přes noc  v červeném víně, rajčatech, zelenině, rybí omáčce a citronové trávě) podáváme s dušenou jasmínovou rýží, koriandrem, pažitkou a smaženou cibulkou\n\t1\n\t3\n\t7\n\t9\n\t10",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "350g Slovenské halušky  míchané s brynzou a smetanou podávané se škvařeným špekem, praženou cibulkou a bylinkami\n\t1\n\t3\n\t7",
+          "name": "350g Slovenské halušky míchané s brynzou a smetanou podávané se škvařeným špekem, praženou cibulkou  a bylinkami\n\t1\n\t3\n\t7",
           "price": "189 Kč",
           "isSoup": false
         }
