@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generatedAt": "2026-09-28T08:16:32.534Z",
+  "generatedAt": "2026-09-28T11:17:01.032Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -20,13 +20,13 @@
       "items": [
         {
           "number": "1.",
-          "name": "Státní svátek - Den české  státnosti - svátek svatého Václava",
+          "name": "Státní svátek - Den české státnosti - svátek svatého  Václava",
           "price": "",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Otevřeno od 12  do 23",
+          "name": "Otevřeno od 12 do  23",
           "price": "23 Kč",
           "isSoup": false
         }
@@ -42,19 +42,19 @@
       "items": [
         {
           "number": "",
-          "name": "Slepičí vývar s  masem a nudlemi 1a,3,9",
+          "name": "Slepičí vývar s masem a nudlemi  1a,3,9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Smažený kuřecí řízek CORDON BLEU, vařené brambory s máslem 1a,3,7",
+          "name": "Smažený kuřecí řízek CORDON  BLEU, vařené brambory s máslem 1a,3,7",
           "price": "169 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "200g NAKLÁDANÝ VEPŘOVÝ STEAK S ČESNEKEM,  HRANOLKY, hřibová omáčka 1a,7",
+          "name": "200g NAKLÁDANÝ VEPŘOVÝ STEAK S ČESNEKEM, HRANOLKY,  hřibová omáčka 1a,7",
           "price": "179 Kč",
           "isSoup": false
         },
@@ -66,19 +66,19 @@
         },
         {
           "number": "4.",
-          "name": "Vepřové výpečky, dušené  zelí, bramborový knedlík 1a,3",
+          "name": "Vepřové výpečky, dušené zelí, bramborový  knedlík 1a,3",
           "price": "169 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Zeleninový salát, filovaná kachní  prsa s medem a rozmarýnem, dressing, pečivo 1a,7",
+          "name": "Zeleninový salát, filovaná kachní prsa s medem a rozmarýnem,  dressing, pečivo 1a,7",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Kynuté knedlíky s borůvkami a mákem 1a,3,7",
+          "name": "Kynuté  knedlíky s borůvkami a mákem 1a,3,7",
           "price": "169 Kč",
           "isSoup": false
         }
