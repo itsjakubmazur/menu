@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generatedAt": "2026-09-29T07:55:42.115Z",
+  "generatedAt": "2026-09-29T10:56:37.465Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -8,7 +8,44 @@
       "menickaId": 3830,
       "url": "https://www.menicka.cz/3830-suzies-steak-pub.html",
       "type": "menicka",
-      "items": [],
+      "items": [
+        {
+          "number": "",
+          "name": "Tomatová  polévka s těstovinovou tarhoní",
+          "price": "",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "200g Tagliatelle s krémovým  smetanovým špenátem, filírovaným kuřecím prsíčkem, parmezánem a slaninovým chipsem",
+          "price": "175 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "200g Skotské vejce /smažené vejce v mletém mase/  podávané se šťouchanými bramborami a nakládaným okurkem",
+          "price": "175 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "3.",
+          "name": "200g Vepřová  jatýrka na roštu, bramborové hranolky, tatarská omáčka",
+          "price": "175 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "4.",
+          "name": "200g Kuřecí prsní steak z grilu se sázeným vejcem, omáčka z modrého sýru,  bramborové krokety",
+          "price": "179 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "5.",
+          "name": "150g  Hovězí svíčková na smetaně podávaná s houskovými knedlíky a brusinkovým terčem",
+          "price": "195 Kč",
+          "isSoup": false
+        }
+      ],
       "error": null
     },
     {
@@ -20,25 +57,25 @@
       "items": [
         {
           "number": "",
-          "name": "0, 25 l Zeleninová polévka  s brokolicí a květákem",
+          "name": "0, 25 l Zeleninová polévka s brokolicí  a květákem",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150g Plněný paprikový lusk s  rajskou omáčkou a houskovým knedlíkem",
+          "name": "150g Plněný paprikový lusk s rajskou omáčkou a houskovým knedlíkem",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g Medailonky z vepřové panenky s  pepřovou omáčkou, pečené rozmarýnové brambory",
+          "name": "150g Medailonky z vepřové  panenky s pepřovou omáčkou, pečené rozmarýnové brambory",
           "price": "195 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "150g Hovězí roštěnky na  lesních houbách s dušenou rýží Basmati a okurkovým salátem",
+          "name": "150g  Hovězí roštěnky na lesních houbách s dušenou rýží Basmati a okurkovým salátem",
           "price": "285 Kč",
           "isSoup": false
         }
@@ -60,31 +97,31 @@
         },
         {
           "number": "1.",
-          "name": "Smažená vepřová kotleta plněná  tvarůžky a šunkou, vařené brambory s máslem 1a,3,7",
+          "name": "Smažená vepřová  kotleta plněná tvarůžky a šunkou, vařené brambory s máslem 1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Kuřecí pikantní  směs se žampiony, bramboráčky, tatarka 1a,3",
+          "name": "Kuřecí pikantní směs se žampiony, bramboráčky, tatarka  1a,3",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Cikánská  pečená krkovička, rýže jasmínová 1a",
+          "name": "Cikánská pečená krkovička, rýže jasmínová 1a",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Uzené maso, křenová  omáčka, houskový knedlík 1a,3,7",
+          "name": "Uzené maso, křenová omáčka, houskový knedlík 1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "BZM /Zeleninový salát s grilovaným tofu sýrem,  dressing, slunečnicový chléb 1a",
+          "name": "BZM /Zeleninový salát s grilovaným tofu sýrem, dressing, slunečnicový chléb 1a",
           "price": "179 Kč",
           "isSoup": false
         },
@@ -96,7 +133,7 @@
         },
         {
           "number": "7.",
-          "name": "200gKUŘECÍ PRSA ZAPEČENÁ S  PIK. ŽAMPIONY A ČEDAREM, ŠŤOUCHANY BRAMBOR 1a,7",
+          "name": "200gKUŘECÍ  PRSA ZAPEČENÁ S PIK. ŽAMPIONY A ČEDAREM, ŠŤOUCHANY BRAMBOR 1a,7",
           "price": "179 Kč",
           "isSoup": false
         }
@@ -124,13 +161,13 @@
         },
         {
           "number": "2.",
-          "name": "Masová směs v bramboráku se zelným salátem",
+          "name": "Masová  směs v bramboráku se zelným salátem",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Smažený sýrový špíz(eidam a hermelín) s vařenými bramborami a tatarskou omáčkou",
+          "name": "Smažený sýrový  špíz(eidam a hermelín) s vařenými bramborami a tatarskou omáčkou",
           "price": "148 Kč",
           "isSoup": false
         },
@@ -142,13 +179,13 @@
         },
         {
           "number": "5.",
-          "name": "Filovaná vepřová panenka s pepřovou omáčkou  a americkými bramborami",
+          "name": "Filovaná vepřová panenka s pepřovou omáčkou a americkými bramborami",
           "price": "172 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Mini  zákusek (věneček,špička,větrník,kokoska)",
+          "name": "Mini zákusek  (věneček,špička,větrník,kokoska)",
           "price": "30 Kč",
           "isSoup": false
         }
@@ -164,19 +201,19 @@
       "items": [
         {
           "number": "",
-          "name": "Boršč s masem a  zeleninou\n\t1\n\t3\n\t7\n\t9",
+          "name": "Boršč s  masem a zeleninou\n\t1\n\t3\n\t7\n\t9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150g Tortilla plněná kuřecím steakem, salátem, rajčaty, cibulkou, bylinkovou majonézou a parmazánem podávaná s grilovanými  ftanzouszkými grenaillemi, dip\n\t1\n\t3\n\t7",
+          "name": "150g Tortilla plněná kuřecím steakem,  salátem, rajčaty, cibulkou, bylinkovou majonézou a parmazánem podávaná s grilovanými ftanzouszkými grenaillemi, dip\n\t1\n\t3\n\t7",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g Poctivý maďarský perkelt s kuřecím masem, klobásou, čerstvou zeleninou, chilli a rajčaty podávaný s dušenou jasminovou  rýží a bylinkami\n\t1\n\t3\n\t7\n\t9",
+          "name": "150g Poctivý  maďarský perkelt s kuřecím masem, klobásou, čerstvou zeleninou, chilli a rajčaty podávaný s dušenou jasminovou rýží a bylinkami\n\t1\n\t3\n\t7\n\t9",
           "price": "189 Kč",
           "isSoup": false
         }
