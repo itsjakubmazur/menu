@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generatedAt": "2026-09-30T08:03:45.933Z",
+  "generatedAt": "2026-09-30T10:46:56.091Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -11,37 +11,37 @@
       "items": [
         {
           "number": "",
-          "name": "Česnečka se šunkou, vejcem, bramborem  a chlebovými krutonky",
+          "name": "Česnečka se šunkou, vejcem, bramborem a  chlebovými krutonky",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "300g Pečené kuřátko na másle a bylinkách, dušená zeleninová rýže /baby karotka,  hrášek/, výpek",
+          "name": "300g  Pečené kuřátko na másle a bylinkách, dušená zeleninová rýže /baby karotka, hrášek/, výpek",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "200g Krkovička po srbsku podávaná se  smaženými bramboráčky",
+          "name": "200g  Krkovička po srbsku podávaná se smaženými bramboráčky",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "200g Vepřové  výpečky na česneku a kmíně, dušené bílé zelí na slanině, variace knedlíků",
+          "name": "200g Vepřové výpečky na česneku a kmíně, dušené bílé  zelí na slanině, variace knedlíků",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "200g Panenská svíčková z grilu  /filírovaná/ podávaná se smaženými cibulovými kroužky, americkými bramborami a omáčkou z lesních hub",
+          "name": "200g Panenská svíčková z grilu /filírovaná/ podávaná se smaženými cibulovými kroužky, americkými bramborami a omáčkou z lesních  hub",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "150g Hovězí svíčková na smetaně podávaná s houskovými  knedlíky a brusinkovým terčem",
+          "name": "150g Hovězí svíčková na smetaně podávaná s houskovými knedlíky a brusinkovým terčem",
           "price": "195 Kč",
           "isSoup": false
         }
@@ -57,25 +57,25 @@
       "items": [
         {
           "number": "",
-          "name": "0, 25 l Bramborový krém  s chlebovými krutony",
+          "name": "0, 25  l Bramborový krém s chlebovými krutony",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "120g Řecký salát s grilovaným kuřecím masem, balkánským sýrem a  jogurtovým dresinkem",
+          "name": "120g Řecký salát s grilovaným kuřecím  masem, balkánským sýrem a jogurtovým dresinkem",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g Holandský řízek s  Goudou, bramborová kaše, kyselý okurek",
+          "name": "150g Holandský řízek  s Goudou, bramborová kaše, kyselý okurek",
           "price": "195 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "150g Hovězí roštěnky na lesních houbách s dušenou rýží  Basmati a okurkovým salátem",
+          "name": "150g Hovězí roštěnky na lesních houbách s  dušenou rýží Basmati a okurkovým salátem",
           "price": "285 Kč",
           "isSoup": false
         }
@@ -91,43 +91,43 @@
       "items": [
         {
           "number": "",
-          "name": "Hovězí vývar s játrovou rýží a  nudlemi 1a,3",
+          "name": "Hovězí vývar s játrovou rýží a nudlemi 1a,3",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Vepřové medailonky z panenky v čedarovém těstíčku, bramborové pyré  1a,3,7",
+          "name": "Vepřové medailonky z  panenky v čedarovém těstíčku, bramborové pyré 1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Kuřecí gyros, čínské nudle, tatarka  1a,3",
+          "name": "Kuřecí gyros,  čínské nudle, tatarka 1a,3",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Vepřové ledvinky na  cibulce, okurkový salát 1a,",
+          "name": "Vepřové ledvinky na cibulce, okurkový salát  1a,",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Domácí sekaná pečeně, bramborový lahůdkový  salát 1a,3,7,9,10",
+          "name": "Domácí sekaná pečeně, bramborový lahůdkový salát  1a,3,7,9,10",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Zeleninový salát s trhaným vepřovým masem a mozzarellou,  dressing, pečivo 1a,7",
+          "name": "Zeleninový salát s  trhaným vepřovým masem a mozzarellou, dressing, pečivo 1a,7",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "BZM /Bramborové šulánky s mákem 1a,3,7",
+          "name": "BZM /Bramborové šulánky s mákem  1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
@@ -155,7 +155,7 @@
         },
         {
           "number": "1.",
-          "name": "Sekaná pečeně s bramborovou kaší a okurkovým salátem",
+          "name": "Sekaná pečeně s bramborovou kaší a  okurkovým salátem",
           "price": "136 Kč",
           "isSoup": false
         },
@@ -179,7 +179,7 @@
         },
         {
           "number": "5.",
-          "name": "Filovaná vepřová panenka s pepřovou omáčkou a  americkými bramborami",
+          "name": "Filovaná vepřová panenka s pepřovou omáčkou  a americkými bramborami",
           "price": "172 Kč",
           "isSoup": false
         },
@@ -201,19 +201,19 @@
       "items": [
         {
           "number": "",
-          "name": "Slepičí  vývar s masem, zeleninou, tarhoňou a bylinkami\n\t1\n\t7\n\t9",
+          "name": "Slepičí vývar s masem, zeleninou,  tarhoňou a bylinkami\n\t1\n\t7\n\t9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150g Filírovaná vepřová panenka podávaná s restovanými fazolkami, volským okem a pečenými kořeněnými brambory,  silná pepřová šťava\n\t1\n\t3\n\t7\n\t9\n\t10",
+          "name": "150g Filírovaná vepřová panenka podávaná s restovanými fazolkami, volským okem  a pečenými kořeněnými brambory, silná pepřová šťava\n\t1\n\t3\n\t7\n\t9\n\t10",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "120g Smažený red čedar v chlebové strouhance podávaný s mačkanými brambory  s cibulkou a máslem, tatarská omáčka, salátek\n\t1\n\t3\n\t7\n\t10\n\t12",
+          "name": "120g Smažený red čedar v chlebové strouhance podávaný s mačkanými brambory s cibulkou a máslem, tatarská omáčka,  salátek\n\t1\n\t3\n\t7\n\t10\n\t12",
           "price": "189 Kč",
           "isSoup": false
         }
