@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generatedAt": "2026-10-01T08:21:56.271Z",
+  "generatedAt": "2026-10-01T11:13:11.697Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -23,25 +23,25 @@
         },
         {
           "number": "2.",
-          "name": "200g Jemná hrachová kaše podávaná s opečenou klobáskou z řeznictví Sláma, sázeným  vejcem, nakládaným okurkem a krajícem čerstvého chlebu",
+          "name": "200g Jemná hrachová kaše podávaná s  opečenou klobáskou z řeznictví Sláma, sázeným vejcem, nakládaným okurkem a krajícem čerstvého chlebu",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "200g Česnekované řízečky z panenské svíčkové, šťouchané brambory se smaženou cibulkou,  okurkový salát",
+          "name": "200g Česnekované řízečky z panenské svíčkové,  šťouchané brambory se smaženou cibulkou, okurkový salát",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "200g Trhané vepřové sypané chedarem podávané s bramborovými hranolky a naší zauzenou mayo",
+          "name": "200g Trhané  vepřové sypané chedarem podávané s bramborovými hranolky a naší zauzenou mayo",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "150g Hovězí svíčková na smetaně podávaná s houskovými knedlíky a brusinkovým terčem",
+          "name": "150g Hovězí svíčková na smetaně podávaná s houskovými knedlíky  a brusinkovým terčem",
           "price": "195 Kč",
           "isSoup": false
         }
@@ -57,25 +57,25 @@
       "items": [
         {
           "number": "",
-          "name": "0, 25  l Kuřecí vývar s masem a zeleninou",
+          "name": "0, 25 l Kuřecí  vývar s masem a zeleninou",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150g Vepřo knedlo zelo - krkovice pečená na kmíně a česneku s hlávkovým zelím a houskovým knedlíkem",
+          "name": "150g Vepřo knedlo zelo -  krkovice pečená na kmíně a česneku s hlávkovým zelím a houskovým knedlíkem",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "250g Lasagne s boloňským masovým ragú, bešamelem, mozzarellou  a bazalkovým pestem",
+          "name": "250g  Lasagne s boloňským masovým ragú, bešamelem, mozzarellou a bazalkovým pestem",
           "price": "195 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "150g Hovězí roštěnky na lesních houbách s dušenou rýží Basmati a  okurkovým salátem",
+          "name": "150g Hovězí roštěnky na lesních houbách  s dušenou rýží Basmati a okurkovým salátem",
           "price": "285 Kč",
           "isSoup": false
         }
@@ -97,43 +97,43 @@
         },
         {
           "number": "1.",
-          "name": "Kuřecí prsa v bylinko sýrovém těstíčku se šunkou, vařené brambory s  máslem 1a,3,7",
+          "name": "Kuřecí prsa v bylinko sýrovém těstíčku se šunkou,  vařené brambory s máslem 1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "BZM /Smažené sýrové trio,  hranolky, tatarka, obloha 1a,3,7",
+          "name": "BZM /Smažené sýrové  trio, hranolky, tatarka, obloha 1a,3,7",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Španělský vepřový ptáček, rýže 1a,3",
+          "name": "Španělský vepřový  ptáček, rýže 1a,3",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Vepřové ragů,  těstoviny penne, sýr 1a,7",
+          "name": "Vepřové ragů, těstoviny penne,  sýr 1a,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Zeleninový salát, MLETÝ BIFTEK ZAPEČENÝ SE SLANINOU A  ČEDAREM, dressing, pečivo 1a,7",
+          "name": "Zeleninový  salát, MLETÝ BIFTEK ZAPEČENÝ SE SLANINOU A ČEDAREM, dressing, pečivo 1a,7",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "BZM / Špenát, vařené vejce, vařené brambory 1a,3,7",
+          "name": "BZM / Špenát, vařené vejce,  vařené brambory 1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "7.",
-          "name": "200gKUŘECÍ PRSA ZAPEČENÁ S PIK. ŽAMPIONY A ČEDAREM, ŠŤOUCHANY BRAMBOR 1a,7",
+          "name": "200gKUŘECÍ PRSA ZAPEČENÁ S PIK. ŽAMPIONY A ČEDAREM,  ŠŤOUCHANY BRAMBOR 1a,7",
           "price": "179 Kč",
           "isSoup": false
         }
@@ -167,7 +167,7 @@
         },
         {
           "number": "3.",
-          "name": "Smažený sýrový špíz(eidam  a hermelín) s vařenými bramborami a tatarskou omáčkou",
+          "name": "Smažený sýrový špíz(eidam a hermelín) s vařenými bramborami a tatarskou omáčkou",
           "price": "148 Kč",
           "isSoup": false
         },
@@ -179,13 +179,13 @@
         },
         {
           "number": "5.",
-          "name": "Filovaná vepřová panenka s pepřovou omáčkou a  americkými bramborami",
+          "name": "Filovaná vepřová panenka s pepřovou omáčkou a americkými bramborami",
           "price": "172 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Mini zákusek (věneček,špička,větrník,kokoska)",
+          "name": "Mini zákusek  (věneček,špička,větrník,kokoska)",
           "price": "30 Kč",
           "isSoup": false
         }
@@ -207,13 +207,13 @@
         },
         {
           "number": "1.",
-          "name": "150g Filírované kuřecí  prso marinované v petrželovém pestu podávané na hráškovém pyré se smetanou, grilovanou zeleninou a francouzskými grenaillemi, bylinkové pesto\n\t7",
+          "name": "150g Filírované kuřecí prso marinované v petrželovém pestu podávané na  hráškovém pyré se smetanou, grilovanou zeleninou a francouzskými grenaillemi, bylinkové pesto\n\t7",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g Hovězí svíčková pečeně na smetaně a kořenové  zelenině podávaná s divokými brusinkami a houskovým knedlikem, citron, šlehačka\n\t1\n\t9\n\t12",
+          "name": "150g Hovězí svíčková pečeně na smetaně a kořenové zelenině podávaná s  divokými brusinkami a houskovým knedlikem, citron, šlehačka\n\t1\n\t9\n\t12",
           "price": "189 Kč",
           "isSoup": false
         }
