@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generatedAt": "2026-10-02T07:58:27.615Z",
+  "generatedAt": "2026-10-02T10:45:46.768Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -11,37 +11,37 @@
       "items": [
         {
           "number": "",
-          "name": "Francouzská cibulačka ovoněná bílým  vínem, opečený toastik",
+          "name": "Francouzská cibulačka ovoněná bílým vínem, opečený  toastik",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "1 ks Rakouský nadýchaný Germknödel plněný povidly podávaný s domácím vanilkovým krémem, mákem s  cukrem a čerstvým ovocem",
+          "name": "1 ks Rakouský nadýchaný Germknödel plněný  povidly podávaný s domácím vanilkovým krémem, mákem s cukrem a čerstvým ovocem",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g Plzeňský hovězí gulášek podávaný s houskovými  knedlíky, křenem, feferonkou a cibulí",
+          "name": "150g Plzeňský hovězí gulášek podávaný s houskovými knedlíky, křenem, feferonkou a  cibulí",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "200g Smažený květák s petrželovými bramborami  a naší tatarskou omáčkou",
+          "name": "200g Smažený květák s  petrželovými bramborami a naší tatarskou omáčkou",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "200g Chickenburger /smažený kuřecí  řízek v panko strouhance podávaný s plátkem slaniny, ementálem a cibulovým kroužkem/, tenké hranolky julienne a bylinková majonéza",
+          "name": "200g Chickenburger /smažený kuřecí řízek v panko strouhance podávaný s plátkem slaniny, ementálem a cibulovým kroužkem/, tenké hranolky julienne a  bylinková majonéza",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "1 ks Pstruh pečený po mlynářsku, podávaný se zámeckými  brambůrkami s pažitkou a máslem, grilovaný citron",
+          "name": "1 ks Pstruh pečený po mlynářsku, podávaný se zámeckými brambůrkami s  pažitkou a máslem, grilovaný citron",
           "price": "189 Kč",
           "isSoup": false
         }
@@ -57,19 +57,19 @@
       "items": [
         {
           "number": "",
-          "name": "0, 25 l Brokolicová polévka s bylinkovým pestem",
+          "name": "0, 25 l Brokolicová polévka s bylinkovým  pestem",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150g Grilovaná bavorská sekaná s volským okem  a lehkým bramborovým salátem s pažitkou a červenou cibulí",
+          "name": "150g Grilovaná bavorská sekaná s volským okem a lehkým bramborovým salátem s pažitkou  a červenou cibulí",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g Filet z mořské štiky pečený na limetách a bylinkovém másle, bramborovo - dýňové pyré, rukolový salát",
+          "name": "150g Filet z mořské  štiky pečený na limetách a bylinkovém másle, bramborovo - dýňové pyré, rukolový salát",
           "price": "195 Kč",
           "isSoup": false
         },
@@ -91,19 +91,19 @@
       "items": [
         {
           "number": "",
-          "name": "Kuřecí vývar s nudlemi 1a,3,9",
+          "name": "Kuřecí vývar  s nudlemi 1a,3,9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Smažený vepřový  řízek, bramborový salát 1a,3,7,9,10",
+          "name": "Smažený vepřový řízek, bramborový salát 1a,3,7,9,10",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Kuřecí prsní nugety v holandské omáčce, pečené brambory s bylinkami  1a,7",
+          "name": "Kuřecí prsní nugety v holandské omáčce, pečené  brambory s bylinkami 1a,7",
           "price": "149 Kč",
           "isSoup": false
         },
@@ -115,13 +115,13 @@
         },
         {
           "number": "4.",
-          "name": "Domácí  halušky s brynzou, uzeným a cibulkou 1a,3,7",
+          "name": "Domácí halušky s brynzou, uzeným  a cibulkou 1a,3,7",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "BZM /Zeleninový salát, smažený hermelín plněný brusinkami, dressing,  pečivo 1a,3,7",
+          "name": "BZM /Zeleninový salát, smažený hermelín plněný  brusinkami, dressing, pečivo 1a,3,7",
           "price": "179 Kč",
           "isSoup": false
         },
@@ -133,7 +133,7 @@
         },
         {
           "number": "7.",
-          "name": "200gKUŘECÍ PRSA ZAPEČENÁ S  PIK. ŽAMPIONY A ČEDAREM, ŠŤOUCHANY BRAMBOR 1a,7",
+          "name": "200gKUŘECÍ  PRSA ZAPEČENÁ S PIK. ŽAMPIONY A ČEDAREM, ŠŤOUCHANY BRAMBOR 1a,7",
           "price": "179 Kč",
           "isSoup": false
         }
@@ -167,7 +167,7 @@
         },
         {
           "number": "3.",
-          "name": "Smažený sýrový špíz(eidam a hermelín)  s vařenými bramborami a tatarskou omáčkou",
+          "name": "Smažený sýrový špíz(eidam a hermelín) s vařenými bramborami a tatarskou  omáčkou",
           "price": "148 Kč",
           "isSoup": false
         },
@@ -179,13 +179,13 @@
         },
         {
           "number": "5.",
-          "name": "Filovaná  vepřová panenka s pepřovou omáčkou a americkými bramborami",
+          "name": "Filovaná vepřová panenka s pepřovou omáčkou a americkými bramborami",
           "price": "172 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Mini  zákusek (věneček,špička,větrník,kokoska)",
+          "name": "Mini zákusek  (věneček,špička,větrník,kokoska)",
           "price": "30 Kč",
           "isSoup": false
         }
@@ -201,19 +201,19 @@
       "items": [
         {
           "number": "",
-          "name": "Pikantní mexická polévka s rajčaty, fazolemi,  hovězím masem a koriandrem\n\t1\n\t9",
+          "name": "Pikantní mexická polévka s rajčaty, fazolemi, hovězím  masem a koriandrem\n\t1\n\t9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "160g Masové švédské kuličky v krémové omáčce  s petrželkou podávané s máslovou bramborovou kaší, zeleným hráškem a divokými brusinkami\n\t1\n\t3\n\t9",
+          "name": "160g  Masové švédské kuličky v krémové omáčce s petrželkou podávané s máslovou bramborovou kaší, zeleným hráškem a divokými brusinkami\n\t1\n\t3\n\t9",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g Pečený hejk mořský na pestu ze  sušených rajčat podávaný na dýňovém rizotu ze slovenské tarhoni, bílým vínem, smetanou a bylinkami, petrželové pesto\n\t1\n\t7\n\t9\n\t12",
+          "name": "150g Pečený hejk mořský na pestu ze sušených rajčat podávaný na dýňovém rizotu ze slovenské tarhoni,  bílým vínem, smetanou a bylinkami, petrželové pesto\n\t1\n\t7\n\t9\n\t12",
           "price": "189 Kč",
           "isSoup": false
         }
