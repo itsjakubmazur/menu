@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generatedAt": "2026-10-05T08:25:44.627Z",
+  "generatedAt": "2026-10-05T11:53:11.932Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -17,7 +17,7 @@
         },
         {
           "number": "1.",
-          "name": "200g Liškové smetanové risotto s filírovanou panenskou svíčkovou, rukolou a parmezánem",
+          "name": "200g  Liškové smetanové risotto s filírovanou panenskou svíčkovou, rukolou a parmezánem",
           "price": "175 Kč",
           "isSoup": false
         },
@@ -29,19 +29,19 @@
         },
         {
           "number": "3.",
-          "name": "200g Rozlítaný španělský ptáček podávaný  s dušenou jasmínovou rýží a salátkem",
+          "name": "200g Rozlítaný španělský ptáček podávaný s dušenou jasmínovou rýží  a salátkem",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "200g Kuřecí prsa z grilu podávaná s kukuřičným klasem, kořeněné americké brambory, omáčka  Quattro formaggi",
+          "name": "200g Kuřecí prsa  z grilu podávaná s kukuřičným klasem, kořeněné americké brambory, omáčka Quattro formaggi",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "200g Fish and chips  /treska smažená v pivním těstíčku/, mačkaný hrášek s mátou, bramborové hranolky, majonéza",
+          "name": "200g Fish and chips /treska smažená v pivním těstíčku/, mačkaný hrášek s mátou,  bramborové hranolky, majonéza",
           "price": "189 Kč",
           "isSoup": false
         }
@@ -57,25 +57,25 @@
       "items": [
         {
           "number": "",
-          "name": "0,25  l Cuketová polévka s houskovými krutony",
+          "name": "0,25 l Cuketová polévka s  houskovými krutony",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150 g  Trhané kuře na paprice, těstovinová kolínka nebo houskový knedlík",
+          "name": "150 g Trhané kuře  na paprice, těstovinová kolínka nebo houskový knedlík",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150 g Obrácený vepřový řízek zapečený anglickou slaninou a cibulí, šťouchané brambory s máslem a smetanou, ledový salát s vinaigrette dresinkem",
+          "name": "150 g Obrácený  vepřový řízek zapečený anglickou slaninou a cibulí, šťouchané brambory s máslem a smetanou, ledový salát s vinaigrette dresinkem",
           "price": "195 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "250 g Králík na černo (tradiční omáčka s perníkem,  povidly, sušenými švestkami a mandlemi) s domácími bramborovými šiškami",
+          "name": "250 g Králík na černo (tradiční omáčka s perníkem, povidly, sušenými švestkami a  mandlemi) s domácími bramborovými šiškami",
           "price": "275 Kč",
           "isSoup": false
         }
@@ -97,31 +97,31 @@
         },
         {
           "number": "1.",
-          "name": "Smažená kuřecí prsa plněná nivou  a žampiony, bramborové pyré 1a,3,7",
+          "name": "Smažená  kuřecí prsa plněná nivou a žampiony, bramborové pyré 1a,3,7",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Vepřový  stek zapečený se šunkou a sýrem, hranolky 1a,7",
+          "name": "Vepřový stek zapečený se  šunkou a sýrem, hranolky 1a,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Kuřecí maso na kari se zeleninou a smetanou, rýže  r 1a,7",
+          "name": "Kuřecí maso na kari se zeleninou a smetanou, rýže r  1a,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Koprová omáčka, vařené vejce, vařené brambory 1a,3,7",
+          "name": "Koprová omáčka, vařené  vejce, vařené brambory 1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Zeleninový salát, smažené sýrové trio, dressing,  rohlík 1a,3,7",
+          "name": "Zeleninový salát, smažené  sýrové trio, dressing, rohlík 1a,3,7",
           "price": "179 Kč",
           "isSoup": false
         },
@@ -143,37 +143,37 @@
       "items": [
         {
           "number": "",
-          "name": "Polévka: uzená s  kroupami",
+          "name": "Polévka: uzená  s kroupami",
           "price": "35 Kč",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Špagety carbonara s parmezánem",
+          "name": "Špagety carbonara  s parmezánem",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Kuřecí steak  ala caprese s americkými bramborami",
+          "name": "Kuřecí steak ala caprese s americkými bramborami",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Kuřecí  medailonky se sýrovou omáčkou a hranolkami",
+          "name": "Kuřecí medailonky se sýrovou  omáčkou a hranolkami",
           "price": "148 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Krkovice s grilovanými kukuřičnými klasy a americkými  bramborami",
+          "name": "Krkovice s grilovanými kukuřičnými klasy a americkými bramborami",
           "price": "157 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Svíčková na smetaně s brusinkovým terčem  a 1/2 karlovarské a 1/2 houskové knedlíky",
+          "name": "Svíčková na smetaně s brusinkovým terčem a 1/2 karlovarské a 1/2  houskové knedlíky",
           "price": "172 Kč",
           "isSoup": false
         }
