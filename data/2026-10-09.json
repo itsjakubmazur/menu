@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generatedAt": "2026-10-09T08:31:47.061Z",
+  "generatedAt": "2026-10-09T11:32:39.037Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -11,7 +11,7 @@
       "items": [
         {
           "number": "",
-          "name": "Staročeská  kulajda s vejcem, bramborem a koprem",
+          "name": "Staročeská kulajda s vejcem, bramborem a  koprem",
           "price": "",
           "isSoup": true
         },
@@ -23,13 +23,13 @@
         },
         {
           "number": "2.",
-          "name": "200g  Smažená vepřová loštická kapsa plněná herkulesem a tvarůžky podávaná se šťouchanými smetanovými bramborami",
+          "name": "200g Smažená vepřová loštická kapsa plněná herkulesem a tvarůžky podávaná se šťouchanými smetanovými bramborami",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "200g Butter chicken /tradiční indický recept/ podávaný s dušenou  rýží a chlebovou plackou naan",
+          "name": "200g Butter chicken /tradiční indický recept/ podávaný s dušenou rýží  a chlebovou plackou naan",
           "price": "175 Kč",
           "isSoup": false
         },
@@ -41,7 +41,7 @@
         },
         {
           "number": "5.",
-          "name": "150g Hovězí roastbeef pečený medium, julienne  hranolky, omáčka z nakládaného zeleného a růžového pepře",
+          "name": "150g Hovězí roastbeef pečený medium, julienne hranolky, omáčka  z nakládaného zeleného a růžového pepře",
           "price": "195 Kč",
           "isSoup": false
         }
@@ -57,25 +57,25 @@
       "items": [
         {
           "number": "",
-          "name": "0,25 l Vývar z krůtích krků s  masem a zeleninou",
+          "name": "0,25 l Vývar z krůtích krků  s masem a zeleninou",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150 g Smažené filé z aljašské tresky, jemná bramborová kaše s olivovým  olejem, rukolový salát",
+          "name": "150 g Smažené filé z  aljašské tresky, jemná bramborová kaše s olivovým olejem, rukolový salát",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150 g Hovězí guláš s červenou cibulkou a houskovým  knedlíkem",
+          "name": "150 g Hovězí guláš s červenou cibulkou a houskovým knedlíkem",
           "price": "195 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "250 g Králík na černo (tradiční omáčka s perníkem, povidly, sušenými švestkami a  mandlemi) s domácími bramborovými šiškami",
+          "name": "250 g Králík na  černo (tradiční omáčka s perníkem, povidly, sušenými švestkami a mandlemi) s domácími bramborovými šiškami",
           "price": "275 Kč",
           "isSoup": false
         }
@@ -91,31 +91,31 @@
       "items": [
         {
           "number": "",
-          "name": "Slepičí vývar s masem a nudlemi 1a,3",
+          "name": "Slepičí vývar s  masem a nudlemi 1a,3",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Smažený kuřecí  řízek, bramborový salát 1a,3,7,9,10",
+          "name": "Smažený  kuřecí řízek, bramborový salát 1a,3,7,9,10",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Pečené vepřové kostky v nivové omáčce,  krokety 1a,7",
+          "name": "Pečené vepřové kostky v nivové omáčce, krokety 1a,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Znojemská hovězí pečeně, jasmínová rýže  1a",
+          "name": "Znojemská hovězí pečeně, jasmínová rýže 1a",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Pečená krkovička  se sýrovou omáčkou, těstoviny kolínka 1a,7",
+          "name": "Pečená krkovička se sýrovou omáčkou, těstoviny  kolínka 1a,7",
           "price": "139 Kč",
           "isSoup": false
         },
@@ -133,7 +133,7 @@
         },
         {
           "number": "7.",
-          "name": "200g FILOVANÝ VEPŘOVÝ STEAK PFEEFER Z KRKOVIČKY,  AMERICKÉ BRAMBORY",
+          "name": "200g FILOVANÝ VEPŘOVÝ STEAK  PFEEFER Z KRKOVIČKY, AMERICKÉ BRAMBORY",
           "price": "179 Kč",
           "isSoup": false
         }
@@ -149,31 +149,31 @@
       "items": [
         {
           "number": "",
-          "name": "Polévka: hovězí vývar s hráškovou rýží",
+          "name": "Polévka:  hovězí vývar s hráškovou rýží",
           "price": "35 Kč",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Smažená vepřová  játra s bramborovou kaší",
+          "name": "Smažená vepřová játra s bramborovou  kaší",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Grilovaný hermelín s brusinkami na listovém  salátě a rozpečeným toastem",
+          "name": "Grilovaný hermelín s brusinkami na listovém salátě  a rozpečeným toastem",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Kuřecí medailonky se sýrovou omáčkou a  hranolkami",
+          "name": "Kuřecí medailonky  se sýrovou omáčkou a hranolkami",
           "price": "148 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Krkovice  s grilovanými kukuřičnými klasy a americkými bramborami",
+          "name": "Krkovice s  grilovanými kukuřičnými klasy a americkými bramborami",
           "price": "157 Kč",
           "isSoup": false
         },
@@ -185,7 +185,7 @@
         },
         {
           "number": "6.",
-          "name": "Mini  zákusek (věneček,špička,větrník,kokoska)",
+          "name": "Mini zákusek (věneček,špička,větrník,kokoska)",
           "price": "30 Kč",
           "isSoup": false
         }
@@ -201,19 +201,19 @@
       "items": [
         {
           "number": "",
-          "name": "Hovězí vývar se zeleninou, bylinkami, nudlemi  a játrovými knedlíčky\n\t1\n\t7\n\t9",
+          "name": "Hovězí vývar se  zeleninou, bylinkami, nudlemi a játrovými knedlíčky\n\t1\n\t7\n\t9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "1. 400g Trhané kachní maso  pečené na kmínu a soli podávané na bramborových haluškách se šlehanou brynzou zdobené bylinkami a smaženou cibulkou\n\t1\n\t3\n\t7\n\t9",
+          "name": "1. 400g Trhané kachní maso pečené  na kmínu a soli podávané na bramborových haluškách se šlehanou brynzou zdobené bylinkami a smaženou cibulkou\n\t1\n\t3\n\t7\n\t9",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "2. 150g Japonský kuřecí řízek v panko strouhance na způsob (KATSU)  podávaný s kari omáčkou se zeleninou a dušenou jasmínovou rýží\n\t1\n\t7\n\t9\n\t12",
+          "name": "2. 150g Japonský kuřecí řízek v  panko strouhance na způsob (KATSU) podávaný s kari omáčkou se zeleninou a dušenou jasmínovou rýží\n\t1\n\t7\n\t9\n\t12",
           "price": "189 Kč",
           "isSoup": false
         }
