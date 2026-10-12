@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generatedAt": "2026-10-12T08:40:55.920Z",
+  "generatedAt": "2026-10-12T12:30:00.419Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -11,37 +11,37 @@
       "items": [
         {
           "number": "",
-          "name": "Čočková polévka s  bramborem a párkem",
+          "name": "Čočková polévka s bramborem a  párkem",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "200g Bramborové gnocchi podávané se smetanovým listovým špenátem s česnekem, filtrovaným kuřecím prsíčkem, polníčkem  a parmezánem",
+          "name": "200g Bramborové gnocchi podávané se smetanovým listovým špenátem s česnekem,  filtrovaným kuřecím prsíčkem, polníčkem a parmezánem",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "200g Slovenské halušky  se zelím, opečeným uzeným a pažitkou",
+          "name": "200g Slovenské halušky se zelím, opečeným uzeným a  pažitkou",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "200g 2 ks Vařené vejce s lahodnou koprovou omáčkou s čerstvým  koprem a žloutkem, vařené brambory",
+          "name": "200g 2 ks Vařené vejce s lahodnou koprovou omáčkou  s čerstvým koprem a žloutkem, vařené brambory",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "200g Kuřecí prsní steak z grilu podávaný s omáčkou z vyzrálého chedaru, bramborovými kroketami a zelným salátem Coleslaw",
+          "name": "200g Kuřecí prsní  steak z grilu podávaný s omáčkou z vyzrálého chedaru, bramborovými kroketami a zelným salátem Coleslaw",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "300g Konfitované kachní stehno podávané s červeným  sladkokyselým zelím, výpekem, smaženou cibulkou a variací knedlíků",
+          "name": "300g Konfitované kachní stehno podávané s červeným sladkokyselým zelím, výpekem, smaženou cibulkou  a variací knedlíků",
           "price": "195 Kč",
           "isSoup": false
         }
@@ -57,25 +57,25 @@
       "items": [
         {
           "number": "",
-          "name": "0,25 l Cibulačka s  bílým vínem, slaninou a houskovými krutony",
+          "name": "0,25 l Cibulačka s bílým  vínem, slaninou a houskovými krutony",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150 g Pečené  žampiony plněné mletým masem a bylinkami, smetanová bramborová kaše, míchaný zeleninový salát",
+          "name": "150 g Pečené žampiony plněné mletým masem a bylinkami, smetanová bramborová  kaše, míchaný zeleninový salát",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "200 g Marinované vepřové žebírko (kotleta) s grilovanou cuketou a anglickou slaninou, pečené brambory  s čubricou",
+          "name": "200 g Marinované vepřové  žebírko (kotleta) s grilovanou cuketou a anglickou slaninou, pečené brambory s čubricou",
           "price": "195 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "400 g Pomalu pečená kachna s červeným hlávkovým zelím dušeným na víně a domácím bramborovým a houskovým knedlíkem",
+          "name": "400 g Pomalu pečená kachna s červeným hlávkovým zelím dušeným na víně a domácím bramborovým a houskovým  knedlíkem",
           "price": "295 Kč",
           "isSoup": false
         }
@@ -103,37 +103,37 @@
         },
         {
           "number": "2.",
-          "name": "Vepřový steak, hřibová omáčka, sázené vejce se šunkou, opékané brambory  1a,3",
+          "name": "Vepřový steak, hřibová omáčka, sázené vejce se  šunkou, opékané brambory 1a,3",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Kuřecí nudličky s ananasem a broskví na smetaně, jasmínová rýže  1a,7",
+          "name": "Kuřecí nudličky s ananasem a broskví na smetaně, jasmínová rýže 1a,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Uzené maso, křenová omáčka, houskový  knedlík 1a,3,7",
+          "name": "Uzené maso, křenová omáčka,  houskový knedlík 1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Zeleninový salát, pečené kuřecí stehno  barbecue, dressing, pečivo 1a,7",
+          "name": "Zeleninový salát, pečené kuřecí stehno barbecue,  dressing, pečivo 1a,7",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Těstoviny vřetena se špenátovou omáčkou a kuř. masem, česn. a smetanou, sýr 1a,3,7",
+          "name": "Těstoviny vřetena se špenátovou omáčkou  a kuř. masem, česn. a smetanou, sýr 1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "7.",
-          "name": "200g MARINOVANÝ VEPŘ. STEAK Z  KOTLETY, SÝROVÝ DIP S PAŽITKOU, AMERICKÉ BR.",
+          "name": "200g MARINOVANÝ VEPŘ. STEAK Z KOTLETY, SÝROVÝ DIP S PAŽITKOU, AMERICKÉ  BR.",
           "price": "179 Kč",
           "isSoup": false
         }
@@ -155,13 +155,13 @@
         },
         {
           "number": "1.",
-          "name": "Zapečené těstoviny s uzeným masem ,okurek",
+          "name": "Zapečené těstoviny  s uzeným masem ,okurek",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Sekané biftečky s  bramborovou kaší,zelný salát",
+          "name": "Sekané biftečky s bramborovou  kaší,zelný salát",
           "price": "136 Kč",
           "isSoup": false
         },
@@ -173,13 +173,13 @@
         },
         {
           "number": "4.",
-          "name": "Smažené kuřecí nugetky s vařenými  bramborami a tatarskou omáčkou",
+          "name": "Smažené kuřecí nugetky s  vařenými bramborami a tatarskou omáčkou",
           "price": "157 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Králičí hřbet po burgundsku s bramborovou  kaší",
+          "name": "Králičí hřbet po burgundsku s  bramborovou kaší",
           "price": "172 Kč",
           "isSoup": false
         },
@@ -201,19 +201,19 @@
       "items": [
         {
           "number": "",
-          "name": "Polévka: Ruský boršč se zeleninou \n\t1\n\t7\n\t9",
+          "name": "Polévka: Ruský boršč  se zeleninou\n\t1\n\t7\n\t9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150g Thajské červené kari s kuřecím masem, zeleninou, bambusem, rajčaty  a chilli zjemněné kokosovým mlékem podávané s jasmínovou rýží a bylinkami",
+          "name": "150g Thajské červené kari s kuřecím masem, zeleninou, bambusem, rajčaty a chilli zjemněné kokosovým mlékem podávané s jasmínovou rýží  a bylinkami",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g  Tence filírovaná vepřová kotleta marinovaná v hořčici (pečená v celku) podávaná na máslové bramborové kaši s čerstvou vařenou brokolicí a silnou masovou šťávou",
+          "name": "150g Tence filírovaná vepřová kotleta marinovaná v hořčici (pečená v celku) podávaná na máslové bramborové  kaši s čerstvou vařenou brokolicí a silnou masovou šťávou",
           "price": "189 Kč",
           "isSoup": false
         }
