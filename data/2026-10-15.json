@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generatedAt": "2026-10-15T07:00:19.134Z",
+  "generatedAt": "2026-10-15T09:29:06.526Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -11,37 +11,37 @@
       "items": [
         {
           "number": "",
-          "name": "Dýňová polévka  s kokosovým mlékem a krutonky",
+          "name": "Dýňová polévka s kokosovým mlékem  a krutonky",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "200g Spaghetti s pestem  torro rosso /pesto ze sušených rajčátek, piniových oříšků, parmezánu a extra panenského olivového oleje/, kornout sušené šunky San Danielle, parmezán",
+          "name": "200g Spaghetti s  pestem torro rosso /pesto ze sušených rajčátek, piniových oříšků, parmezánu a extra panenského olivového oleje/, kornout sušené šunky San Danielle, parmezán",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "200g  Kuřecí Gordon bleu plněný šunkou a sýrem, máslová bramborová kaše s pažitkou, nakládaný znojemský okurek",
+          "name": "200g Kuřecí Gordon bleu plněný šunkou a sýrem,  máslová bramborová kaše s pažitkou, nakládaný znojemský okurek",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "200g Vepřový stroganoff se zeleninou podávaný se smaženými bramboráčky,  baby okurky cornichons",
+          "name": "200g Vepřový stroganoff se zeleninou podávaný se smaženými  bramboráčky, baby okurky cornichons",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "150g Filírovaný hanger steak z grilu /předem marinovaný v argentinském koření/ podávaný s belgickými hranolky, pečenou kukuřicí  s chilli a jalapenos, silná omáčka demi glace",
+          "name": "150g Filírovaný hanger steak z grilu /předem marinovaný  v argentinském koření/ podávaný s belgickými hranolky, pečenou kukuřicí s chilli a jalapenos, silná omáčka demi glace",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "150g Špíz z  norského lososa prokládaný středomořskou zeleninou, bramborovo-batátové pyré a pečený citron",
+          "name": "150g Špíz z norského lososa prokládaný středomořskou zeleninou, bramborovo-batátové  pyré a pečený citron",
           "price": "195 Kč",
           "isSoup": false
         }
@@ -63,19 +63,19 @@
         },
         {
           "number": "1.",
-          "name": "150 g Kachní játra na cibulce, iberijském špeku a  portském víně, dušená rýže, kyselý okurek",
+          "name": "150 g Kachní  játra na cibulce, iberijském špeku a portském víně, dušená rýže, kyselý okurek",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "250 g Hovězí Parmentier (specialita francouzské kuchyně - hovězí ragú  zapečené bramborovou kaší, lilkem a Ementálem) s omáčkou z portského vína",
+          "name": "250 g Hovězí Parmentier (specialita francouzské kuchyně - hovězí ragú zapečené  bramborovou kaší, lilkem a Ementálem) s omáčkou z portského vína",
           "price": "195 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "400 g Pomalu pečená kachna s červeným hlávkovým zelím dušeným na  víně a domácím bramborovým a houskovým knedlíkem",
+          "name": "400 g Pomalu pečená kachna s červeným hlávkovým zelím dušeným na víně a domácím bramborovým a  houskovým knedlíkem",
           "price": "295 Kč",
           "isSoup": false
         }
@@ -91,49 +91,49 @@
       "items": [
         {
           "number": "",
-          "name": "Polévka boršč  1a,9,7 /",
+          "name": "Polévka boršč 1a,9,7 /",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Kuřecí prsa se slaninou a čedarem v těstíčku, bramborové  pyré 1a,3,7",
+          "name": "Kuřecí prsa se slaninou a čedarem v těstíčku, bramborové pyré  1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Katův šleh,  krokety, tatarka 1a,3",
+          "name": "Katův  šleh, krokety, tatarka 1a,3",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Kuřecí roláda,  zeleninová rýže 1a,3,7",
+          "name": "Kuřecí  roláda, zeleninová rýže 1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Pečená krkovička, dušené zelí, bramborový knedlík 1a,3",
+          "name": "Pečená  krkovička, dušené zelí, bramborový knedlík 1a,3",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Zeleninový  salát, smažená treska tmavá, dressing s koprem, pečivo 1a,3,4,7",
+          "name": "Zeleninový salát, smažená  treska tmavá, dressing s koprem, pečivo 1a,3,4,7",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Fazolový  guláš s klobásou, chléb 1a",
+          "name": "Fazolový guláš s klobásou, chléb  1a",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "7.",
-          "name": "200g MARINOVANÝ VEPŘ. STEAK Z KOTLETY,  SÝROVÝ DIP S PAŽITKOU, AMERICKÉ BR",
+          "name": "200g MARINOVANÝ VEPŘ. STEAK Z KOTLETY, SÝROVÝ  DIP S PAŽITKOU, AMERICKÉ BR",
           "price": "179 Kč",
           "isSoup": false
         }
@@ -149,19 +149,19 @@
       "items": [
         {
           "number": "",
-          "name": "Polévka: rajská s  rýží",
+          "name": "Polévka: rajská  s rýží",
           "price": "35 Kč",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Koprová omáčka s 2 ks sázeným vejcem,vařené  brambory",
+          "name": "Koprová omáčka s 2 ks  sázeným vejcem,vařené brambory",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Vepřové kousky na houbách s  dušenou rýží",
+          "name": "Vepřové kousky na  houbách s dušenou rýží",
           "price": "136 Kč",
           "isSoup": false
         },
@@ -173,19 +173,19 @@
         },
         {
           "number": "4.",
-          "name": "Smažené  kuřecí nugetky s vařenými bramborami a tatarskou omáčkou",
+          "name": "Smažené kuřecí nugetky s vařenými bramborami  a tatarskou omáčkou",
           "price": "157 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Králičí hřbet po burgundsku s  bramborovou kaší",
+          "name": "Králičí  hřbet po burgundsku s bramborovou kaší",
           "price": "172 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Mini  zákusek (věneček,špička,větrník,kokoska)",
+          "name": "Mini zákusek  (věneček,špička,větrník,kokoska)",
           "price": "30 Kč",
           "isSoup": false
         }
@@ -201,19 +201,19 @@
       "items": [
         {
           "number": "",
-          "name": "Polévka: Bramborový krém s  pancettou a pestem",
+          "name": "Polévka: Bramborový krém s pancettou a  pestem",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "1. 150g Norská treska pečená na bylinkách podávaná na dušeném rajčatovém ragú s čerstvou zeleninou a mačkanými brambory se smetanou a  rukolou",
+          "name": "1. 150g Norská treska pečená na bylinkách podávaná na  dušeném rajčatovém ragú s čerstvou zeleninou a mačkanými brambory se smetanou a rukolou",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "2.  350g Vietnamská bun cha (marinované vepřové maso připravené na grilu podávané s rýžovými nudlemi, salátem, výhonky, smaženou cibulkou a bylinky) sezamová zálivka",
+          "name": "2. 350g Vietnamská bun cha (marinované vepřové  maso připravené na grilu podávané s rýžovými nudlemi, salátem, výhonky, smaženou cibulkou a bylinky) sezamová zálivka",
           "price": "189 Kč",
           "isSoup": false
         }
