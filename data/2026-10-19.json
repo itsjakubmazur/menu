@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "generatedAt": "2026-10-19T07:21:44.204Z",
+  "generatedAt": "2026-10-19T10:21:21.998Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -8,7 +8,50 @@
       "menickaId": 3830,
       "url": "https://www.menicka.cz/3830-suzies-steak-pub.html",
       "type": "menicka",
-      "items": [],
+      "items": [
+        {
+          "number": "",
+          "name": "Gulášová  polévka",
+          "price": "45 Kč",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "200g Tagliatele Bolognese  sypané parmazánem a polníčkem",
+          "price": "175 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "1.",
+          "name": "200g Smažené kuřecí stripsy v Panko strouhance podávané s  máslovou bramborovou kaší a zelným salátem Coleslaw",
+          "price": "175 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "200g Francouzské brambory  plněné zeleninou a uzeným kolínkem, gratinované sýrem, nakládaný znojemský okurek",
+          "price": "175 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "3.",
+          "name": "200g  Smažené rybí filé podávaný s tradičním bramborovým salátem, citron",
+          "price": "175 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "4.",
+          "name": "200g  Grilovaná panenská svíčková, sázené vejce, kořeněné americké brambory, omáčka z lesních hub",
+          "price": "185 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "5.",
+          "name": "200g Domácí Hot dog bulka plněná pečeným roastbeefem /filírovaný, pečený médium/ podávaný s dijonským dresinkem a zeleninu, bramborové hranolky, tatarská  omáčka",
+          "price": "189 Kč",
+          "isSoup": false
+        }
+      ],
       "error": null
     },
     {
@@ -20,25 +63,25 @@
       "items": [
         {
           "number": "",
-          "name": "0,25 l Drůbeží polévka s  nudlemi a zeleninou",
+          "name": "0,25  l Drůbeží polévka s nudlemi a zeleninou",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150 g Maďarský kuřecí perkelt s rajčaty, paprikou a zakysanou smetanou,  halušky",
+          "name": "150 g Maďarský kuřecí perkelt s rajčaty, paprikou a zakysanou smetanou, halušky",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150 g Smažený sýrový špíz (Gouda, Niva, uzený Eidam), mačkané brambory s máslem a petrželkou, domácí tatarská  omáčka",
+          "name": "150 g Smažený sýrový špíz (Gouda, Niva, uzený  Eidam), mačkané brambory s máslem a petrželkou, domácí tatarská omáčka",
           "price": "195 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "150 g Španělský ptáček s dušenou rýží Basmati nebo houskovým  knedlíkem",
+          "name": "150 g Španělský ptáček s dušenou rýží Basmati nebo  houskovým knedlíkem",
           "price": "285 Kč",
           "isSoup": false
         }
@@ -60,7 +103,7 @@
         },
         {
           "number": "1.",
-          "name": "Kuřecí prsa v pikantní  těstíčku s mozzarellou, bramborové pyré 1a,3,7",
+          "name": "Kuřecí  prsa v pikantní těstíčku s mozzarellou, bramborové pyré 1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
@@ -72,7 +115,7 @@
         },
         {
           "number": "3.",
-          "name": "Vepřové rizoto se žampiony, sýr, okurek  1,7",
+          "name": "Vepřové rizoto se žampiony, sýr, okurek 1,7",
           "price": "139 Kč",
           "isSoup": false
         },
@@ -84,7 +127,7 @@
         },
         {
           "number": "5.",
-          "name": "Zeleninový salát, smažený hermelín plněný brusinkami,  bageta, dressing 1,3,7",
+          "name": "Zeleninový  salát, smažený hermelín plněný brusinkami, bageta, dressing 1,3,7",
           "price": "179 Kč",
           "isSoup": false
         },
@@ -96,7 +139,7 @@
         },
         {
           "number": "7.",
-          "name": "200g KUŘECÍ  STEAK ZAPEČENÝ SE SLANINOU A ČEDAREM, OP. BRAMBOR 1a,7",
+          "name": "200g KUŘECÍ STEAK ZAPEČENÝ SE  SLANINOU A ČEDAREM, OP. BRAMBOR 1a,7",
           "price": "179 Kč",
           "isSoup": false
         }
@@ -124,31 +167,31 @@
         },
         {
           "number": "2.",
-          "name": "Sekané  biftečky s bramborovou kaší,zelný salát",
+          "name": "Sekané biftečky s  bramborovou kaší,zelný salát",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Tagliatelle s kuřecí masem  ve smetanovo-parmezánové omáčce",
+          "name": "Tagliatelle s kuřecí masem ve smetanovo-parmezánové  omáčce",
           "price": "148 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Smažené kuřecí nugetky s vařenými bramborami a tatarskou  omáčkou",
+          "name": "Smažené kuřecí nugetky s vařenými bramborami a  tatarskou omáčkou",
           "price": "157 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Králičí hřbet po burgundsku  s bramborovou kaší",
+          "name": "Králičí hřbet po burgundsku s bramborovou kaší",
           "price": "172 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Mini zákusek  (věneček,špička,větrník,kokoska)",
+          "name": "Mini  zákusek (věneček,špička,větrník,kokoska)",
           "price": "30 Kč",
           "isSoup": false
         }
@@ -164,19 +207,19 @@
       "items": [
         {
           "number": "",
-          "name": "Polévka: Zelná  polévka s masem a bramborem",
+          "name": "Polévka: Zelná polévka s masem a  bramborem",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "1.  150g Pikantní kung pao na pekingský způsob s kuřecím masem, zeleninou, oříšky a švestkovým vínem podáváme s dušenou jasmínovou rýží, bylinky",
+          "name": "1. 150g Pikantní  kung pao na pekingský způsob s kuřecím masem, zeleninou, oříšky a švestkovým vínem podáváme s dušenou jasmínovou rýží, bylinky",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "2. 150g Kuřecí steak  marinovaný v petrželovém pestu podávaný s batátovým pyré, opékané francouzské grenaille, grilovaná zelenina",
+          "name": "2. 150g Kuřecí  steak marinovaný v petrželovém pestu podávaný s batátovým pyré, opékané francouzské grenaille, grilovaná zelenina",
           "price": "189 Kč",
           "isSoup": false
         }
