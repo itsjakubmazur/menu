@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "generatedAt": "2026-10-28T07:57:06.287Z",
+  "generatedAt": "2026-10-28T10:52:37.625Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -11,7 +11,7 @@
       "items": [
         {
           "number": "",
-          "name": "STÁTNÍ SVÁTEK Otevřeno  11:00 - 23:00 hodin Speciální sváteční nabídka Těšíme se na Vás /702 180 180/",
+          "name": "STÁTNÍ  SVÁTEK Otevřeno 11:00 - 23:00 hodin Speciální sváteční nabídka Těšíme se na Vás /702 180 180/",
           "price": "",
           "isSoup": true
         }
@@ -36,13 +36,13 @@
       "items": [
         {
           "number": "",
-          "name": "Slepičí vývar s nudlemi  1a,3,9 VÍKENDOVÉ MENU",
+          "name": "Slepičí vývar s  nudlemi 1a,3,9 VÍKENDOVÉ MENU",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Smažený květák, vařené brambory, tatarka 1a,3,7",
+          "name": "Smažený  květák, vařené brambory, tatarka 1a,3,7",
           "price": "169 Kč",
           "isSoup": false
         },
@@ -54,13 +54,13 @@
         },
         {
           "number": "3.",
-          "name": "Kuřecí kung- pao, jasmínová rýže  1a,5",
+          "name": "Kuřecí kung- pao,  jasmínová rýže 1a,5",
           "price": "169 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Plněné bramborové knedlíky uzeným masem, dušené  zelí, cibulka 1a,3",
+          "name": "Plněné bramborové  knedlíky uzeným masem, dušené zelí, cibulka 1a,3",
           "price": "169 Kč",
           "isSoup": false
         }
@@ -76,13 +76,13 @@
       "items": [
         {
           "number": "",
-          "name": "Mix medailonky (kuřecí,vepřové) na grilované  zelenině,hranolky",
+          "name": "Mix medailonky (kuřecí,vepřové) na grilované zelenině,hranolky",
           "price": "148 Kč",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Přírodní krůtí závitek  plněný sušenými švestkami a šunkou,americké brambory",
+          "name": "Přírodní krůtí závitek plněný sušenými švestkami a šunkou,americké brambory",
           "price": "157 Kč",
           "isSoup": false
         },
@@ -94,7 +94,7 @@
         },
         {
           "number": "3.",
-          "name": "Mini  zákusek (věneček,špička,větrník,kokoska)",
+          "name": "Mini zákusek (věneček,špička,větrník,kokoska)",
           "price": "30 Kč",
           "isSoup": false
         }
@@ -110,19 +110,19 @@
       "items": [
         {
           "number": "",
-          "name": "Slepičí  vývar s masem, zeleninou, nudlemi a bylinkami\n\t1\n\t3\n\t9",
+          "name": "Slepičí vývar s masem, zeleninou, nudlemi a  bylinkami\n\t1\n\t3\n\t9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "1. 150g  Mořská štika pečená na sušených rajčatech podávaná rajčatovém ragú s pečenou zeleninou a dýní, grilované francouzské grenaille, pesto\n\t4",
+          "name": "1. 150g Mořská štika pečená na  sušených rajčatech podávaná rajčatovém ragú s pečenou zeleninou a dýní, grilované francouzské grenaille, pesto\n\t4",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "2. 350g Italské lasagne s masovým ragú, italskou pancettou v rajčatové omáčce  s oreganem a grilovanou zeleninou, sýrovým bešamelem a zapečené mozzarellou podávané s malým míchaným salátem a zálivkou vinaigrette\n\t1\n\t3\n\t7\n\t9\n\t12",
+          "name": "2. 350g Italské lasagne s masovým ragú, italskou pancettou v rajčatové omáčce s oreganem a grilovanou zeleninou, sýrovým bešamelem a zapečené mozzarellou podávané  s malým míchaným salátem a zálivkou vinaigrette\n\t1\n\t3\n\t7\n\t9\n\t12",
           "price": "189 Kč",
           "isSoup": false
         }
