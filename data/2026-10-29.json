@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generatedAt": "2026-10-29T08:04:39.941Z",
+  "generatedAt": "2026-10-29T11:08:48.243Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -11,37 +11,37 @@
       "items": [
         {
           "number": "",
-          "name": "Slepičí vývar s  nudlemi a kořenovou zeleninou",
+          "name": "Slepičí vývar s nudlemi a kořenovou  zeleninou",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "250g Lasagne Caprese  prokládané grilovanými kuřecími prsíčky, mozzarellou, plátky rajčat a bazalkový bešamelem, sypané Parmigiano Reggiano",
+          "name": "250g Lasagne Caprese prokládané grilovanými kuřecími prsíčky, mozzarellou, plátky  rajčat a bazalkový bešamelem, sypané Parmigiano Reggiano",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "200g Smažený řízek z vepřové krkovice, vánoční bramborový salát s  jablky, citron",
+          "name": "200g Smažený řízek z  vepřové krkovice, vánoční bramborový salát s jablky, citron",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "150g Myslivecký  guláš z divočáka na červeném víně, houskové knedlíky",
+          "name": "150g Myslivecký guláš z divočáka na  červeném víně, houskové knedlíky",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Variace řeckých souvlaki (vepřová panenka obalovaná v anglické slanině + kuřecí prsa s gyros kořením) s rozmarýnovým pita chlebem, hranolky a jogurtovými tzatziki",
+          "name": "Variace řeckých souvlaki (vepřová panenka obalovaná v anglické slanině  + kuřecí prsa s gyros kořením) s rozmarýnovým pita chlebem, hranolky a jogurtovými tzatziki",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Hovězí roastbeef /médium, filírovaný/  podávaný s pečenými grenaille bramborami ve slupce, teplá dijonská omáčka s nakládaným pepřem",
+          "name": "Hovězí roastbeef /médium, filírovaný/ podávaný s pečenými grenaille bramborami ve slupce, teplá dijonská omáčka  s nakládaným pepřem",
           "price": "195 Kč",
           "isSoup": false
         }
@@ -57,25 +57,25 @@
       "items": [
         {
           "number": "",
-          "name": "0,25 l Drůbková  polévka s masem a nudlemi",
+          "name": "0,25 l  Drůbková polévka s masem a nudlemi",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "120 g Čočka na kyselo se  zauzeným vepřovým karé, volským okem a kyselým okurkem, valašský chleba",
+          "name": "120 g Čočka na kyselo se zauzeným vepřovým karé, volským okem a kyselým okurkem, valašský chleba",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150 g Krůtí pečeně na pomerančích, zázvoru a tymiánu,  šťouchané brambory s máslem a meduňkou, mrkvový salát",
+          "name": "150 g Krůtí pečeně na pomerančích, zázvoru a  tymiánu, šťouchané brambory s máslem a meduňkou, mrkvový salát",
           "price": "195 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "150 g Porthaus - česnekovaná hovězí roštěná smažená v trojobalu, petrželové  brambory, okurkový salát",
+          "name": "150 g Porthaus - česnekovaná hovězí roštěná smažená v trojobalu, petrželové brambory, okurkový salát",
           "price": "295 Kč",
           "isSoup": false
         }
@@ -97,7 +97,7 @@
         },
         {
           "number": "1.",
-          "name": "Vepřové medailonky z panenky v bramboráku  zapečené s nivou, zel. obloha 1a,3,7",
+          "name": "Vepřové medailonky z panenky v bramboráku zapečené  s nivou, zel. obloha 1a,3,7",
           "price": "149 Kč",
           "isSoup": false
         },
@@ -109,25 +109,25 @@
         },
         {
           "number": "3.",
-          "name": "Cikánská hovězí pečeně, rýže",
+          "name": "Cikánská hovězí  pečeně, rýže",
           "price": "159 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Halušky  s kysaným zelím, uzeným, cibulkou a škvarky 1a,7,3",
+          "name": "Halušky s kysaným  zelím, uzeným, cibulkou a škvarky 1a,7,3",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Zeleninový salát, mletý biftek zapečený se slaninou  a mozzarellou, dressing, pečivo 1a,7",
+          "name": "Zeleninový salát, mletý  biftek zapečený se slaninou a mozzarellou, dressing, pečivo 1a,7",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Špagety s boloňskou omáčkou a  vepřovým masem, sýr 1a,7",
+          "name": "Špagety  s boloňskou omáčkou a vepřovým masem, sýr 1a,7",
           "price": "139 Kč",
           "isSoup": false
         },
@@ -155,13 +155,13 @@
         },
         {
           "number": "1.",
-          "name": "Halušky s brynzou  a opečenou slaninou",
+          "name": "Halušky s brynzou a opečenou slaninou",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Holandský řízek s bramborovou kaší,okurek",
+          "name": "Holandský  řízek s bramborovou kaší,okurek",
           "price": "136 Kč",
           "isSoup": false
         },
@@ -201,19 +201,19 @@
       "items": [
         {
           "number": "",
-          "name": "Brokolicový krém se  smetanou, parmazánem a krutony\n\t1\n\t7\n\t9",
+          "name": "Brokolicový krém  se smetanou, parmazánem a krutony\n\t1\n\t7\n\t9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150g Cordon bleu plněný vepřovou šunkou a sýrem podávaný s mačkanými brambory s máslem a jarní cibulkou, domácí tatarská omáčka \n\t1\n\t3\n\t7\n\t9\n\t10\n\t12",
+          "name": "150g Cordon bleu plněný vepřovou šunkou a sýrem podávaný s mačkanými brambory s máslem a jarní  cibulkou, domácí tatarská omáčka\n\t1\n\t3\n\t7\n\t9\n\t10\n\t12",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g Hovězí pečeně na  slanině (dušené hovězí se silnou hnědou omáčkou s rozmarýnem a slaninou) podávané se slovenskými haluškami, bylinkami a karamelizovanými cibulkami\n\t1\n\t3\n\t7",
+          "name": "150g Hovězí pečeně na slanině (dušené hovězí se silnou hnědou omáčkou s rozmarýnem a slaninou) podávané se slovenskými haluškami, bylinkami  a karamelizovanými cibulkami\n\t1\n\t3\n\t7",
           "price": "189 Kč",
           "isSoup": false
         }
