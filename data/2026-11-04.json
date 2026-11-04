@@ -1,6 +1,6 @@
 {
   "date": "2026-11-04",
-  "generatedAt": "2026-11-04T08:40:21.820Z",
+  "generatedAt": "2026-11-04T12:38:01.204Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -11,37 +11,37 @@
       "items": [
         {
           "number": "",
-          "name": "Hovězí  vývar s játrovou rýží a zeleninou",
+          "name": "Hovězí vývar  s játrovou rýží a zeleninou",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "200g Spaghetti Carbonara s grilovanou pancettou, vaječným žloutkem, čerstvě  mletým pepřem a parmezánem",
+          "name": "200g Spaghetti Carbonara s grilovanou pancettou, vaječným žloutkem, čerstvě mletým pepřem  a parmezánem",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "200g Naše sekaná plněná bylinkami a  sýrem, vídeňský bramborový salát",
+          "name": "200g Naše  sekaná plněná bylinkami a sýrem, vídeňský bramborový salát",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "200g Jemná hrachová kaše podávaná s opečenou klobáskou, znojemským okurkem, smaženou cibulkou  a čerstvým chlebem",
+          "name": "200g Jemná hrachová kaše  podávaná s opečenou klobáskou, znojemským okurkem, smaženou cibulkou a čerstvým chlebem",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "200g Quesadilla plněná kuřecími prsíčky, naší BBQ  omáčkou, uzeným sýrem Scamorza a kukuřicí, americké brambory a chipotle mayo",
+          "name": "200g Quesadilla plněná kuřecími prsíčky, naší BBQ omáčkou, uzeným sýrem Scamorza a kukuřicí, americké brambory a  chipotle mayo",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "150g Vepřová líčka dušená s červeným  vínem a kořenovou zeleninou podávaná s bramborovým pyré a glazovanou karotkou",
+          "name": "150g Vepřová líčka dušená s červeným vínem a kořenovou zeleninou podávaná s bramborovým pyré a glazovanou  karotkou",
           "price": "189 Kč",
           "isSoup": false
         }
@@ -57,25 +57,25 @@
       "items": [
         {
           "number": "",
-          "name": "0, 25  l Zeleninový krém",
+          "name": "0, 25 l Zeleninový  krém",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "250g Řecká Musaka - brambory zapečené  s masovým ragú, lilkem, rajčaty, bešamelem a sýrem Gran Biraghi",
+          "name": "250g Řecká Musaka - brambory zapečené s masovým  ragú, lilkem, rajčaty, bešamelem a sýrem Gran Biraghi",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g Filet z  mořské štiky pečený na limetách a bylinkovém másle, bramborové pyré s olivovým olejem, rukolový salát",
+          "name": "150g Filet  z mořské štiky pečený na limetách a bylinkovém másle, bramborové pyré s olivovým olejem, rukolový salát",
           "price": "195 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "150g Telecí pečeně  Esterházy s pajfalský knedlíkem",
+          "name": "150g Telecí pečeně Esterházy s pajfalský  knedlíkem",
           "price": "295 Kč",
           "isSoup": false
         }
@@ -91,49 +91,49 @@
       "items": [
         {
           "number": "",
-          "name": "Chalupářská polévka se sýrem 1a,7,9",
+          "name": "Chalupářská polévka  se sýrem 1a,7,9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Smažený kuřecí řízek pl. nivou  a slaninou, vařené brambory s máslem 1a,3,7",
+          "name": "Smažený kuřecí řízek pl. nivou a slaninou,  vařené brambory s máslem 1a,3,7",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Vepřový  steak, pepřová omáčka, pečené brambory s rozmarýnem 1a,7",
+          "name": "Vepřový steak, pepřová omáčka, pečené brambory s rozmarýnem 1a,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Kuřecí nudličky po čínsku, jasmínová rýže 1a,",
+          "name": "Kuřecí nudličky  po čínsku, jasmínová rýže 1a,",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Hovězí líčka na víně, bramborové pyré 1a",
+          "name": "Hovězí líčka na víně, bramborové pyré  1a",
           "price": "169 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Zeleninový salát, smažené rybí prsty, dressing,  pečico 1a,3,4,7",
+          "name": "Zeleninový salát, smažené rybí prsty, dressing, pečico 1a,3,4,7",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Kynuté knedlíky s  jahodami a tvarohem 1a,3,7",
+          "name": "Kynuté knedlíky s jahodami a tvarohem  1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "7.",
-          "name": "200g KUŘECÍ STEHENNÍ STEAK BARBECUE ZAPEČENÝ SE ŽAMPIONY A NIVOU,  KROKETY 1a,7",
+          "name": "200g KUŘECÍ  STEHENNÍ STEAK BARBECUE ZAPEČENÝ SE ŽAMPIONY A NIVOU, KROKETY 1a,7",
           "price": "179 Kč",
           "isSoup": false
         }
@@ -155,25 +155,25 @@
         },
         {
           "number": "1.",
-          "name": "Špagety Carbonara s parmezánem",
+          "name": "Špagety  Carbonara s parmezánem",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Bramborové knedlíky plněné uzeným masem,špenát,restovaná cibulka",
+          "name": "Bramborové knedlíky plněné  uzeným masem,špenát,restovaná cibulka",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Tortelini plněné hovězím mletým masem v  rajčatové omáčce",
+          "name": "Tortelini plněné hovězím  mletým masem v rajčatové omáčce",
           "price": "148 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Variace smažených řízků(vepřový,kuřecí)s bramborovým  salátem,citron",
+          "name": "Variace smažených řízků(vepřový,kuřecí)s  bramborovým salátem,citron",
           "price": "157 Kč",
           "isSoup": false
         },
@@ -185,7 +185,7 @@
         },
         {
           "number": "6.",
-          "name": "Mini zákusek  (věneček,špička,větrník,kokoska)",
+          "name": "Mini zákusek (věneček,špička,větrník,kokoska)",
           "price": "30 Kč",
           "isSoup": false
         }
@@ -201,19 +201,19 @@
       "items": [
         {
           "number": "",
-          "name": "Vietnamské Pho  Ga s rýžovými nudlemi a bylinkami\n\t1\n\t4\n\t5\n\t6\n\t11",
+          "name": "Vietnamské Pho Ga s rýžovými nudlemi  a bylinkami\n\t1\n\t4\n\t5\n\t6\n\t11",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150g Špaličky z pečené vepřové panenky v hrubém pepři podávané na pyré z dýně hokaido se  smetanou, grilovanou zeleninou a pečenými francouzskými grenaillemi, petrželové pesto\n\t7",
+          "name": "150g Špaličky z pečené vepřové panenky v hrubém pepři podávané na pyré z dýně hokaido se smetanou, grilovanou zeleninou a pečenými francouzskými grenaillemi,  petrželové pesto\n\t7",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "120g Smažený čedar v chlebové strouhance podávaný s  mačkanými brambory s jarní cibulkou a máslem, domácí tatarkou s kapkou vina\n\t1\n\t3\n\t7\n\t12",
+          "name": "120g Smažený čedar v chlebové strouhance podávaný s mačkanými brambory s jarní cibulkou a máslem, domácí tatarkou s  kapkou vina\n\t1\n\t3\n\t7\n\t12",
           "price": "189 Kč",
           "isSoup": false
         }
