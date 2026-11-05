@@ -1,6 +1,6 @@
 {
   "date": "2026-11-05",
-  "generatedAt": "2026-11-05T09:00:12.108Z",
+  "generatedAt": "2026-11-05T12:48:45.499Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -11,13 +11,13 @@
       "items": [
         {
           "number": "",
-          "name": "Dýňová polévka s kokosovým mlékem a rohlíčkovými krutonky",
+          "name": "Dýňová polévka s kokosovým mlékem a  rohlíčkovými krutonky",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "200g Vepřové  výpečky na černém pivu, bramborový knedlík, červené zelí, smažená cibulka",
+          "name": "200g Vepřové výpečky na černém pivu, bramborový knedlík, červené zelí,  smažená cibulka",
           "price": "175 Kč",
           "isSoup": false
         },
@@ -29,13 +29,13 @@
         },
         {
           "number": "3.",
-          "name": "200g Česnekované řízečky z  panenské svíčkové, mačkané brambory se smaženou cibulkou a slaninou, citron",
+          "name": "200g  Česnekované řízečky z panenské svíčkové, mačkané brambory se smaženou cibulkou a slaninou, citron",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "200g Jelení burger v domácí  briochi s dipem z pečeného česneku, karamelizovanou cibulkou, omáčkou Cumberland a ementálem, steakové hranolky, zelný salát Coleslaw",
+          "name": "200g Jelení  burger v domácí briochi s dipem z pečeného česneku, karamelizovanou cibulkou, omáčkou Cumberland a ementálem, steakové hranolky, zelný salát Coleslaw",
           "price": "185 Kč",
           "isSoup": false
         },
@@ -57,7 +57,7 @@
       "items": [
         {
           "number": "",
-          "name": "0, 25 l Frankfurtská polévka s párkem",
+          "name": "0,  25 l Frankfurtská polévka s párkem",
           "price": "",
           "isSoup": true
         },
@@ -69,13 +69,13 @@
         },
         {
           "number": "2.",
-          "name": "150g  Holandský řízek s Goudou, bramborová kaše, kyselý okurek",
+          "name": "150g Holandský řízek s  Goudou, bramborová kaše, kyselý okurek",
           "price": "195 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "150g Telecí pečeně  Esterházy s pajfalským knedlíkem",
+          "name": "150g Telecí pečeně Esterházy s pajfalským knedlíkem",
           "price": "295 Kč",
           "isSoup": false
         }
@@ -97,19 +97,19 @@
         },
         {
           "number": "1.",
-          "name": "Vepřové medailonky z panenky v bramboráku, zelenina, sýrový dip  1a,3,7",
+          "name": "Vepřové medailonky z panenky v bramboráku, zelenina,  sýrový dip 1a,3,7",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Pečené kuřecí nugety v čedarové omáčce, krokety  1a,7",
+          "name": "Pečené kuřecí nugety v čedarové omáčce,  krokety 1a,7",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Pečeně na  žampionech, šunková rýže 1a",
+          "name": "Pečeně na žampionech, šunková  rýže 1a",
           "price": "139 Kč",
           "isSoup": false
         },
@@ -121,7 +121,7 @@
         },
         {
           "number": "5.",
-          "name": "Zeleninový salát COLESLAW, pečené kuřecí špalíčky, bageta 1a,7",
+          "name": "Zeleninový salát COLESLAW, pečené  kuřecí špalíčky, bageta 1a,7",
           "price": "179 Kč",
           "isSoup": false
         },
@@ -133,7 +133,7 @@
         },
         {
           "number": "7.",
-          "name": "200g KUŘECÍ STEHENNÍ STEAK BARBECUE ZAPEČENÝ SE ŽAMPIONY A NIVOU, KROKETY 1a,7",
+          "name": "200g  KUŘECÍ STEHENNÍ STEAK BARBECUE ZAPEČENÝ SE ŽAMPIONY A NIVOU, KROKETY 1a,7",
           "price": "179 Kč",
           "isSoup": false
         }
@@ -149,43 +149,43 @@
       "items": [
         {
           "number": "",
-          "name": "Polévka:Moravská  cibulačka",
+          "name": "Polévka:Moravská cibulačka",
           "price": "35 Kč",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Kuřecí soté se žampiony,dušená  rýže",
+          "name": "Kuřecí  soté se žampiony,dušená rýže",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Vepřový steak se špekovou kukuřicí  a hranolkami",
+          "name": "Vepřový steak se špekovou kukuřicí a  hranolkami",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Tortelini plněné hovězím mletým masem  v rajčatové omáčce",
+          "name": "Tortelini plněné hovězím mletým  masem v rajčatové omáčce",
           "price": "148 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Variace smažených řízků(vepřový,kuřecí)s bramborovým salátem,citron",
+          "name": "Variace smažených řízků(vepřový,kuřecí)s bramborovým  salátem,citron",
           "price": "157 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Filovaná vepřová panenka s pepřovou  omáčkou,americké brambory",
+          "name": "Filovaná vepřová  panenka s pepřovou omáčkou,americké brambory",
           "price": "172 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Mini  zákusek (věneček,špička,větrník,kokoska)",
+          "name": "Mini zákusek (věneček,špička,větrník,kokoska)",
           "price": "30 Kč",
           "isSoup": false
         }
@@ -201,19 +201,19 @@
       "items": [
         {
           "number": "",
-          "name": "Indický čočkový dhal \n\t9",
+          "name": "Indický čočkový  dhal\n\t9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "350g Italské lasagne s masovým ragú, italskou pancettou v rajčatové omáčce s oreganem a grilovanou zeleninou, sýrovým bešamelem a zapečené mozzarellou podávané  s malým míchaným salátem a zálivkou vinaigrette\n\t1\n\t3\n\t7\n\t9\n\t12",
+          "name": "350g Italské lasagne s  masovým ragú, italskou pancettou v rajčatové omáčce s oreganem a grilovanou zeleninou, sýrovým bešamelem a zapečené mozzarellou podávané s malým míchaným salátem a zálivkou vinaigrette\n\t1\n\t3\n\t7\n\t9\n\t12",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g Hovězí stroganoff s  francouzským crème fraîche, žampiony, nakládanými cibulkami a dušenou jasmínovou rýží, bylinky\n\t1\n\t7\n\t9\n\t10\n\t12",
+          "name": "150g Hovězí stroganoff s francouzským crème fraîche, žampiony, nakládanými cibulkami a dušenou jasmínovou rýží,  bylinky\n\t1\n\t7\n\t9\n\t10\n\t12",
           "price": "189 Kč",
           "isSoup": false
         }
