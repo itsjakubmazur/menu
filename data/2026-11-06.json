@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "generatedAt": "2026-11-06T08:57:32.654Z",
+  "generatedAt": "2026-11-06T12:33:09.376Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -11,7 +11,7 @@
       "items": [
         {
           "number": "",
-          "name": "Česneková polévka se  šunkou, vejcem a opečeným chlebem",
+          "name": "Česneková polévka se šunkou,  vejcem a opečeným chlebem",
           "price": "",
           "isSoup": true
         },
@@ -23,7 +23,7 @@
         },
         {
           "number": "1.",
-          "name": "200g Francouzská kachní roláda podávaná s bramborovo-květákovým pyré, listový salátek  se špekem",
+          "name": "200g Francouzská kachní roláda podávaná s bramborovo-květákovým pyré, listový salátek se  špekem",
           "price": "179 Kč",
           "isSoup": false
         },
@@ -35,19 +35,19 @@
         },
         {
           "number": "3.",
-          "name": "200g Smažený kuřecí Gordon bleu plněný medovou šunkou a mozzarellou podávaný se  šťouchanými smetanovými bramborami a okurkovým salátem",
+          "name": "200g Smažený kuřecí  Gordon bleu plněný medovou šunkou a mozzarellou podávaný se šťouchanými smetanovými bramborami a okurkovým salátem",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "200g Medailonky z vepřové panenky Quattro Formaggi gratinované výběrovými italskými sýry, steakové krokety, bylinkový dip z  creme fraiché",
+          "name": "200g Medailonky z vepřové panenky Quattro Formaggi gratinované výběrovými italskými sýry, steakové  krokety, bylinkový dip z creme fraiché",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "150g Vepřová líčka dušená s  červeným vínem a kořenovou zeleninou podávaná s bramborovým pyré a glazovanou karotkou",
+          "name": "150g Vepřová líčka dušená s červeným vínem a kořenovou zeleninou podávaná s bramborovým pyré a  glazovanou karotkou",
           "price": "189 Kč",
           "isSoup": false
         }
@@ -69,13 +69,13 @@
         },
         {
           "number": "1.",
-          "name": "150g Grilovaná bavorská sekaná s volským okem  a lehkým bramborovým salátem s pažitkou a červenou cibulí",
+          "name": "150g Grilovaná bavorská sekaná  s volským okem a lehkým bramborovým salátem s pažitkou a červenou cibulí",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g Hovězí guláš s červenou cibulkou a houskovým knedlíkem",
+          "name": "150g Hovězí guláš s červenou  cibulkou a houskovým knedlíkem",
           "price": "195 Kč",
           "isSoup": false
         },
@@ -97,49 +97,49 @@
       "items": [
         {
           "number": "",
-          "name": "Hovězí vývar s masem a  nudlemi 1a,3,9",
+          "name": "Hovězí  vývar s masem a nudlemi 1a,3,9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Smažený kuřecí řízek,  bramborový salát 1a,3,7,9,10",
+          "name": "Smažený kuřecí řízek, bramborový salát 1a,3,7,9,10",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Pečené vepřové kostky po  myslivecku, americké brambory, tatarka 1a,3,7",
+          "name": "Pečené vepřové kostky  po myslivecku, americké brambory, tatarka 1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Španělský  hovězí ptáček, rýže 1a,3",
+          "name": "Španělský hovězí ptáček,  rýže 1a,3",
           "price": "169 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Vepřové výpečky, dušená  kapusta, vařené brambory 1a",
+          "name": "Vepřové výpečky, dušená kapusta,  vařené brambory 1a",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "Zeleninový salát,4 ks pečené kuřecí křídla,  dressing, tmavý chléb 1a,7,",
+          "name": "Zeleninový salát,4  ks pečené kuřecí křídla, dressing, tmavý chléb 1a,7,",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Čínské nudle, pikantní kuřecí  nudličky 1a",
+          "name": "Čínské nudle, pikantní kuřecí nudličky  1a",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "7.",
-          "name": "200g KUŘECÍ STEHENNÍ STEAK  BARBECUE ZAPEČENÝ SE ŽAMPIONY A NIVOU, KROKETY 1a,7",
+          "name": "200g KUŘECÍ STEHENNÍ STEAK BARBECUE ZAPEČENÝ  SE ŽAMPIONY A NIVOU, KROKETY 1a,7",
           "price": "179 Kč",
           "isSoup": false
         }
@@ -167,13 +167,13 @@
         },
         {
           "number": "2.",
-          "name": "Zeleninový salát  s filovaným kuřecím prsíčkem,bylinkovým dipem,rozpečený toast",
+          "name": "Zeleninový salát s filovaným kuřecím prsíčkem,bylinkovým dipem,rozpečený toast",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Tortelini plněné hovězím  mletým masem v rajčatové omáčce",
+          "name": "Tortelini plněné hovězím mletým masem  v rajčatové omáčce",
           "price": "148 Kč",
           "isSoup": false
         },
@@ -185,7 +185,7 @@
         },
         {
           "number": "5.",
-          "name": "Filovaná  vepřová panenka s pepřovou omáčkou,americké brambory",
+          "name": "Filovaná vepřová panenka s  pepřovou omáčkou,americké brambory",
           "price": "172 Kč",
           "isSoup": false
         },
@@ -207,19 +207,19 @@
       "items": [
         {
           "number": "",
-          "name": "Zampionový  krém se smetanou, portským vínem a krutony\n\t1\n\t7\n\t9",
+          "name": "Zampionový krém  se smetanou, portským vínem a krutony\n\t1\n\t7\n\t9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "150g Mexická  quesadilla piněná trhaným BBQ kuřecím masem a hromadou sýru, podáváme s pečenými brambory a dipem z uzených jalapeno papriček\n\t1\n\t3",
+          "name": "150g Mexická quesadilla piněná trhaným BBQ kuřecím masem a hromadou sýru, podáváme s pečenými brambory a dipem z uzených  jalapeno papriček\n\t1\n\t3",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g Vepřový řízek z kotlety marinovaný  v česneku a pepři podávaný s máslovou bramborovou kaší, nakládanou zeleninou a citronem\n\t1\n\t3\n\t7",
+          "name": "150g Vepřový řízek z kotlety marinovaný v česneku a pepři podávaný s máslovou bramborovou  kaší, nakládanou zeleninou a citronem\n\t1\n\t3\n\t7",
           "price": "189 Kč",
           "isSoup": false
         }
