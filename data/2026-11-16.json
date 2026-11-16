@@ -1,6 +1,6 @@
 {
   "date": "2026-11-16",
-  "generatedAt": "2026-11-16T09:03:29.715Z",
+  "generatedAt": "2026-11-16T13:11:46.930Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -17,31 +17,31 @@
         },
         {
           "number": "1.",
-          "name": "Pasta: Gnocchi podávané  s hříbkovou omáčkou, kornoutem sušené šunky Parma, parmezán",
+          "name": "Pasta: Gnocchi podávané s  hříbkovou omáčkou, kornoutem sušené šunky Parma, parmezán",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "200g Pomalu  pečená krkovice na černém pivu, šťouchané brambory, cibulová šťáva",
+          "name": "200g Pomalu pečená  krkovice na černém pivu, šťouchané brambory, cibulová šťáva",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "200 Fish and chips /filety argentinského hejka smažené v pivním těstíčku/ podávané s  bramborovými hranolky, mačkaným hráškem a mátou a naší majonézou",
+          "name": "200 Fish and chips /filety argentinského hejka smažené v pivním těstíčku/ podávané s bramborovými hranolky, mačkaným hráškem a mátou a naší  majonézou",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "200g Filírovaná panenská svíčková, opékané grenaille brambůrky s  chorizem, sázené vejce",
+          "name": "200g  Filírovaná panenská svíčková, opékané grenaille brambůrky s chorizem, sázené vejce",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "150g Gulášek z hovězí veverky podávaný se smaženými bramboráčky a  feferonkou",
+          "name": "150g Gulášek z hovězí  veverky podávaný se smaženými bramboráčky a feferonkou",
           "price": "189 Kč",
           "isSoup": false
         }
@@ -57,13 +57,13 @@
       "items": [
         {
           "number": "",
-          "name": "0, 25 l Zelňačka s  klobásou",
+          "name": "0, 25 l Zelňačka s klobásou",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "200g Vepřový bůček pomalu pečený na česneku, kmíně  a rozmarýnu, mačkané brambory s restovanou cibulkou, salát z červené řepy a křenu",
+          "name": "200g Vepřový bůček pomalu pečený  na česneku, kmíně a rozmarýnu, mačkané brambory s restovanou cibulkou, salát z červené řepy a křenu",
           "price": "185 Kč",
           "isSoup": false
         },
@@ -75,7 +75,7 @@
         },
         {
           "number": "3.",
-          "name": "150g Vídeňské roštěnky se smaženou cibulkou,  šťouchané brambory s máslem a petrželkou, okurkový salát",
+          "name": "150g Vídeňské roštěnky se smaženou cibulkou, šťouchané brambory s máslem a  petrželkou, okurkový salát",
           "price": "295 Kč",
           "isSoup": false
         }
@@ -88,7 +88,56 @@
       "menickaId": 6690,
       "url": "https://www.menicka.cz/6690-u-kormidla.html",
       "type": "menicka",
-      "items": [],
+      "items": [
+        {
+          "number": "",
+          "name": "Česnečka s bramborem a sýrem 3,9",
+          "price": "",
+          "isSoup": true
+        },
+        {
+          "number": "1.",
+          "name": "Smažený  květák, vařené brambory, tatarská omáčka 1a3,7",
+          "price": "149 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "2.",
+          "name": "Přírodní vepřová kotleta zapečená se šunkou a  sýrem, americké brambory 1a,7",
+          "price": "139 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "3.",
+          "name": "Pečené kuřecí stehno  v sýrové omáčce, jasmínová rýže 1a,7",
+          "price": "139 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "4.",
+          "name": "Bramborové knedlíky plněné uzeným masem, dušené zelí, restovaná  cibulka 1a,3",
+          "price": "139 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "5.",
+          "name": "Zeleninový salát, smažené rybí  prsty, dressing, pečivo 1a,3,4,7",
+          "price": "179 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "6.",
+          "name": "Čočka na kyselo, 2 ks vařené vejce, okurek,  chléb 1a,3",
+          "price": "139 Kč",
+          "isSoup": false
+        },
+        {
+          "number": "7.",
+          "name": "200g KUŘECÍ STEAK S BYLINKAMI,  sýrová omáčka, šťouchaný brambor 1a,3,7",
+          "price": "179 Kč",
+          "isSoup": false
+        }
+      ],
       "error": null
     },
     {
@@ -112,7 +161,7 @@
         },
         {
           "number": "2.",
-          "name": "Smažené žampiony s vařenými bramborami a tatarskou omáčkou",
+          "name": "Smažené žampiony s vařenými bramborami a  tatarskou omáčkou",
           "price": "136 Kč",
           "isSoup": false
         },
@@ -130,13 +179,13 @@
         },
         {
           "number": "5.",
-          "name": "Zvěřinový  hamburger s karamelizovanou červenou cibulkou a pikantní majonézou,hranolky",
+          "name": "Zvěřinový hamburger s  karamelizovanou červenou cibulkou a pikantní majonézou,hranolky",
           "price": "172 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Mini zákusek  (věneček,špička,větrník,kokoska)",
+          "name": "Mini zákusek (věneček,špička,větrník,kokoska)",
           "price": "30 Kč",
           "isSoup": false
         }
@@ -152,19 +201,19 @@
       "items": [
         {
           "number": "",
-          "name": "Italská rajčatová polévka s parmazánem  a bazalkou\n\t1\n\t7\n\t9",
+          "name": "Italská rajčatová polévka s  parmazánem a bazalkou\n\t1\n\t7\n\t9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "1. 150g Kuřecí pikantní zelené kari s čerstvou zeleninou podávané s  dušenou jasmínovou rýží a bylinkami\n\t1\n\t4\n\t5\n\t11",
+          "name": "1. 150g Kuřecí pikantní zelené kari s  čerstvou zeleninou podávané s dušenou jasmínovou rýží a bylinkami\n\t1\n\t4\n\t5\n\t11",
           "price": "189 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "2. 150g Vepřový steak z kotlety marinovaný v pepři podávaný na restovaných fazolkách se sázeným  vejcem, mačkané brambory s máslem a jamí cibulkou, sýrová omáčka\n\t1\n\t3\n\t7",
+          "name": "2. 150g Vepřový steak z kotlety marinovaný v pepři podávaný na restovaných fazolkách se sázeným vejcem, mačkané brambory s máslem  a jamí cibulkou, sýrová omáčka\n\t1\n\t3\n\t7",
           "price": "189 Kč",
           "isSoup": false
         }
