@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "generatedAt": "2026-11-17T10:14:26.570Z",
+  "generatedAt": "2026-11-17T13:55:29.557Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -11,7 +11,7 @@
       "items": [
         {
           "number": "",
-          "name": "STÁTNÍ  SVÁTEK Otevřeno 11:00-22:00 hodin Speciální sváteční nabídka",
+          "name": "STÁTNÍ SVÁTEK Otevřeno 11:00-22:00 hodin Speciální sváteční  nabídka",
           "price": "",
           "isSoup": true
         }
@@ -27,13 +27,13 @@
       "items": [
         {
           "number": "1.",
-          "name": "Státní svátek - Den boje za svobodu  a demokracii a Mezinárodní den studentstva",
+          "name": "Státní svátek - Den boje za  svobodu a demokracii a Mezinárodní den studentstva",
           "price": "",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Otevřeno od 12 do  23",
+          "name": "Otevřeno od 12 do 23",
           "price": "",
           "isSoup": false
         }
@@ -49,13 +49,13 @@
       "items": [
         {
           "number": "",
-          "name": "Hovězí vývar s játrovou rýží a  nudlemi 1a,3,9",
+          "name": "Hovězí vývar s játrovou rýží a nudlemi 1a,3,9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Smažený kuřecí řízek CORDON  BLEU (S NIVOU A ŠUNKOU), vařené brambory s máslem 1,3,7",
+          "name": "Smažený kuřecí řízek CORDON BLEU (S NIVOU A ŠUNKOU), vařené brambory  s máslem 1,3,7",
           "price": "169 Kč",
           "isSoup": false
         },
@@ -67,13 +67,13 @@
         },
         {
           "number": "3.",
-          "name": "Kuřecí kung -pao,  jasmínová rýže 1a,5",
+          "name": "Kuřecí kung -pao, jasmínová  rýže 1a,5",
           "price": "169 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "Pečená kačena, dušné zelí, variace knedlíků",
+          "name": "Pečená kačena, dušné zelí,  variace knedlíků",
           "price": "199 Kč",
           "isSoup": false
         }
@@ -89,7 +89,7 @@
       "items": [
         {
           "number": "",
-          "name": "Polévka: Hovězí vývar s masem a nudlemi",
+          "name": "Polévka: Hovězí vývar s masem a  nudlemi",
           "price": "35 Kč",
           "isSoup": true
         },
@@ -107,7 +107,7 @@
         },
         {
           "number": "5.",
-          "name": "Zvěřinový hamburger s karamelizovanou červenou cibulkou a pikantní majonézou,hranolky",
+          "name": "Zvěřinový hamburger s karamelizovanou červenou cibulkou  a pikantní majonézou,hranolky",
           "price": "172 Kč",
           "isSoup": false
         },
