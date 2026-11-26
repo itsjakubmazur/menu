@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "generatedAt": "2026-11-26T10:29:52.145Z",
+  "generatedAt": "2026-11-26T14:33:06.726Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -11,37 +11,37 @@
       "items": [
         {
           "number": "",
-          "name": "Frankfurtská polévka s  bramborem a párkem",
+          "name": "Frankfurtská  polévka s bramborem a párkem",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "200g Kuře na paprice podávané s  vařenými kolínky",
+          "name": "200g Kuře na paprice podávané s vařenými  kolínky",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "150g Vepřová líčka po  Burgundsku s kořenovou zeleninou a červeným vínem, bramborové pyré, smažená cibulka",
+          "name": "150g Vepřová líčka  po Burgundsku s kořenovou zeleninou a červeným vínem, bramborové pyré, smažená cibulka",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "300g Slovenské  halušky podávané s farmářskou bryndzou a pravou uzenou oravskou slaninou, sypané čerstvou pažitkou",
+          "name": "300g Slovenské halušky podávané s farmářskou bryndzou a pravou uzenou oravskou  slaninou, sypané čerstvou pažitkou",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "200g Kuřecí fajitas v pšeničné tortille s  grilovanou paprikou a červenou cibulí, sýrem a zakysanou smetanou, tomatová salsa a bramborové dolary",
+          "name": "200g Kuřecí fajitas v pšeničné tortille s grilovanou paprikou a  červenou cibulí, sýrem a zakysanou smetanou, tomatová salsa a bramborové dolary",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "200g Filírovaná hovězí veverka z grilu  podávaná s chimichurri salsou a bramborovými hranolky",
+          "name": "200g  Filírovaná hovězí veverka z grilu podávaná s chimichurri salsou a bramborovými hranolky",
           "price": "195 Kč",
           "isSoup": false
         }
@@ -63,19 +63,19 @@
         },
         {
           "number": "1.",
-          "name": "150 g  Segedínský guláš Speciál s houskovým knedlíkem",
+          "name": "150 g Segedínský guláš  Speciál s houskovým knedlíkem",
           "price": "185 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "200 g Vykostěné kuřecí stehno plněné tradiční žemlovou  nádivkou bramborovo - pastiňákové pyré, mrkový salát",
+          "name": "200 g Vykostěné kuřecí stehno plněné tradiční  žemlovou nádivkou bramborovo - pastiňákové pyré, mrkový salát",
           "price": "195 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "200 g Vepřová panenka na medu, zázvoru a černém pivu, lyonské brambory restované s  máslem a cibulí",
+          "name": "200 g Vepřová panenka na medu, zázvoru a černém pivu, lyonské  brambory restované s máslem a cibulí",
           "price": "275 Kč",
           "isSoup": false
         }
@@ -91,25 +91,25 @@
       "items": [
         {
           "number": "",
-          "name": "Frankfurtská s  bramborem a párkem 1a",
+          "name": "Frankfurtská  s bramborem a párkem 1a",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "Kuřecí prsa ve špenátovém těstíčku s  nivou, bramborové pyré 1a,3,7",
+          "name": "Kuřecí prsa  ve špenátovém těstíčku s nivou, bramborové pyré 1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Vepřový KAŤÁK, hranolky,  tatarka 1a,3",
+          "name": "Vepřový KAŤÁK, hranolky, tatarka  1a,3",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Hovězí nudličky STROGANOV,  jasmínová rýže 1a,7,10",
+          "name": "Hovězí  nudličky STROGANOV, jasmínová rýže 1a,7,10",
           "price": "159 Kč",
           "isSoup": false
         },
@@ -121,19 +121,19 @@
         },
         {
           "number": "5.",
-          "name": "Zeleninový salát, pečené kuřecí stehno v marinádě, dressing, pečivo  1a,7",
+          "name": "Zeleninový salát,  pečené kuřecí stehno v marinádě, dressing, pečivo 1a,7",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "BZM /Hermelín v bramboráku, zel. obloha  1A,3,7",
+          "name": "BZM /Hermelín v  bramboráku, zel. obloha 1A,3,7",
           "price": "149 Kč",
           "isSoup": false
         },
         {
           "number": "7.",
-          "name": "200g VEPŘOVÝ STEAK Z KRKOVIČKY, AMERICKÉ  BRAMBORY, HŘIBOVÁ OMÁČKA 1a,7",
+          "name": "200g VEPŘOVÝ  STEAK Z KRKOVIČKY, AMERICKÉ BRAMBORY, HŘIBOVÁ OMÁČKA 1a,7",
           "price": "179 Kč",
           "isSoup": false
         }
@@ -161,13 +161,13 @@
         },
         {
           "number": "2.",
-          "name": "Vepřový steak s anglickou slaninou a camembertem,hranolky",
+          "name": "Vepřový steak  s anglickou slaninou a camembertem,hranolky",
           "price": "136 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "Smažený  sýrový špíz(eidam,uzený) s vařenými bramborami a tatarskou omáčkou",
+          "name": "Smažený sýrový špíz(eidam,uzený) s vařenými bramborami a tatarskou omáčkou",
           "price": "148 Kč",
           "isSoup": false
         },
@@ -179,19 +179,19 @@
         },
         {
           "number": "5.",
-          "name": "Mix gril (hovězí,kuřecí,vepřové) na restovaných zelených fazolkách s americkými  bramborami",
+          "name": "Mix gril (hovězí,kuřecí,vepřové) na restovaných zelených fazolkách s americkými bramborami",
           "price": "172 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Mini zákusek  (věneček,špička,větrník,kokoska)",
+          "name": "Mini zákusek (věneček,špička,větrník,kokoska)",
           "price": "30 Kč",
           "isSoup": false
         },
         {
           "number": "7.",
-          "name": "Dezert:Čokoládový dort,,Pohádka\"se  šlehačkou",
+          "name": "Dezert:Čokoládový  dort,,Pohádka\"se šlehačkou",
           "price": "93 Kč",
           "isSoup": false
         }
@@ -207,19 +207,19 @@
       "items": [
         {
           "number": "",
-          "name": "Polévka: Bramboračka s kapustou, kmínem a  majoránkou\n\t9",
+          "name": "Polévka: Bramboračka s kapustou,  kmínem a majoránkou\n\t9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "1.  150g Pomalu pečená kuřecí prsa na rozmarýnu podávané s bretaňskou zeleninou (mrkev, hrášek, květák), máslovou bramborovou kaší, silná výpeková štáva, sypané parmazánem a bylinkami 189\n\t7\n\t9\n\t10",
+          "name": "1. 150g Pomalu pečená kuřecí prsa na rozmarýnu podávané s bretaňskou zeleninou (mrkev, hrášek, květák), máslovou bramborovou kaší, silná výpeková štáva, sypané parmazánem a  bylinkami 189\n\t7\n\t9\n\t10",
           "price": "",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "2. 150g Tradiční hovězí štěpánská pečeně s nakládanými okurkami, praženou slaninou a vařeným vejcem  podáváme s houskovým knedlíkem 189\n\t1\n\t7\n\t9\n\t10\n\t12",
+          "name": "2. 150g Tradiční hovězí štěpánská  pečeně s nakládanými okurkami, praženou slaninou a vařeným vejcem podáváme s houskovým knedlíkem 189\n\t1\n\t7\n\t9\n\t10\n\t12",
           "price": "",
           "isSoup": false
         }
