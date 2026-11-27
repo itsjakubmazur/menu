@@ -1,6 +1,6 @@
 {
   "date": "2026-11-27",
-  "generatedAt": "2026-11-27T10:33:57.267Z",
+  "generatedAt": "2026-11-27T14:27:36.831Z",
   "restaurants": [
     {
       "id": "suzies",
@@ -11,31 +11,31 @@
       "items": [
         {
           "number": "",
-          "name": "Boršč se zakysanou  smetanou a bramborem",
+          "name": "Boršč se zakysanou smetanou  a bramborem",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "3 ks Domácí kynuté meruňkové knedlíky  podávané s vanilkovou zmrzlinou, máslem a skořicovým cukrem",
+          "name": "3 ks Domácí kynuté meruňkové knedlíky podávané s  vanilkovou zmrzlinou, máslem a skořicovým cukrem",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "200g Vepřová pečeně špikovaná uzenou slaninou podávaná se  štěpánskou omáčkou a dušenou rýží, listový salátek se špekem",
+          "name": "200g  Vepřová pečeně špikovaná uzenou slaninou podávaná se štěpánskou omáčkou a dušenou rýží, listový salátek se špekem",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "3.",
-          "name": "200g Filety tresky v bylinkové krustě, smetanové šťouchané brambory s  jarní cibulkou, citron",
+          "name": "200g Filety tresky v bylinkové krustě, smetanové šťouchané brambory s jarní  cibulkou, citron",
           "price": "175 Kč",
           "isSoup": false
         },
         {
           "number": "4.",
-          "name": "200g Vykoštěný kuřecí steak Teriyaki podávaný s křupavými hranolky, grilovaným kukuřičným klasem a  teplou chedarovou omáčkou",
+          "name": "200g Vykoštěný kuřecí steak Teriyaki podávaný  s křupavými hranolky, grilovaným kukuřičným klasem a teplou chedarovou omáčkou",
           "price": "185 Kč",
           "isSoup": false
         },
@@ -63,7 +63,7 @@
         },
         {
           "number": "1.",
-          "name": "150 g  Smažené filé z aljašské tresky, mačkané brambory s olivovým olejem a pažitkou, polničkový salát",
+          "name": "150 g Smažené filé z aljašské tresky, mačkané brambory  s olivovým olejem a pažitkou, polničkový salát",
           "price": "185 Kč",
           "isSoup": false
         },
@@ -75,7 +75,7 @@
         },
         {
           "number": "3.",
-          "name": "200 g Vepřová panenka na medu, zázvoru  a černém pivu, lyonské brambory restované s máslem a cibulí",
+          "name": "200 g Vepřová panenka na medu, zázvoru a černém pivu,  lyonské brambory restované s máslem a cibulí",
           "price": "275 Kč",
           "isSoup": false
         }
@@ -97,13 +97,13 @@
         },
         {
           "number": "1.",
-          "name": "Smažený vepřový  řízek, bramborový salát 1a,3,7,9,10",
+          "name": "Smažený vepřový řízek, bramborový  salát 1a,3,7,9,10",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "Kuřecí steak,  grilovaná zelenina, dip, krokety 1a,7",
+          "name": "Kuřecí steak, grilovaná zelenina, dip,  krokety 1a,7",
           "price": "159 Kč",
           "isSoup": false
         },
@@ -115,25 +115,25 @@
         },
         {
           "number": "4.",
-          "name": "Uzené  maso, křenová omáčka, houskový knedlík 1a,3,7",
+          "name": "Uzené maso, křenová omáčka, houskový knedlík  1a,3,7",
           "price": "139 Kč",
           "isSoup": false
         },
         {
           "number": "5.",
-          "name": "BZM / Zeleninový salát, 3 druhy smažených sýrů,  dressing, pečivo 1a,3,7",
+          "name": "BZM  / Zeleninový salát, 3 druhy smažených sýrů, dressing, pečivo 1a,3,7",
           "price": "179 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Pečená žebra, křen, okurek, chléb, hořčice  1a,10",
+          "name": "Pečená žebra,  křen, okurek, chléb, hořčice 1a,10",
           "price": "159 Kč",
           "isSoup": false
         },
         {
           "number": "7.",
-          "name": "200g VEPŘOVÝ STEAK Z KRKOVIČKY, AMERICKÉ BRAMBORY, HŘIBOVÁ OMÁČKA  1a,7",
+          "name": "200g VEPŘOVÝ STEAK Z  KRKOVIČKY, AMERICKÉ BRAMBORY, HŘIBOVÁ OMÁČKA 1a,7",
           "price": "179 Kč",
           "isSoup": false
         }
@@ -179,13 +179,13 @@
         },
         {
           "number": "5.",
-          "name": "Mix gril (hovězí,kuřecí,vepřové) na restovaných zelených fazolkách s americkými  bramborami",
+          "name": "Mix gril (hovězí,kuřecí,vepřové) na restovaných zelených fazolkách s americkými bramborami",
           "price": "172 Kč",
           "isSoup": false
         },
         {
           "number": "6.",
-          "name": "Mini zákusek (věneček,špička,větrník,kokoska)",
+          "name": "Mini  zákusek (věneček,špička,větrník,kokoska)",
           "price": "30 Kč",
           "isSoup": false
         },
@@ -207,19 +207,19 @@
       "items": [
         {
           "number": "",
-          "name": "Polévka: Gulášová polévka s  majoránkou a bramborem\n\t1\n\t3\n\t7\n\t9",
+          "name": "Polévka: Gulášová  polévka s majoránkou a bramborem\n\t1\n\t3\n\t7\n\t9",
           "price": "",
           "isSoup": true
         },
         {
           "number": "1.",
-          "name": "1. 150g Krémové tarhoňové rizoto se smetanou, vínem a grilovanou  zeleninou podávané s filírovaným kuřecím steakem marinovaným v česneku a petrželce, zdobené špenátovým pestem a parmazánem 189\n\t1\n\t7",
+          "name": "1. 150g Krémové tarhoňové rizoto se smetanou, vínem  a grilovanou zeleninou podávané s filírovaným kuřecím steakem marinovaným v česneku a petrželce, zdobené špenátovým pestem a parmazánem 189\n\t1\n\t7",
           "price": "",
           "isSoup": false
         },
         {
           "number": "2.",
-          "name": "2. 350g Slovenské bramborové halušky se šlehaným sýrem bryndza, karamelizovanou cibulkou,  praženým uzeným špekem a čerstvými bylinkami 189\n\t1\n\t3\n\t7",
+          "name": "2. 350g Slovenské bramborové halušky se šlehaným sýrem  bryndza, karamelizovanou cibulkou, praženým uzeným špekem a čerstvými bylinkami 189\n\t1\n\t3\n\t7",
           "price": "",
           "isSoup": false
         }
